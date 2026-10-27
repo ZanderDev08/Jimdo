@@ -35,6 +35,18 @@
 </head>
 
 <body class="overflow-x-hidden max-w-full min-w-full mx-auto font-geologica text-black">
+
+    <!-- ===================================================================== -->
+    <!-- MEMBER 1 START: Navigation Bar (Desktop & Mobile) + Hero Section      -->
+    <!-- TASKS FOR MEMBER 1:                                                   -->
+    <!--   1. Desktop Navbar with Logo, Nav Links, Dropdowns & "Start for free"-->
+    <!--   2. Mobile Hamburger Menu & Slide-out Drawer Submenus                -->
+    <!--   3. Hero Section ("Create an Online Portfolio With Jimdo",           -->
+    <!--      3 checkmark bullets, "Start Now" button, and Hero Image)         -->
+    <!-- ASSETS TO USE:                                                        -->
+    <!--   - src/img/Logo.png                                                  -->
+    <!--   - src/img/hero-image.png (or src/img/img1.webp)                     -->
+    <!-- ===================================================================== -->
     <div class="hero bg-[#f8f8f8] w-full min-h-dvh flex justify-center relative max-lg:min-h-[70dvh] max-md:h-[120dvh] max-[480px]:min-h-[80dvh] max-[480px]:h-[120dvh]">
         <nav class="fixed w-full h-[100px] flex justify-between items-center shadow-[0_0_20px_0px_rgba(0,0,0,0.2)] bg-white z-[1000] px-[100px] lg:max-xl:px-5 max-md:px-5 max-md:h-[80px]">
 
@@ -403,7 +415,7 @@
             </div>
         </div>
 
-        <!-- Hero Content (Layout & Size from template, Icons preserved) -->
+        <!-- Hero Content -->
         <div class="home relative top-[250px] translate-x-[5%] text-center w-full h-auto inline-flex flex-wrap flex-row max-md:flex-col max-md:px-[100px] max-md:m-0 max-md:gap-5 max-[480px]:top-[180px] max-[480px]:h-dvh max-[480px]:p-0">
             <div class="first-text w-1/2 px-[120px] max-lg:p-0 max-md:p-5 max-md:m-0 max-md:w-full max-[480px]:w-full max-[480px]:text-center max-[480px]:pl-[5px] max-[480px]:pr-[50px]">
                 <h1 class="text-[45px] font-light text-left mb-5 max-md:p-2.5 max-[480px]:text-[30px]">Create an Online Portfolio With Jimdo</h1>
@@ -446,10 +458,28 @@
             </div>
         </div>
     </div>
+    <!-- ========================== MEMBER 1 END ============================= -->
 
+
+    <!-- ===================================================================== -->
+    <!-- MEMBER 2 START: Portfolio Site Features Section                       -->
+    <!-- TASKS FOR MEMBER 2:                                                   -->
+    <!--   1. Section Heading: "Portfolio site features that matter"           -->
+    <!--   2. Feature 1 (Text Left, Image Right - src/img/img2.webp):          -->
+    <!--      "Beautiful visuals, by design"                                   -->
+    <!--   3. Feature 2 (Image Left - src/img/img3.webp, Text Right):          -->
+    <!--      "Help search engines find you"                                   -->
+    <!--   4. Feature 3 (Text Left, Image Right - src/img/img4.webp):          -->
+    <!--      "Connect your social media" + Bottom "Start Now" CTA Button      -->
+    <!-- ASSETS TO USE:                                                        -->
+    <!--   - src/img/img2.webp                                                 -->
+    <!--   - src/img/img3.webp                                                 -->
+    <!--   - src/img/img4.webp                                                 -->
+    <!-- ===================================================================== -->
     <section class="features w-full min-h-[100dvh] relative bg-[#f8f8f8] bg-center bg-cover text-center justify-center pt-20 pb-28 max-lg:min-h-[70dvh] max-md:p-5">
         <h1 class="text-[50px] font-light relative max-[979px]:text-[45px] max-md:text-[35px] max-md:p-5 max-[480px]:text-[30px]">Portfolio site features that matter</h1>
 
+        <!-- Feature 1: Beautiful visuals, by design -->
         <div class="content mt-[100px] px-[300px] flex flex-wrap items-center justify-around gap-20 max-lg:px-5 max-lg:gap-[5px] max-md:p-5 max-md:gap-5 max-md:mt-5 max-[480px]:flex-col-reverse max-[480px]:p-5 max-[480px]:gap-8 max-[480px]:mt-5">
             <div class="description flex-1 text-left max-lg:p-0 max-lg:m-0 max-md:p-[15px] max-[480px]:text-left max-[480px]:m-0 max-[480px]:p-0">
                 <h1 class="text-[35px] font-normal mb-5 max-md:text-[25px] max-md:mb-[15px] max-[480px]:text-[24px] max-[480px]:font-extralight">Beautiful visuals, by design</h1>
@@ -465,37 +495,95 @@
         </div>
     </section>
 
+    <!-- Feature 2: Help search engines find you -->
     <section class="max-w-7xl mx-auto px-6 py-16">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
-
-                <!-- Analytics Dashboard Image -->
-                <div class="w-full md:w-1/2">
-                    <img
-                        src="src/img/img3.webp"
-                        alt="Website visitor analytics dashboard"
-                        class="w-full h-auto object-contain drop-shadow-2xl"
-                    >
-                </div>
-
-                <!-- SEO Text -->
-                <div class="w-full md:w-1/2">
-                    <h3 class="text-3xl md:text-4xl font-medium text-heading mb-6">
-                        Help search engines find you
-                    </h3>
-
-                    <p class="text-base leading-relaxed text-heading">
-                        Want your portfolio website to find the right audience?
-                        Our automatic SEO tools and tips walk you through every
-                        step, even if you’re a beginner. Show up on Google and
-                        track traffic with Statistics, too.
-                    </p>
-                </div>
-
+        <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+            <!-- Analytics Dashboard Image -->
+            <div class="w-full md:w-1/2">
+                <img
+                    src="src/img/img3.webp"
+                    alt="Website visitor analytics dashboard"
+                    class="w-full h-auto object-contain drop-shadow-2xl"
+                >
             </div>
-        </section>
+
+            <!-- SEO Text -->
+            <div class="w-full md:w-1/2">
+                <h3 class="text-3xl md:text-4xl font-medium text-heading mb-6">
+                    Help search engines find you
+                </h3>
+
+                <p class="text-base leading-relaxed text-heading">
+                    Want your portfolio website to find the right audience?
+                    Our automatic SEO tools and tips walk you through every
+                    step, even if you’re a beginner. Show up on Google and
+                    track traffic with Statistics, too.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TODO (Member 2): Add Feature 3 ("Connect your social media" using src/img/img4.webp) here -->
+    <!-- ========================== MEMBER 2 END ============================= -->
+
+
+    <!-- ===================================================================== -->
+    <!-- MEMBER 3 START: Portfolio Examples Tabs + How-To Steps Section        -->
+    <!-- TASKS FOR MEMBER 3:                                                   -->
+    <!--   1. "How will you use your portfolio website?" Interactive Tabs:     -->
+    <!--      - Tab 1: Artist (uses src/img/artist.webp)                       -->
+    <!--      - Tab 2: Graphic Designer (uses src/img/graphic.webp)            -->
+    <!--      - Tab 3: Model (uses src/img/model.webp)                         -->
+    <!--      - Tab 4: Photographer (uses src/img/photographer.webp)           -->
+    <!--   2. "How to create your online portfolio" Step-by-Step Section       -->
+    <!--      (Numbered steps 1-5 on the left, src/img/img5.webp on the right) -->
+    <!-- ASSETS TO USE:                                                        -->
+    <!--   - src/img/artist.webp                                               -->
+    <!--   - src/img/graphic.webp                                              -->
+    <!--   - src/img/model.webp                                                -->
+    <!--   - src/img/photographer.webp                                         -->
+    <!--   - src/img/img5.webp                                                 -->
+    <!-- ===================================================================== -->
+    <section id="member-3-examples">
+        <!-- TODO (Member 3 - Part 1): Build "How will you use your portfolio website?" tabs here -->
+    </section>
+
+    <section id="member-3-how-to">
+        <!-- TODO (Member 3 - Part 2): Build "How to create your online portfolio" steps (src/img/img5.webp) here -->
+    </section>
+    <!-- ========================== MEMBER 3 END ============================= -->
+
+
+    <!-- ===================================================================== -->
+    <!-- MEMBER 4 START: Online Portfolio FAQ + CTA Banner + Footer            -->
+    <!-- TASKS FOR MEMBER 4:                                                   -->
+    <!--   1. "Online Portfolio FAQ" Accordion Section                         -->
+    <!--      (Expandable/collapsible questions & answers about portfolios)    -->
+    <!--   2. Bottom Blue Call-to-Action Banner                                -->
+    <!--      ("Create your portfolio website today" + "Let's get started" btn)-->
+    <!--   3. Main Website Footer                                              -->
+    <!--      (Jimdo logo src/img/Logo.png, social media icons, Products,      -->
+    <!--       About us, Service columns, and legal links at the bottom)       -->
+    <!-- ASSETS TO USE:                                                        -->
+    <!--   - src/img/Logo.png                                                  -->
+    <!-- ===================================================================== -->
+    <section id="member-4-faq">
+        <!-- TODO (Member 4 - Part 1): Build "Online Portfolio FAQ" accordion here -->
+    </section>
+
+    <section id="member-4-cta">
+        <!-- TODO (Member 4 - Part 2): Build bottom blue CTA banner here -->
+    </section>
+
+    <footer id="member-4-footer">
+        <!-- TODO (Member 4 - Part 3): Build website footer here -->
+    </footer>
+    <!-- ========================== MEMBER 4 END ============================= -->
 
     <script>
-        // Desktop Nav Dropdown Click Toggles (.show, .active, .rotated)
+        // =====================================================================
+        // MEMBER 1 JS START: Desktop Nav Dropdowns & Mobile Hamburger Menu
+        // =====================================================================
         const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
 
         function closeAllDropdowns(exceptToggle = null) {
@@ -568,6 +656,30 @@
                 submenu?.classList.toggle('active');
             });
         });
+        // ========================== MEMBER 1 JS END ==========================
+
+
+        // =====================================================================
+        // MEMBER 2 JS START: Features Section JS (if needed)
+        // =====================================================================
+
+        // ========================== MEMBER 2 JS END ==========================
+
+
+        // =====================================================================
+        // MEMBER 3 JS START: Portfolio Examples Tab Switcher
+        // (Switch between Artist, Graphic Designer, Model, Photographer images)
+        // =====================================================================
+
+        // ========================== MEMBER 3 JS END ==========================
+
+
+        // =====================================================================
+        // MEMBER 4 JS START: Online Portfolio FAQ Accordion Toggle
+        // (Expand/collapse FAQ answers when clicking questions)
+        // =====================================================================
+
+        // ========================== MEMBER 4 JS END ==========================
     </script>
     <script type="module" src="/src/main.js"></script>
 </body>
