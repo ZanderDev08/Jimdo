@@ -35,6 +35,14 @@
 </head>
 
 <body class="overflow-x-hidden max-w-full min-w-full mx-auto font-geologica text-black">
+
+    <!-- ===================================================================== -->
+    <!-- Edmark START: Navigation Bar (Desktop Menu)                           -->
+    <!--                                                                       -->
+    <!-- TASKS:                                                                -->
+    <!--   1. Desktop Navbar with Logo, Nav Links, Dropdowns & "Start for free"-->
+    <!-- ===================================================================== -->
+
     <div class="hero bg-[#f8f8f8] w-full min-h-dvh flex justify-center relative max-lg:min-h-[70dvh] max-md:h-[120dvh] max-[480px]:min-h-[80dvh] max-[480px]:h-[120dvh]">
         <nav class="fixed w-full h-[100px] flex justify-between items-center shadow-[0_0_20px_0px_rgba(0,0,0,0.2)] bg-white z-[1000] px-[100px] lg:max-xl:px-5 max-md:px-5 max-md:h-[80px]">
 
@@ -286,6 +294,13 @@
             </div>
         </nav>
 
+    <!-- ===================================================================== -->
+    <!-- ZANDER START: Navigation Bar (Mobile Menu)                            -->
+    <!--                                                                       -->
+    <!-- TASKS:                                                                -->
+    <!--   1. Mobile Hamburger Menu & Slide-out Drawer Submenus                -->
+    <!-- ===================================================================== -->
+
         <!-- Mobile Menu Overlay -->
         <div class="mobile-menu-overlay hidden fixed top-0 left-0 w-full h-full bg-black/50 z-[998] opacity-0 transition-opacity duration-300 [&.active]:max-lg:block [&.active]:opacity-100" id="mobileMenuOverlay"></div>
 
@@ -403,7 +418,17 @@
             </div>
         </div>
 
-        <!-- Hero Content (Layout & Size from template, Icons preserved) -->
+
+        <!-- Hero Content -->
+
+        <!-- ===================================================================== -->
+        <!-- ANI : Hero Section                                                    -->
+        <!--                                                                       -->
+        <!-- TASKS:                                                                -->
+        <!--   1.                                                                  -->
+        <!-- ===================================================================== -->
+
+
         <div class="home relative top-[250px] translate-x-[5%] text-center w-full h-auto inline-flex flex-wrap flex-row max-md:flex-col max-md:px-[100px] max-md:m-0 max-md:gap-5 max-[480px]:top-[180px] max-[480px]:h-dvh max-[480px]:p-0">
             <div class="first-text w-1/2 px-[120px] max-lg:p-0 max-md:p-5 max-md:m-0 max-md:w-full max-[480px]:w-full max-[480px]:text-center max-[480px]:pl-[5px] max-[480px]:pr-[50px]">
                 <h1 class="text-[45px] font-light text-left mb-5 max-md:p-2.5 max-[480px]:text-[30px]">Create an Online Portfolio With Jimdo</h1>
@@ -447,9 +472,15 @@
         </div>
     </div>
 
+    <!-- ===================================================================== -->
+    <!--  ANI: Portfolio Site Features Section                                 -->
+    <!-- TASKS                                                                 -->
+    <!--   1.                                                                  -->
+    <!-- ===================================================================== -->
     <section class="features w-full min-h-[100dvh] relative bg-[#f8f8f8] bg-center bg-cover text-center justify-center pt-20 pb-28 max-lg:min-h-[70dvh] max-md:p-5">
         <h1 class="text-[50px] font-light relative max-[979px]:text-[45px] max-md:text-[35px] max-md:p-5 max-[480px]:text-[30px]">Portfolio site features that matter</h1>
 
+        <!-- Feature 1: Beautiful visuals, by design -->
         <div class="content mt-[100px] px-[300px] flex flex-wrap items-center justify-around gap-20 max-lg:px-5 max-lg:gap-[5px] max-md:p-5 max-md:gap-5 max-md:mt-5 max-[480px]:flex-col-reverse max-[480px]:p-5 max-[480px]:gap-8 max-[480px]:mt-5">
             <div class="description flex-1 text-left max-lg:p-0 max-lg:m-0 max-md:p-[15px] max-[480px]:text-left max-[480px]:m-0 max-[480px]:p-0">
                 <h1 class="text-[35px] font-normal mb-5 max-md:text-[25px] max-md:mb-[15px] max-[480px]:text-[24px] max-[480px]:font-extralight">Beautiful visuals, by design</h1>
@@ -465,37 +496,58 @@
         </div>
     </section>
 
+    <!-- Feature 2: Help search engines find you -->
     <section class="max-w-7xl mx-auto px-6 py-16">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
-
-                <!-- Analytics Dashboard Image -->
-                <div class="w-full md:w-1/2">
-                    <img
-                        src="src/img/img3.webp"
-                        alt="Website visitor analytics dashboard"
-                        class="w-full h-auto object-contain drop-shadow-2xl"
-                    >
-                </div>
-
-                <!-- SEO Text -->
-                <div class="w-full md:w-1/2">
-                    <h3 class="text-3xl md:text-4xl font-medium text-heading mb-6">
-                        Help search engines find you
-                    </h3>
-
-                    <p class="text-base leading-relaxed text-heading">
-                        Want your portfolio website to find the right audience?
-                        Our automatic SEO tools and tips walk you through every
-                        step, even if you’re a beginner. Show up on Google and
-                        track traffic with Statistics, too.
-                    </p>
-                </div>
-
+        <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+            <!-- Analytics Dashboard Image -->
+            <div class="w-full md:w-1/2">
+                <img
+                    src="src/img/img3.webp"
+                    alt="Website visitor analytics dashboard"
+                    class="w-full h-auto object-contain drop-shadow-2xl"
+                >
             </div>
-        </section>
+
+            <!-- SEO Text -->
+            <div class="w-full md:w-1/2">
+                <h3 class="text-3xl md:text-4xl font-medium text-heading mb-6">
+                    Help search engines find you
+                </h3>
+
+                <p class="text-base leading-relaxed text-heading">
+                    Want your portfolio website to find the right audience?
+                    Our automatic SEO tools and tips walk you through every
+                    step, even if you’re a beginner. Show up on Google and
+                    track traffic with Statistics, too.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="member-3-examples">
+        <!-- TODO (Member 3 - Part 1): Build "How will you use your portfolio website?" tabs here -->
+    </section>
+
+    <section id="member-3-how-to">
+        <!-- TODO (Member 3 - Part 2): Build "How to create your online portfolio" steps (src/img/img5.webp) here -->
+    </section>
+
+    <section id="member-4-faq">
+        <!-- TODO ANI: Build "Online Portfolio FAQ" accordion here -->
+    </section>
+
+    <section id="member-4-cta">
+        <!-- TODO ANI: Build bottom blue CTA banner here -->
+    </section>
+
+    <footer id="member-4-footer">
+        <!-- TODO EDMARK: Build website footer here -->
+    </footer>
 
     <script>
-        // Desktop Nav Dropdown Click Toggles (.show, .active, .rotated)
+        // =====================================================================
+        // ZANDER JS START: Desktop Nav Dropdowns & Mobile Hamburger Menu
+        // =====================================================================
         const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
 
         function closeAllDropdowns(exceptToggle = null) {
@@ -568,6 +620,30 @@
                 submenu?.classList.toggle('active');
             });
         });
+        // ========================== MEMBER 1 JS END ==========================
+
+
+        // =====================================================================
+        // MEMBER 2 JS START: Features Section JS (if needed)
+        // =====================================================================
+
+        // ========================== MEMBER 2 JS END ==========================
+
+
+        // =====================================================================
+        // MEMBER 3 JS START: Portfolio Examples Tab Switcher
+        // (Switch between Artist, Graphic Designer, Model, Photographer images)
+        // =====================================================================
+
+        // ========================== MEMBER 3 JS END ==========================
+
+
+        // =====================================================================
+        // MEMBER 4 JS START: Online Portfolio FAQ Accordion Toggle
+        // (Expand/collapse FAQ answers when clicking questions)
+        // =====================================================================
+
+        // ========================== MEMBER 4 JS END ==========================
     </script>
     <script type="module" src="/src/main.js"></script>
 </body>
