@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+.hamburger span {
+  display: block;
+  transform-origin: center;
+  transition: transform 300ms ease, opacity 300ms ease;
+}
+
+.hamburger.active span:first-child {
+  transform: translateY(7.8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:last-child {
+  transform: translateY(-7.8px) rotate(-45deg);
+}

@@ -53,11 +53,11 @@
 
             <a href="#home"><img src="src/img/Logo.png" alt="Jimdo Logo" class="logo w-[100px] absolute left-[10%] top-[30%] lg:max-xl:w-[70px] lg:max-xl:left-[2%] max-md:w-[70px] max-md:left-[5%]"></a>
 
-            <div class="hamburger hidden max-lg:flex flex-col cursor-pointer z-[1001] absolute right-5 max-lg:top-1/2 max-lg:-translate-y-1/2 group" id="hamburger">
-                <span class="w-[25px] h-[3px] bg-[#001453] my-[2.4px] transition-all duration-300 group-[.active]:-rotate-45 group-[.active]:-translate-x-[5px] group-[.active]:translate-y-[6px]"></span>
-                <span class="w-[25px] h-[3px] bg-[#001453] my-[2.4px] transition-all duration-300 group-[.active]:opacity-0"></span>
-                <span class="w-[25px] h-[3px] bg-[#001453] my-[2.4px] transition-all duration-300 group-[.active]:rotate-45 group-[.active]:-translate-x-[5px] group-[.active]:-translate-y-[6px]"></span>
-            </div>
+            <button type="button" class="hamburger hidden max-lg:flex flex-col cursor-pointer z-[1001] absolute right-5 max-lg:top-1/2 max-lg:-translate-y-1/2 border-0 bg-transparent p-0" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="w-[25px] h-[3px] bg-[#001453] my-[2.4px]"></span>
+                <span class="w-[25px] h-[3px] bg-[#001453] my-[2.4px]"></span>
+                <span class="w-[25px] h-[3px] bg-[#001453] my-[2.4px]"></span>
+            </button>
 
             <!-- Left/Center Nav Links -->
             <div class="fnav max-lg:hidden lg:max-xl:mr-5">
@@ -596,7 +596,7 @@
 <ol class="list-none space-y-2 mt-6">
                     <li class="flex gap-4"><span class="text-blue-600 font-medium">1.</span>
                         <span class="text-black font-extralight"> 
-                            Sign up or log in with social media. You’ll also be able to choose a domain (website address) for your portfolio site.
+                        Sign up or log in with social media. You’ll also be able to choose a domain (website address) for your portfolio site.
                         </span>
                     </li>
                     <li class="flex gap-4"><span class="text-blue-600 font-medium">2.</span>
@@ -1046,45 +1046,65 @@
     <!-- HTML Section: <section> "Online Portfolio FAQ" (lines ~789-902)       -->
     <!-- Functionality: Smoothly toggles answers with slide animation & chevron rotation -->
     <!-- ===================================================================== -->
-    <script>
+   
         // Smooth Animated Accordion for Ani's FAQ Items
-        const faqList = [
-            { btn: 'toggleBtn', content: 'toggleContent', icon: 'arrowIcon' },
-            { btn: 'toggleBtn2', content: 'toggleContent2', icon: 'arrowIcon2' },
-            { btn: 'toggleBtn3', content: 'toggleContent3', icon: 'arrowIcon3' },
-            { btn: 'toggleBtn4', content: 'toggleContent4', icon: 'arrowIcon4' },
-            { btn: 'toggleBtn5', content: 'toggleContent5', icon: 'arrowIcon5' }
-        ];
+      <script>
+            const toggleBtn = document.getElementById('toggleBtn');
+            const toggleContent = document.getElementById('toggleContent');
+            const arrowIcon = document.getElementById('arrowIcon');
 
-        faqList.forEach(item => {
-            const btnEl = document.getElementById(item.btn);
-            const contentEl = document.getElementById(item.content);
-            const iconEl = document.getElementById(item.icon);
-
-            if (!btnEl || !contentEl) return;
-
-            // Prepare content styling for smooth height animation
-            contentEl.style.overflow = 'hidden';
-            contentEl.style.transition = 'max-height 0.35s ease-in-out, opacity 0.3s ease-in-out, padding 0.35s ease-in-out';
-            contentEl.style.maxHeight = '0px';
-            contentEl.style.opacity = '0';
-            contentEl.classList.remove('hidden');
-
-            btnEl.addEventListener('click', () => {
-                const isOpen = contentEl.style.maxHeight !== '0px' && contentEl.style.maxHeight !== '';
-
-                if (isOpen) {
-                    contentEl.style.maxHeight = '0px';
-                    contentEl.style.opacity = '0';
-                    iconEl?.classList.remove('rotate-180');
-                } else {
-                    contentEl.style.maxHeight = contentEl.scrollHeight + 'px';
-                    contentEl.style.opacity = '1';
-                    iconEl?.classList.add('rotate-180');
-                }
+            toggleBtn.addEventListener('click', () => {
+                // Toggle content visibility
+                toggleContent.classList.toggle('hidden');
+                // Rotate the arrow icon
+                arrowIcon.classList.toggle('rotate-180');
             });
-        });
+
+            const toggleBtn2 = document.getElementById('toggleBtn2');
+            const toggleContent2 = document.getElementById('toggleContent2');
+            const arrowIcon2 = document.getElementById('arrowIcon2');
+
+            toggleBtn2.addEventListener('click', () => {
+                // Toggle content visibility
+                toggleContent2.classList.toggle('hidden');
+                // Rotate the arrow icon
+                arrowIcon2.classList.toggle('rotate-180');
+            });
+
+            const toggleBtn3 = document.getElementById('toggleBtn3');
+            const toggleContent3 = document.getElementById('toggleContent3');
+            const arrowIcon3 = document.getElementById('arrowIcon3');
+
+            toggleBtn3.addEventListener('click', () => {
+                // Toggle content visibility
+                toggleContent3.classList.toggle('hidden');
+                // Rotate the arrow icon
+                arrowIcon3.classList.toggle('rotate-180');
+            });
+
+            const toggleBtn4 = document.getElementById('toggleBtn4');
+            const toggleContent4 = document.getElementById('toggleContent4');
+            const arrowIcon4 = document.getElementById('arrowIcon4');
+
+            toggleBtn4.addEventListener('click', () => {
+                // Toggle content visibility
+                toggleContent4.classList.toggle('hidden');
+                // Rotate the arrow icon
+                arrowIcon4.classList.toggle('rotate-180');
+            });
+
+            const toggleBtn5 = document.getElementById('toggleBtn5');
+            const toggleContent5 = document.getElementById('toggleContent5');
+            const arrowIcon5 = document.getElementById('arrowIcon5');
+
+            toggleBtn5.addEventListener('click', () => {
+                // Toggle content visibility
+                toggleContent5.classList.toggle('hidden');
+                // Rotate the arrow icon
+                arrowIcon5.classList.toggle('rotate-180');
+            });
     </script>
+
 
     <script>
         // =====================================================================
@@ -1143,6 +1163,7 @@
 
         function toggleMobileMenu() {
             const isActive = hamburger?.classList.toggle('active');
+            hamburger?.setAttribute('aria-expanded', String(Boolean(isActive)));
             mobileMenu?.classList.toggle('active');
             mobileMenuOverlay?.classList.toggle('active');
             document.body.style.overflow = isActive ? 'hidden' : 'auto';
