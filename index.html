@@ -36,23 +36,6 @@
         }
     </script>
     <link rel="stylesheet" href="src/output.css">
-    <style>
-        #hamburger span {
-            transform-origin: center;
-        }
-
-        #hamburger.active span:first-child {
-            transform: translateY(7.8px) rotate(45deg);
-        }
-
-        #hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        #hamburger.active span:last-child {
-            transform: translateY(-7.8px) rotate(-45deg);
-        }
-    </style>
 </head>
 
 <body class="overflow-x-hidden max-w-full min-w-full mx-auto font-geologica text-black">
@@ -70,10 +53,10 @@
 
             <a href="#home"><img src="src/img/Logo.png" alt="Jimdo Logo" class="logo w-[100px] absolute left-[10%] top-[30%] lg:max-xl:w-[70px] lg:max-xl:left-[2%] max-md:w-[70px] max-md:left-[5%]"></a>
 
-            <div class="hamburger hidden max-lg:flex flex-col cursor-pointer z-[1001] absolute right-5 max-lg:top-1/2 max-lg:-translate-y-1/2" id="hamburger">
-                <span class="w-[25px] h-[3px] bg-[#001453] my-[2.4px] transition-all duration-300"></span>
-                <span class="w-[25px] h-[3px] bg-[#001453] my-[2.4px] transition-all duration-300"></span>
-                <span class="w-[25px] h-[3px] bg-[#001453] my-[2.4px] transition-all duration-300"></span>
+            <div class="hamburger hidden max-lg:flex flex-col cursor-pointer z-[1001] absolute right-5 max-lg:top-1/2 max-lg:-translate-y-1/2 group" id="hamburger">
+                <span class="w-[25px] h-[3px] bg-[#001453] my-[2.4px] transition-all duration-300 group-[.active]:-rotate-45 group-[.active]:-translate-x-[5px] group-[.active]:translate-y-[6px]"></span>
+                <span class="w-[25px] h-[3px] bg-[#001453] my-[2.4px] transition-all duration-300 group-[.active]:opacity-0"></span>
+                <span class="w-[25px] h-[3px] bg-[#001453] my-[2.4px] transition-all duration-300 group-[.active]:rotate-45 group-[.active]:-translate-x-[5px] group-[.active]:-translate-y-[6px]"></span>
             </div>
 
             <!-- Left/Center Nav Links -->
@@ -1023,12 +1006,12 @@
                 </button>
 
                 <ul class="footer-dropdown-menu p-0 max-md:max-h-0 max-md:overflow-hidden transition-all duration-300 ease-in-out [&.active]:max-md:max-h-[500px] [&.active]:max-md:py-2">
-                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Jimdo Blog</a></li>
-                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">JIMDOCONNECT</a></li>
-                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Founder Stories</a></li>
-                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Inspiration</a></li>
-                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Help Center</a></li>
-                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Contact Support</a></li>
+                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-black font-normal hover:text-[#004ced]">Jimdo Blog</a></li>
+                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-black font-normal hover:text-[#004ced]">JIMDOCONNECT</a></li>
+                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-black font-normal hover:text-[#004ced]">Founder Stories</a></li>
+                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-black font-normal hover:text-[#004ced]">Inspiration</a></li>
+                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-black font-normal hover:text-[#004ced]">Help Center</a></li>
+                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-black font-normal hover:text-[#004ced]">Contact Support</a></li>
                 </ul>
             </div>
         </div>
@@ -1052,7 +1035,7 @@
             </div>
         </div>
 
-        <div class="info w-full md:w-auto md:absolute md:bottom-[5%] md:left-[80%] lg:left-[100px] xl:left-[200px] max-md:mt-8 max-md:p-0 max-md:text-center">
+        <div class="info w-full md:w-auto md:absolute md:bottom-[15%] md:left-[10%] max-md:mt-4 max-md:p-0 max-md:text-center">
             <ul class="p-0 m-0">
                 <li class="inline-block p-2 relative max-md:block max-md:mb-1"><a href="#" class="no-underline text-[15px] font-medium text-black hover:text-[#004ced] max-[480px]:text-[12px]">Legal notice</a></li>
                 <li class="inline-block p-2 relative max-md:block max-md:mb-1"><a href="#" class="no-underline text-[15px] font-medium text-black hover:text-[#004ced] max-[480px]:text-[12px]">Terms of Service</a></li>
