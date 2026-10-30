@@ -1152,21 +1152,23 @@
         </div>
 
         <div class="languages w-full md:w-auto md:absolute md:top-[85%] md:left-[80%] max-md:mt-6 max-md:text-center">
-            <div class="option group/lang flex flex-row items-center max-md:justify-center">
-                <div class="selection w-1/2 absolute bottom-[150%] right-[60%] bg-white shadow-[0_4px_12px_rgba(0,0,0,0.15)] p-5 overflow-hidden hidden pointer-events-none group-hover/lang:block group-hover/lang:pointer-events-auto max-md:static max-md:w-full max-md:shadow-none max-md:p-2.5">
+            <div class="option relative flex flex-row items-center max-md:justify-center">
+                <div id="languageMenu" class="selection absolute bottom-[calc(100%+0.5rem)] right-0 z-50 w-48 bg-white shadow-[0_4px_12px_rgba(0,0,0,0.15)] p-3 overflow-hidden hidden max-md:bottom-[calc(100%+0.5rem)] max-md:right-1/2 max-md:translate-x-1/2 max-md:w-48 max-md:shadow-[0_4px_12px_rgba(0,0,0,0.15)] max-md:p-3" aria-hidden="true">
                     <ul>
-                        <li class="list-none text-[15px] flex items-center gap-2.5 p-2 hover:text-[#003bbb] max-[480px]:text-[14px]"><img src="src/img/GER.png" alt="Deutsch" class="w-8 border-2 border-[#003bbb] rounded-full max-[480px]:w-6">Deutsch</li>
-                        <li class="list-none text-[15px] flex items-center gap-2.5 p-2 hover:text-[#003bbb] max-[480px]:text-[14px]"><img src="src/img/SPA.png" alt="Español" class="w-8 border-2 border-[#003bbb] rounded-full max-[480px]:w-6">Español</li>
-                        <li class="list-none text-[15px] flex items-center gap-2.5 p-2 hover:text-[#003bbb] max-[480px]:text-[14px]"><img src="src/img/FRA.png" alt="Français" class="w-8 border-2 border-[#003bbb] rounded-full max-[480px]:w-6">Français</li>
-                        <li class="list-none text-[15px] flex items-center gap-2.5 p-2 hover:text-[#003bbb] max-[480px]:text-[14px]"><img src="src/img/ITA.png" alt="Italiano" class="w-8 border-2 border-[#003bbb] rounded-full max-[480px]:w-6">Italiano</li>
-                        <li class="list-none text-[15px] flex items-center gap-2.5 p-2 hover:text-[#003bbb] max-[480px]:text-[14px]"><img src="src/img/JPN.png" alt="日本語" class="w-8 border-2 border-[#003bbb] rounded-full max-[480px]:w-6">日本語</li>
-                        <li class="list-none text-[15px] flex items-center gap-2.5 p-2 hover:text-[#003bbb] max-[480px]:text-[14px]"><img src="src/img/NL.png" alt="Nederlands" class="w-8 border-2 border-[#003bbb] rounded-full max-[480px]:w-6">Nederlands</li>
+                        <li class="list-none text-[15px] flex items-center gap-2.5 p-2 hover:text-[#003bbb] max-[480px]:text-[14px]"><img src="src/img/GER.png" alt="" class="w-8 h-8 shrink-0 object-cover border-2 border-[#003bbb] rounded-full">Deutsch</li>
+                        <li class="list-none text-[15px] flex items-center gap-2.5 p-2 hover:text-[#003bbb] max-[480px]:text-[14px]"><img src="src/img/SPA.png" alt="" class="w-8 h-8 shrink-0 object-cover border-2 border-[#003bbb] rounded-full">Español</li>
+                        <li class="list-none text-[15px] flex items-center gap-2.5 p-2 hover:text-[#003bbb] max-[480px]:text-[14px]"><img src="src/img/FRA.png" alt="" class="w-8 h-8 shrink-0 object-cover border-2 border-[#003bbb] rounded-full">Français</li>
+                        <li class="list-none text-[15px] flex items-center gap-2.5 p-2 hover:text-[#003bbb] max-[480px]:text-[14px]"><img src="src/img/ITA.png" alt="" class="w-8 h-8 shrink-0 object-cover border-2 border-[#003bbb] rounded-full">Italiano</li>
+                        <li class="list-none text-[15px] flex items-center gap-2.5 p-2 hover:text-[#003bbb] max-[480px]:text-[14px]"><img src="src/img/JPN.png" alt="" class="w-8 h-8 shrink-0 object-cover border-2 border-[#003bbb] rounded-full">日本語</li>
+                        <li class="list-none text-[15px] flex items-center gap-2.5 p-2 hover:text-[#003bbb] max-[480px]:text-[14px]"><img src="src/img/NL.png" alt="" class="w-8 h-8 shrink-0 object-cover border-2 border-[#003bbb] rounded-full">Nederlands</li>
                     </ul>
                 </div>
 
-                <img src="src/img/uk.png" alt="UK" class="w-[24px] h-[24px] -ml-[15px] border-2 border-[#003bbb] rounded-full">
-                <img src="src/img/us.png" alt="USA" class="w-[24px] h-[24px] border-2 border-[#003bbb] rounded-full ml-1">
-                <h3 class="group/h3 my-[5px] mx-2.5 text-[15px] font-medium hover:text-[#003bbb] cursor-pointer">English<i class="fa fa-angle-down ml-1 transition-transform duration-300 group-hover/h3:rotate-180"></i></h3>
+                <img src="src/img/UK.png" alt="UK" class="w-6 h-6 shrink-0 object-cover -ml-[15px] border-2 border-[#003bbb] rounded-full">
+                <img src="src/img/US.png" alt="USA" class="w-6 h-6 shrink-0 object-cover border-2 border-[#003bbb] rounded-full ml-1">
+                <button type="button" class="language-toggle my-[5px] mx-2.5 flex items-center bg-transparent border-0 p-0 text-[15px] font-medium hover:text-[#003bbb] cursor-pointer" aria-expanded="false" aria-controls="languageMenu">
+                    English<i class="language-arrow fa fa-angle-down ml-1 transition-transform duration-300"></i>
+                </button>
             </div>
         </div>
 
@@ -1179,14 +1181,7 @@
             </ul>
         </div>
     </section>
-    <!-- ===================================================================== -->
-    <!-- SECTION: Online Portfolio FAQ Accordion Script (Member 4 - Ani)       -->
-    <!-- HTML Section: <section> "Online Portfolio FAQ" (lines ~789-902)       -->
-    <!-- Functionality: Smoothly toggles answers with slide animation & chevron rotation -->
-    <!-- ===================================================================== -->
-   
-        // Smooth Animated Accordion for Ani's FAQ Items
-      <script>
+    <script>
             const toggleBtn = document.getElementById('toggleBtn');
             const toggleContent = document.getElementById('toggleContent');
             const arrowIcon = document.getElementById('arrowIcon');
@@ -1367,6 +1362,32 @@
                     toggle.setAttribute('aria-expanded', 'true');
                 }
             });
+        });
+
+        const languageDropdown = document.querySelector('.languages');
+        const languageToggle = languageDropdown?.querySelector('.language-toggle');
+        const languageMenu = languageDropdown?.querySelector('.selection');
+        const languageArrow = languageToggle?.querySelector('.language-arrow');
+
+        function setLanguageMenuOpen(isOpen) {
+            languageMenu?.classList.toggle('hidden', !isOpen);
+            languageToggle?.setAttribute('aria-expanded', String(isOpen));
+            languageMenu?.setAttribute('aria-hidden', String(!isOpen));
+            languageArrow?.classList.toggle('rotate-180', isOpen);
+        }
+
+        languageToggle?.addEventListener('click', () => {
+            setLanguageMenuOpen(languageToggle.getAttribute('aria-expanded') !== 'true');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (languageDropdown && !languageDropdown.contains(event.target)) {
+                setLanguageMenuOpen(false);
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') setLanguageMenuOpen(false);
         });
 
         // =====================================================================
