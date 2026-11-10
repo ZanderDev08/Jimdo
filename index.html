@@ -4,38 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Create an Online Portfolio With Jimdo</title>
-    <link rel="icon" type="image/png" href="src/img/Jimdo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+   <title>Create an Online Portfolio With Jimdo</title>
+<link rel="icon" type="image/png" href="src/img/Jimdo.png">
+
+<!-- Euclid Circular A -->
+<link href="https://fonts.cdnfonts.com/css/euclid-circular-a" rel="stylesheet">
+
+<!-- Google Fonts: Other font families -->
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:wght@100..900&family=Poppins:wght@100..900&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
     <!-- ===================================================================== -->
     <!-- SECTION: Tailwind CSS Custom Configuration                            -->
     <!-- Customizes font families (Geologica) and Jimdo brand color palette     -->
     <!-- ===================================================================== -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        geologica: ['"Geologica"', 'sans-serif'],
-                        sans: ['"Geologica"', 'sans-serif'],
-                        poppins: ['"Poppins"', 'sans-serif']
-                    },
-                    colors: {
-                        jimdo: {
-                            navy: '#001453',
-                            blue: '#004ced',
-                            darkBlue: '#003bbb',
-                            bg: '#f8f8f8',
-                        }
-                    }
+   <script>
+tailwind.config = {
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: [
+                    '"Euclid Circular A"',
+                    '-apple-system',
+                    'BlinkMacSystemFont',
+                    'Segoe UI',
+                    'Roboto',
+                    'Helvetica Neue',
+                    'Helvetica',
+                    'Arial',
+                    'sans-serif'
+                ],
+                euclid: ['"Euclid Circular A"', 'sans-serif'],
+                inter: ['"Inter"', 'sans-serif'],
+                geologica: ['"Geologica"', 'sans-serif'],
+                poppins: ['"Poppins"', 'sans-serif'],
+                montserrat: ['"Montserrat"', 'sans-serif'],
+            },
+            colors: {
+                jimdo: {
+                    navy: '#001453',
+                    blue: '#004ced',
+                    darkBlue: '#003bbb',
+                    bg: '#f8f8f8',
                 }
             }
         }
-    </script>
+    }
+}
+</script>
     <link rel="stylesheet" href="src/output.css">
     <style>
         #hamburger > span {
@@ -73,7 +93,7 @@
     <div class=" pt--0.5 hero bg-[#f8f8f8] w-full min-h-dvh flex justify-center relative max-lg:min-h-[70dvh] max-md:h-[120dvh] max-[480px]:min-h-[80dvh] max-[480px]:h-[120dvh]">
         <nav class="fixed w-full h-[90px] flex justify-between items-center shadow-[0_2px_4px_rgba(0,0,0,0.08)] bg-white z-[1000] px-[100px] lg:max-xl:px-5 max-md:px-5 max-md:h-[80px]">
 
-            <a href="#home"><img src="src/img/Logo.png" alt="Jimdo Logo" class="logo w-[103px] absolute left-[10%] top-[30%] lg:max-xl:w-[70px] lg:max-xl:left-[2%] max-md:w-[70px] max-md:left-[5%]"></a>
+            <a href="#home"><img src="src/img/Logo.png" alt="Jimdo Logo" class="logo w-[103px] absolute left-[10%] top-[30%] lg:max-xl:w-[100px] lg:max-xl:left-[2%] max-md:w-[103px] max-md:left-[3%] max-md:top-[25%] "></a>
 
             <button type="button" class="hamburger hidden max-lg:flex flex-col cursor-pointer z-[1001] absolute right-5 max-lg:top-1/2 max-lg:-translate-y-1/2 border-0 bg-transparent p-0" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span class="w-[25px] h-[3px] bg-[#001453] my-[2.4px]"></span>
@@ -347,8 +367,8 @@
                     </li>
 
                     <!-- Start for free button -->
-                    <li class="list-none inline-block p-1.5 relative">
-                        <a href="#" class="btn inline-block rounded-[8px] bg-[#004ced] hover:bg-[#003bbb] text-white no-underline font-semibold text-[15px] text-center py-[14px] px-[23px] transition-colors">
+                    <li class="list-none inline-block p-1.5 relative ">
+                        <a href="#" class="btn inline-block rounded-[8px] bg-[#004ced] hover:bg-[#003bbb] text-white no-underline font-semibold text-[15px] text-center py-[14px] px-[23px] transition-colors md:max-xl:flex">
                             Start for free
                         </a>
                     </li>
@@ -477,7 +497,8 @@
 
                 <!-- Heading -->
                 <h1 class="mb-4 mr-5 text-left text-[44px] 
-                        font-poppins font-normal
+                        font-euclid font-455
+                        text-very-dark 
                         tracking-normal
                         max-lg:text-[38px]
                         max-md:text-[34px]
@@ -626,11 +647,7 @@
                             transition-colors duration-300
                             hover:bg-[#003bbb]
                             max-sm:py-4 max-sm:text-[16px]">
-
-
                         Start Now
-
-
                     </a>
 
 
