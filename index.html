@@ -377,27 +377,37 @@ tailwind.config = {
         </nav>
 
         <!-- Mobile Menu Overlay -->
-        <div class="mobile-menu-overlay hidden fixed top-0 left-0 w-full h-full bg-black/50 z-[998] opacity-0 transition-opacity duration-300 [&.active]:max-lg:block [&.active]:opacity-100" id="mobileMenuOverlay"></div>
+        <div class="mobile-menu-overlay hidden fixed top-0 left-0 w-full h-full bg-black/50 z-[1001] opacity-0 transition-opacity duration-300 [&.active]:max-lg:block [&.active]:opacity-100" id="mobileMenuOverlay">
+            <button type="button" class="fixed top-4 right-0 w-[60px] max-sm:w-[52px] h-12 flex items-center justify-center text-white bg-transparent border-0 cursor-pointer p-0 z-[1003]" id="mobileMenuClose" aria-label="Close menu">
+            </button>
+        </div>
 
         <!-- Mobile Menu Container -->
-        <div class="mobile-menu fixed top-0 left-0 w-5/6 h-dvh bg-white z-[999] overflow-y-auto transition-transform duration-300 shadow-[2px_0_10px_rgba(0,0,0,0.1)] -translate-x-full [&.active]:translate-x-0" id="mobileMenu">
-            <!-- Header section with Close Button at the top right -->
-            <div class="flex items-center justify-between px-6 pt-6 pb-2">
-                <button type="button" class="w-10 h-10 flex items-center justify-center text-[#001453] bg-transparent border-0 cursor-pointer p-0 ml-auto" id="mobileMenuClose" aria-label="Close menu">
-                    <svg width="24" height="24" class="w-6 h-6 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
+        <div class="mobile-menu fixed top-0 left-0 w-[calc(100%-60px)] max-sm:w-[calc(100%-52px)] h-svh bg-white z-[1002] flex flex-col transition-transform duration-300 shadow-[2px_0_10px_rgba(0,0,0,0.15)] -translate-x-full [&.active]:translate-x-0 lg:hidden" id="mobileMenu" tabindex="-1">
+            <!-- Header section with Jimdo Logo -->
+            <div class="flex items-center justify-between px-6 py-5 shrink-0 bg-white">
+                <a href="#home" class="inline-block">
+                    <img src="src/img/Logo.png" alt="Jimdo Logo" class="w-[95px] block">
+                </a>
             </div>
 
-            <!-- Content Area -->
-            <div class="mobile-menu-content px-6 pb-6 pt-2">
-                <ul class="flex flex-col items-start w-full m-0 p-0">
+            <!-- Submenu Back Header ("Main menu <") -->
+            <button type="button" id="mobileSubmenuBack" class="hidden w-full bg-[#f8f8f8] px-6 py-4 items-center justify-between text-[#001453] font-semibold text-[16px] border-0 cursor-pointer text-left shrink-0 hover:bg-[#efefef] transition-colors">
+                <span>Main menu</span>
+                <svg aria-hidden="true" width="16" height="16" class="w-4 h-4 stroke-[2.5] text-[#001453]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+
+            <!-- Scrollable Content Area -->
+            <div class="mobile-menu-content flex-1 overflow-y-auto px-6 py-2">
+                <!-- Main Menu List -->
+                <ul id="mobileMainMenuList" class="flex flex-col items-start w-full m-0 p-0">
                     <!-- Website -->
                     <li class="w-full border-b border-[#f0f0f0] py-[18px] px-0 list-none text-[18px] font-semibold text-[#001453] relative">
-                        <a href="#" class="flex justify-between items-center w-full no-underline text-[#001453]">
+                        <a href="#" class="menu-toggle flex justify-between items-center w-full no-underline text-[#001453]" data-target="websiteSubmenu" aria-expanded="false" aria-controls="websiteSubmenu">
                             <span>Website</span>
-                            <svg width="16" height="16" class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg aria-hidden="true" width="16" height="16" class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                             </svg>
                         </a>
@@ -405,9 +415,9 @@ tailwind.config = {
 
                     <!-- Online Store -->
                     <li class="w-full border-b border-[#f0f0f0] py-[18px] px-0 list-none text-[18px] font-semibold text-[#001453] relative">
-                        <a href="#" class="flex justify-between items-center w-full no-underline text-[#001453]">
+                        <a href="#" class="menu-toggle flex justify-between items-center w-full no-underline text-[#001453]" data-target="storeSubmenu" aria-expanded="false" aria-controls="storeSubmenu">
                             <span>Online Store</span>
-                            <svg width="16" height="16" class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg aria-hidden="true" width="16" height="16" class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                             </svg>
                         </a>
@@ -415,9 +425,9 @@ tailwind.config = {
 
                     <!-- Solutions -->
                     <li class="w-full border-b border-[#f0f0f0] py-[18px] px-0 list-none text-[18px] font-semibold text-[#001453] relative">
-                        <a href="#" class="flex justify-between items-center w-full no-underline text-[#001453]">
+                        <a href="#" class="menu-toggle flex justify-between items-center w-full no-underline text-[#001453]" data-target="solutionsSubmenu" aria-expanded="false" aria-controls="solutionsSubmenu">
                             <span>Solutions</span>
-                            <svg width="16" height="16" class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg aria-hidden="true" width="16" height="16" class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                             </svg>
                         </a>
@@ -436,40 +446,257 @@ tailwind.config = {
                             <span>Community</span>
                         </a>
                     </li>
-                     
-                          <!--space here-->
-                          <li class="mt-4 w-full   py-[50px] ..."></li>
+
+                    <!-- Spacer -->
+                    <li class="mt-4 w-full py-[30px] list-none"></li>
 
                     <!-- Blog -->
-                    <li class="w-full  border-[#f0f0f0] py-[18px] px-0 list-none text-[18px] font-semibold text-[#001453] relative">
-                        <a href="#" class="flex justify-between items-center w-full no-underline text-[#001453]">
+                    <li class="w-full border-b border-[#f0f0f0] py-[18px] px-0 list-none text-[18px] font-semibold text-[#001453] relative">
+                        <a href="#" class="menu-toggle flex justify-between items-center w-full no-underline text-[#001453]" data-target="blogSubmenu" aria-expanded="false" aria-controls="blogSubmenu">
                             <span>Blog</span>
-                            <svg width="16" height="16" class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg aria-hidden="true" width="16" height="16" class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                             </svg>
                         </a>
                     </li>
 
                     <!-- Help -->
-                    <li class="w-full  border-[#f0f0f0] py-[18px] px-0 list-none text-[18px] font-semibold text-[#001453] relative">
-                        <a href="#" class="flex justify-between items-center w-full no-underline text-[#001453]">
+                    <li class="w-full py-[18px] px-0 list-none text-[18px] font-semibold text-[#001453] relative">
+                        <a href="#" class="menu-toggle flex justify-between items-center w-full no-underline text-[#001453]" data-target="helpSubmenu" aria-expanded="false" aria-controls="helpSubmenu">
                             <span>Help</span>
-                            <svg width="16" height="16" class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg aria-hidden="true" width="16" height="16" class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                             </svg>
                         </a>
                     </li>
                 </ul>
 
-                <!-- Action Buttons -->
-                <div class="flex flex-col gap-3 mt-8">
-                    <a href="#" class="w-full rounded-[8px] bg-[#004ced] hover:bg-[#003bbb] text-white no-underline font-semibold text-[16px] text-center py-[14px] transition-colors">
-                        Start for free
-                    </a>
-                    <a href="#" class="w-full rounded-[8px] bg-white border border-[#001453] text-[#001453] no-underline font-semibold text-[16px] text-center py-[14px] transition-colors hover:bg-gray-50">
-                        Log In
-                    </a>
+                <!-- Submenu: Website -->
+                <div id="websiteSubmenu" class="mobile-submenu hidden py-4">
+                    <div class="mb-7">
+                        <h2 class="text-[12px] font-normal text-[#6d758d] uppercase tracking-[0.4px] mb-3">OUR WEBSITE BUILDER</h2>
+                        <ul class="list-none m-0 p-0 flex flex-col gap-1">
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Create a website</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Pricing and plans</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Website examples</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Your own domain</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Founder Stories</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-7">
+                        <h2 class="text-[12px] font-normal text-[#6d758d] uppercase tracking-[0.4px] mb-3">USEFUL TOOLS FOR YOUR WEBSITE</h2>
+                        <ul class="list-none m-0 p-0 flex flex-col gap-2">
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Warning-proof legal texts</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">For privacy policy &amp; Co</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Business listings</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">For Google, Facebook &amp; Co.</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Online booking</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Directly via your website</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Social media integration</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Promote on Facebook &amp; Instagram</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-4">
+                        <h2 class="text-[12px] font-normal text-[#004ced] uppercase tracking-[0.4px] mb-3">FOR YOUR INDUSTRY</h2>
+                        <ul class="list-none m-0 p-0 flex flex-col gap-1">
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Online Portfolio</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Restaurant websites</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Coaches</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Musicians &amp; Bands</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Real estate agents</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Doctors &amp; practices</a></li>
+                        </ul>
+                    </div>
                 </div>
+
+                <!-- Submenu: Online Store -->
+                <div id="storeSubmenu" class="mobile-submenu hidden py-4">
+                    <div class="mb-7">
+                        <h2 class="text-[12px] font-normal text-[#6d758d] uppercase tracking-[0.4px] mb-3">OUR ONLINE STORE BUILDER</h2>
+                        <ul class="list-none m-0 p-0 flex flex-col gap-1">
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Create an online store</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Pricing and Plans</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Online store examples</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Your own domain</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Founder Stories</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-4">
+                        <h2 class="text-[12px] font-normal text-[#6d758d] uppercase tracking-[0.4px] mb-3">USEFUL TOOLS FOR YOUR STORE</h2>
+                        <ul class="list-none m-0 p-0 flex flex-col gap-2">
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Warning-proof legal texts</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">For general terms and conditions, privacy policy &amp; Co</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Business listings</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">For Google, Facebook &amp; Co.</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Social Media Integration</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Sell on Facebook &amp; Instagram</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Submenu: Solutions -->
+                <div id="solutionsSubmenu" class="mobile-submenu hidden py-4">
+                    <div class="mb-7">
+                        <h2 class="text-[12px] font-normal text-[#6d758d] uppercase tracking-[0.4px] mb-3">GET FOUND</h2>
+                        <ul class="list-none m-0 p-0 flex flex-col gap-2">
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Jimdo Local</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Google Business, Facebook &amp; Co</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Social Media Integration</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Promote your Facebook and Instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Your Own Domain</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Your own Domain</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-7">
+                        <h2 class="text-[12px] font-normal text-[#6d758d] uppercase tracking-[0.4px] mb-3">GET BOOKED</h2>
+                        <ul class="list-none m-0 p-0 flex flex-col gap-2">
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Online Bookings</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Take Appointments via your Website</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Smart Forms</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Create a contact form for any Occasion</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-4">
+                        <h2 class="text-[12px] font-normal text-[#6d758d] uppercase tracking-[0.4px] mb-3">GET PAID</h2>
+                        <ul class="list-none m-0 p-0 flex flex-col gap-2">
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Payment links</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Share a link, get paid</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Sell on Facebook &amp; Instagram</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Reach buyers where they scroll</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Submenu: Blog -->
+                <div id="blogSubmenu" class="mobile-submenu hidden py-4">
+                    <div class="mb-4">
+                        <h2 class="text-[12px] font-normal text-[#6d758d] uppercase tracking-[0.4px] mb-3">EXPERTISE, TIPS AND INSPIRATION</h2>
+                        <ul class="list-none m-0 p-0 flex flex-col gap-2">
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">All Topics</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Blog &amp; Knowledge guide overview</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Website Tips</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Get the most out of your website</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Success stories</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Inspiring stories by real Jimdo customers</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Jimdo Updates</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">What's new at Jimdo?</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Founder Stories</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Inspiring stories by real Jimdo customers</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Submenu: Help -->
+                <div id="helpSubmenu" class="mobile-submenu hidden py-4">
+                    <div class="mb-4">
+                        <h2 class="text-[12px] font-normal text-[#6d758d] uppercase tracking-[0.4px] mb-3">HOW CAN WE HELP YOU?</h2>
+                        <ul class="list-none m-0 p-0 flex flex-col gap-2">
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Help center</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Find answers to your questions</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Contact support</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Our support team is here for you</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sticky Bottom Action Buttons -->
+            <div class="mt-auto shrink-0 bg-white px-6 py-4 shadow-[0_-4px_12px_rgba(0,0,0,0.06)] flex flex-col gap-2.5">
+                <a href="#" class="w-full rounded-[4px] bg-[#004ced] hover:bg-[#003bbb] text-white no-underline font-semibold text-[15px] text-center py-[12px] transition-colors">
+                    Start for free
+                </a>
+                <a href="#" class="w-full rounded-[4px] bg-white border border-[#d6d9e0] text-[#004ced] no-underline font-semibold text-[15px] text-center py-[12px] transition-colors hover:bg-gray-50">
+                    Log In
+                </a>
             </div>
         </div>
 
@@ -1460,43 +1687,84 @@ document.addEventListener('DOMContentLoaded', function () {
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 closeAllDropdowns();
+                if (mobileMenu?.classList.contains('active')) {
+                    closeMobileMenu();
+                }
             }
         });
 
-        // Mobile Hamburger Menu & Submenu Toggles
+        // Mobile Hamburger Menu & Drill-down Submenu Toggles
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobileMenu');
         const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+        const mobileMainMenuList = document.getElementById('mobileMainMenuList');
+        const mobileSubmenuBack = document.getElementById('mobileSubmenuBack');
+        const mobileSubmenus = document.querySelectorAll('.mobile-submenu');
+        const menuToggles = document.querySelectorAll('.menu-toggle');
+
+        function showMobileMainMenu() {
+            mobileSubmenus.forEach((submenu) => submenu.classList.add('hidden'));
+            menuToggles.forEach((toggle) => toggle.setAttribute('aria-expanded', 'false'));
+            mobileSubmenuBack?.classList.add('hidden');
+            mobileSubmenuBack?.classList.remove('flex');
+            mobileMainMenuList?.classList.remove('hidden');
+            mobileMenu?.querySelector('.mobile-menu-content')?.scrollTo({ top: 0 });
+        }
+
+        function openMobileMenu() {
+            hamburger?.classList.add('active');
+            hamburger?.setAttribute('aria-expanded', 'true');
+            mobileMenu?.classList.add('active');
+            mobileMenuOverlay?.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            mobileMenu?.focus();
+        }
+
+        function closeMobileMenu() {
+            hamburger?.classList.remove('active');
+            hamburger?.setAttribute('aria-expanded', 'false');
+            mobileMenu?.classList.remove('active');
+            mobileMenuOverlay?.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            showMobileMainMenu();
+        }
 
         function toggleMobileMenu() {
-            const isActive = hamburger?.classList.toggle('active');
-            hamburger?.setAttribute('aria-expanded', String(Boolean(isActive)));
-            mobileMenu?.classList.toggle('active');
-            mobileMenuOverlay?.classList.toggle('active');
-            document.body.style.overflow = isActive ? 'hidden' : 'auto';
+            if (mobileMenu?.classList.contains('active')) {
+                closeMobileMenu();
+            } else {
+                openMobileMenu();
+            }
         }
 
         hamburger?.addEventListener('click', toggleMobileMenu);
-        mobileMenuOverlay?.addEventListener('click', toggleMobileMenu);
+        mobileMenuOverlay?.addEventListener('click', closeMobileMenu);
+        mobileMenuClose?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeMobileMenu();
+        });
 
-        const menuToggles = document.querySelectorAll('.menu-toggle');
         menuToggles.forEach((toggle) => {
             toggle.addEventListener('click', (e) => {
                 e.preventDefault();
                 const targetId = toggle.getAttribute('data-target');
-                const submenu = document.getElementById(targetId);
+                const submenu = targetId ? document.getElementById(targetId) : null;
+                if (!submenu) return;
 
-                document.querySelectorAll('.mobile-submenu').forEach(menu => {
-                    if (menu.id !== targetId) {
-                        menu.classList.remove('active');
-                        menu.previousElementSibling?.classList.remove('expanded');
-                    }
-                });
+                mobileMainMenuList?.classList.add('hidden');
+                mobileSubmenus.forEach((menu) => menu.classList.add('hidden'));
+                menuToggles.forEach((t) => t.setAttribute('aria-expanded', 'false'));
 
-                toggle.classList.toggle('expanded');
-                submenu?.classList.toggle('active');
+                submenu.classList.remove('hidden');
+                toggle.setAttribute('aria-expanded', 'true');
+                mobileSubmenuBack?.classList.remove('hidden');
+                mobileSubmenuBack?.classList.add('flex');
+                mobileMenu?.querySelector('.mobile-menu-content')?.scrollTo({ top: 0 });
             });
         });
+
+        mobileSubmenuBack?.addEventListener('click', showMobileMainMenu);
 
         // =====================================================================
         // Footer Accordion Dropdown on Mobile (Products, About us, Resources)
