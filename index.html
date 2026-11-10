@@ -63,6 +63,14 @@ tailwind.config = {
             transition: transform 300ms ease, opacity 300ms ease;
         }
 
+        #hamburger.active > span {
+            background-color: #fff;
+        }
+
+        nav:has(#hamburger.active) {
+            background-color: transparent;
+        }
+
         #hamburger.active > span:first-child {
             transform: translateY(7.8px) rotate(-45deg);
         }
@@ -381,7 +389,7 @@ tailwind.config = {
         </nav>
 
         <!-- Mobile Menu Overlay -->
-        <div class="mobile-menu-overlay hidden fixed top-0 left-0 w-full h-full bg-black/50 z-[1001] opacity-0 transition-opacity duration-300 [&.active]:max-lg:block [&.active]:opacity-100" id="mobileMenuOverlay">
+        <div class="mobile-menu-overlay hidden fixed top-0 left-0 w-full h-full bg-black/60 z-[999] opacity-0 transition-opacity duration-300 [&.active]:max-lg:block [&.active]:opacity-100" id="mobileMenuOverlay">
             <button type="button" class="fixed top-4 right-0 w-[60px] max-sm:w-[52px] h-12 flex items-center justify-center text-white bg-transparent border-0 cursor-pointer p-0 z-[1003]" id="mobileMenuClose" aria-label="Close menu">
             </button>
         </div>
