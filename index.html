@@ -1652,56 +1652,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     <script>
-
-
-document.addEventListener('DOMContentLoaded', function () {
-
-
-    document.querySelectorAll('.faq-item').forEach(item => {
-
-
-        const question = item.querySelector('.faq-question');
-        const answer = item.querySelector('.faq-answer');
-        const icon = item.querySelector('.faq-icon');
-
-
-        question.addEventListener('click', function () {
-
-
-            const isOpen = question.getAttribute('aria-expanded') === 'true';
-
-
-            if (isOpen) {
-
-
-                question.setAttribute('aria-expanded', 'false');
-                answer.classList.add('hidden');
-                icon.style.transform = 'rotate(0deg)';
-
-
-            } else {
-
-
-                question.setAttribute('aria-expanded', 'true');
-                answer.classList.remove('hidden');
-                icon.style.transform = 'rotate(180deg)';
-
-
-            }
-
-
-        });
-
-
-    });
-
-
-});
-</script>
-
-
-
-    <script>
         // =====================================================================
         // ZANDER JS: Desktop Nav Dropdowns & Mobile Hamburger Menu
         // =====================================================================
