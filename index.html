@@ -85,7 +85,7 @@ tailwind.config = {
     </style>
 </head>
 
-<body class="overflow-x-hidden max-w-full min-w-full mx-auto  text-black">
+<body class="overflow-x-hidden max-w-full min-w-full mx-auto font-geologica text-black">
 
 
     <!-- ===================================================================== -->
@@ -908,7 +908,7 @@ tailwind.config = {
 
 
             <!-- RIGHT SIDE: HERO IMAGE -->
-            <div class="w-full lg:w-1/2 pt-10 mt-7">
+            <div class="w-full lg:w-1/2">
 
 
                 <img
@@ -1050,10 +1050,10 @@ tailwind.config = {
                         audience. And you can do it in 4 easy steps.
                     </p>
 
-                    <ol class="list-none space-y-4 mt-6">
+                    <ol class="list-none space-y-2 mt-6">
                         <li class="flex gap-4"><span class="text-blue-600 font-medium">1.</span>
                             <span class="text-black font-extralight">
-                            Sign up or log in with social media. You’ll also be able to choose a domain (website address) for your   portfolio site.
+                            Sign up or log in with social media. You’ll also be able to choose a domain (website address) for your portfolio site.
                             </span>
                         </li>
                         <li class="flex gap-4"><span class="text-blue-600 font-medium">2.</span>
@@ -1174,6 +1174,7 @@ tailwind.config = {
 </section>
 
     <!-- ==================== Gallery  ==================== -->
+   <!-- ==================== Gallery ==================== -->
 <section class="design w-full bg-white py-16 sm:py-20 relative text-center overflow-hidden select-none px-9">
     <div class="max-w-5xl mx-auto px-4">
         <h2 class="text-3xl sm:text-[38px] lg:text-[40px] font-light text-black tracking-tight leading-tight">
@@ -1437,7 +1438,7 @@ tailwind.config = {
             </p>
         </header><br>
 
-        <div class="min-[992px]:grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14 text-center max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14 text-center max-w-6xl mx-auto">
             <article class="flex flex-col items-center">
                 <h3 class="text-xl sm:text-2xl font-normal text-[#000000]">Freelancer</h3>
                 <p class="mt-4 text-base sm:text-base font-extralight leading-relaxed text-[#000000] lg:w-full max-w-sm">
@@ -1473,13 +1474,13 @@ tailwind.config = {
     <!-- ===================================================================== -->
     <!--  EDMARK: Website Footer Section                                       -->
     <!-- ===================================================================== -->
-    <section class="footer bg-white w-full max-w-full min-h-[50dvh] flex flex-wrap relative py-[50px] px-9 lg:px-[100px] xl:px-[200px] max-md:py-[30px] max-md:px-9 max-md:gap-6 max-md:h-auto max-[480px]:p-5 max-[480px]:flex-col max-[480px]:gap-8">
-        <div class="foot-items w-full md:w-[30%] flex flex-col max-md:order-2 max-md:p-0 max-md:text-center max-[480px]:gap-4" id="footBrand">
-            <div class="symbols w-full pb-6 md:pb-[50px] max-md:pb-16">
-                <img src="src/img/logo.png" alt="Jimdo Logo" class="w-[130px] max-md:w-[120px] inline-block">
+    <section class="footer bg-white w-full max-w-full min-h-[50dvh] flex flex-wrap relative py-[50px] px-9 lg:px-[100px] xl:px-[200px] max-[991px]:flex-col max-[991px]:py-[30px] max-[991px]:px-9 max-[991px]:gap-6 max-[991px]:h-auto max-[480px]:p-5 max-[480px]:gap-8">
+        <div class="foot-items w-full min-[992px]:w-[30%] flex flex-col max-[991px]:order-2 max-[991px]:p-0 max-[991px]:text-center max-[480px]:gap-4" id="footBrand">
+            <div class="symbols w-full pb-6 min-[992px]:pb-[50px] max-[991px]:pb-16">
+                <img src="src/img/logo.png" alt="Jimdo Logo" class="w-[130px] max-[991px]:w-[120px] inline-block">
             </div>
 
-            <div class="icons flex max-md:justify-center">
+            <div class="icons flex max-[991px]:justify-center">
                 <i class="fa-brands fa-facebook w-[50px] text-[#001453] text-[28px] transition-colors duration-300 hover:text-[#004ced]"></i>
                 <i class="fa-brands fa-instagram w-[50px] text-[#001453] text-[28px] transition-colors duration-300 hover:text-[#004ced]"></i>
                 <i class="fa-brands fa-tiktok w-[50px] text-[#001453] text-[28px] transition-colors duration-300 hover:text-[#004ced]"></i>
@@ -1487,15 +1488,15 @@ tailwind.config = {
             </div>
         </div>
 
-        <div class="fdesc w-full md:w-1/2 flex justify-start gap-8 lg:gap-20 max-md:order-1 max-md:w-[85%] max-md:mx-auto max-md:gap-0 max-md:p-0 max-md:flex-col max-md:divide-y max-md:divide-gray-300 max-md:rounded-md max-md:border max-md:border-gray-300 max-md:overflow-hidden">
+        <div class="fdesc w-full min-[992px]:w-1/2 flex justify-start gap-8 lg:gap-20 max-[991px]:order-1 max-[991px]:w-[85%] max-[991px]:mx-auto max-[991px]:gap-0 max-[991px]:p-0 max-[991px]:flex-col max-[991px]:divide-y max-[991px]:divide-gray-300 max-[991px]:rounded-md max-[991px]:border max-[991px]:border-gray-300 max-[991px]:overflow-hidden">
             <!-- Products Column / Dropdown on Mobile -->
             <div class="foot-text footer-dropdown w-full flex flex-col justify-start" id="footProducts">
-                <button type="button" class="footer-dropdown-toggle w-full flex items-center justify-between cursor-pointer select-none py-3 text-left bg-transparent border-none p-0 max-md:py-3 max-md:px-3 max-md:border-b max-md:border-solid max-md:border-gray-200 focus:outline-none" aria-expanded="false">
-                    <span class="pl-2 font-[450] text-[16px] text-[#6d6d6d] max-md:text-black">Products</span>
-                    <i class="footer-arrow fa fa-angle-down hidden max-md:block text-gray-700 transition-transform  mr-2"></i>
+                <button type="button" class="footer-dropdown-toggle w-full flex items-center justify-between cursor-pointer select-none py-3 text-left bg-transparent border-none p-0 max-[991px]:py-3 max-[991px]:px-3 max-[991px]:border-b max-[991px]:border-solid max-[991px]:border-gray-200 focus:outline-none" aria-expanded="false">
+                    <span class="pl-2 font-[450] text-[16px] text-[#6d6d6d] max-[991px]:text-black">Products</span>
+                    <i class="footer-arrow fa fa-angle-down hidden max-[991px]:block text-gray-700 transition-transform  mr-2"></i>
                 </button>
 
-                <ul class="footer-dropdown-menu p-0 max-md:max-h-0 max-md:overflow-hidden transition-all duration-300 ease-in-out [&.active]:max-md:max-h-[500px] [&.active]:max-md:py-2">
+                <ul class="footer-dropdown-menu p-0 max-[991px]:max-h-0 max-[991px]:overflow-hidden transition-all duration-300 ease-in-out [&.active]:max-[991px]:max-h-[500px] [&.active]:max-[991px]:py-2">
                     <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Website</a></li>
                     <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Online Store</a></li>
                     <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Domain</a></li>
@@ -1504,12 +1505,12 @@ tailwind.config = {
 
             <!-- About us Column / Dropdown on Mobile -->
             <div class="foot-text footer-dropdown w-full flex flex-col justify-start" id="footAbout">
-                <button type="button" class="footer-dropdown-toggle w-full flex items-center justify-between cursor-pointer select-none py-3 text-left bg-transparent border-none p-0 max-md:py-3 max-md:px-3 max-md:border-b max-md:border-solid max-md:border-gray-200 focus:outline-none" aria-expanded="false">
-                    <span class="pl-2 font-[450] text-[16px] text-[#6d6d6d] max-md:text-black">About us</span>
-                    <i class="footer-arrow fa fa-angle-down hidden max-md:block text-gray-700 transition-transform duration-300 mr-2"></i>
+                <button type="button" class="footer-dropdown-toggle w-full flex items-center justify-between cursor-pointer select-none py-3 text-left bg-transparent border-none p-0 max-[991px]:py-3 max-[991px]:px-3 max-[991px]:border-b max-[991px]:border-solid max-[991px]:border-gray-200 focus:outline-none" aria-expanded="false">
+                    <span class="pl-2 font-[450] text-[16px] text-[#6d6d6d] max-[991px]:text-black">About us</span>
+                    <i class="footer-arrow fa fa-angle-down hidden max-[991px]:block text-gray-700 transition-transform duration-300 mr-2"></i>
                 </button>
 
-                <ul class="footer-dropdown-menu p-0 max-md:max-h-0 max-md:overflow-hidden transition-all duration-300 ease-in-out [&.active]:max-md:max-h-[500px] [&.active]:max-md:py-2">
+                <ul class="footer-dropdown-menu p-0 max-[991px]:max-h-0 max-[991px]:overflow-hidden transition-all duration-300 ease-in-out [&.active]:max-[991px]:max-h-[500px] [&.active]:max-[991px]:py-2">
                     <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">About Jimdo</a></li>
                     <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Careers</a></li>
                     <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Press</a></li>
@@ -1522,12 +1523,12 @@ tailwind.config = {
 
             <!-- Resources Column / Dropdown on Mobile -->
             <div class="foot-text footer-dropdown w-full flex flex-col justify-start" id="footResources">
-                <button type="button" class="footer-dropdown-toggle w-full flex items-center justify-between cursor-pointer select-none py-3 text-left bg-transparent border-none p-0 max-md:py-3 max-md:px-3 max-md:border-b max-md:border-solid max-md:border-gray-200 focus:outline-none" aria-expanded="false">
-                    <span class="pl-2 font-[450] text-[16px] text-[#6d6d6d] max-md:text-black">Resources</span>
-                    <i class="footer-arrow fa fa-angle-down hidden max-md:block text-gray-700 transition-transform duration-90 mr-2"></i>
+                <button type="button" class="footer-dropdown-toggle w-full flex items-center justify-between cursor-pointer select-none py-3 text-left bg-transparent border-none p-0 max-[991px]:py-3 max-[991px]:px-3 max-[991px]:border-b max-[991px]:border-solid max-[991px]:border-gray-200 focus:outline-none" aria-expanded="false">
+                    <span class="pl-2 font-[450] text-[16px] text-[#6d6d6d] max-[991px]:text-black">Resources</span>
+                    <i class="footer-arrow fa fa-angle-down hidden max-[991px]:block text-gray-700 transition-transform duration-90 mr-2"></i>
                 </button>
 
-                <ul class="footer-dropdown-menu p-0 max-md:max-h-0 max-md:overflow-hidden transition-all duration-300 ease-in-out [&.active]:max-md:max-h-[500px] [&.active]:max-md:py-2">
+                <ul class="footer-dropdown-menu p-0 max-[991px]:max-h-0 max-[991px]:overflow-hidden transition-all duration-300 ease-in-out [&.active]:max-[991px]:max-h-[500px] [&.active]:max-[991px]:py-2">
                     <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Jimdo Blog</a></li>
                     <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">JIMDOCONNECT</a></li>
                     <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Founder Stories</a></li>
@@ -1538,8 +1539,8 @@ tailwind.config = {
             </div>
         </div>
 
-        <div class="languages w-full md:w-auto md:absolute md:top-[85%] md:left-[80%] max-md:order-3 max-md:mt-6 max-md:text-center">
-            <div class="language-picker language-picker-desktop hidden md:block">
+        <div class="languages w-full min-[992px]:w-auto min-[992px]:absolute min-[992px]:right-9 min-[992px]:bottom-[5%] lg:min-[992px]:right-[100px] xl:min-[992px]:right-[200px] max-[991px]:order-3 max-[991px]:mt-6 max-[991px]:text-center">
+            <div class="language-picker language-picker-desktop hidden min-[992px]:block">
                 <div class="option relative flex flex-row items-center">
                     <div id="languageMenu" class="selection absolute bottom-[calc(100%+0.5rem)] right-0 z-50 w-48 bg-white shadow-[0_4px_12px_rgba(0,0,0,0.15)] p-3 overflow-hidden hidden" aria-hidden="true">
                         <ul>
@@ -1560,7 +1561,7 @@ tailwind.config = {
                 </div>
             </div>
 
-            <div class="language-picker language-picker-mobile relative mx-auto md:hidden">
+            <div class="language-picker language-picker-mobile relative mx-auto min-[992px]:hidden">
                 <div class="option relative flex flex-row items-center justify-center">
                     <img src="src/img/UK.png" alt="UK" class="w-6 h-6 shrink-0 object-cover border-2 border-[#003bbb] rounded-full">
                     <img src="src/img/US.png" alt="USA" class="w-6 h-6 shrink-0 object-cover -ml-1 border-2 border-[#003bbb] rounded-full">
@@ -1568,15 +1569,15 @@ tailwind.config = {
                         <button type="button" class="language-toggle my-[5px] mx-0 flex items-center gap-10 border border-transparent bg-transparent px-4 py-2 text-[16px] font-normal text-[#001453] hover:text-[#001453] cursor-pointer" aria-expanded="false" aria-controls="languageMenuMobile">
                             English<i class="language-arrow fa fa-angle-down transition-transform duration-300"></i>
                         </button>
-                        <div id="languageMenuMobile" class="selection absolute bottom-full left-0 right-0 z-50 w-auto border border-black bg-white shadow-[0_4px_12px_rgba(0,0,0,0.15)] p-0 overflow-hidden hidden max-md:top-full max-md:bottom-auto" aria-hidden="true">
+                        <div id="languageMenuMobile" class="selection absolute bottom-full left-0 right-0 z-50 w-auto border border-black bg-white shadow-[0_4px_12px_rgba(0,0,0,0.15)] p-0 overflow-hidden hidden max-[991px]:top-full max-[991px]:bottom-auto" aria-hidden="true">
                             <ul class="language-menu-list m-0 p-0 text-[#001453]">
                                 <li class="list-none text-[22px] flex items-center gap-2.5 px-2 py-0.5 hover:text-[#001453] font-light max-[480px]:text-[16px]">English</li>
-                                <li class="list-none text-[22px] flex items-center gap-2.5 px-2 py-0.5 hover:text-[#003bbb] font-light max-[480px]:text-[16px]"><img src="src/img/GER.png" alt="" class="w-6 h-6 shrink-0 object-cover border-2 border-[#003bbb] rounded-full max-md:hidden">Deutsch</li>
-                                <li class="list-none text-[22px] flex items-center gap-2.5 px-2 py-0.5 hover:text-[#001453] font-light max-[480px]:text-[16px]"><img src="src/img/SPA.png" alt="" class="w-6 h-6 shrink-0 object-cover border-2 border-[#003bbb] rounded-full max-md:hidden">Español</li>
-                                <li class="list-none text-[22px] flex items-center gap-2.5 px-2 py-0.5 hover:text-[#001453] font-light max-[480px]:text-[16px]"><img src="src/img/FRA.png" alt="" class="w-6 h-6 shrink-0 object-cover border-2 border-[#003bbb] rounded-full max-md:hidden">Français</li>
-                                <li class="list-none text-[22px] flex items-center gap-2.5 px-2 py-0.5 hover:text-[#001453] font-light max-[480px]:text-[16px]"><img src="src/img/ITA.png" alt="" class="w-6 h-6 shrink-0 object-cover border-2 border-[#003bbb] rounded-full max-md:hidden">Italiano</li>
-                                <li class="list-none text-[22px] flex items-center gap-2.5 px-2 py-0.5 hover:text-[#001453] font-light max-[480px]:text-[16px]"><img src="src/img/JPN.png" alt="" class="w-6 h-6 shrink-0 object-cover border-2 border-[#003bbb] rounded-full max-md:hidden">日本語</li>
-                                <li class="list-none text-[22px] flex items-center gap-2.5 px-2 py-0.5 hover:text-[#003bbb] font-light max-[480px]:text-[16px]"><img src="src/img/NL.png" alt="" class="w-6 h-6 shrink-0 object-cover border-2 border-[#003bbb] rounded-full max-md:hidden">Nederlands</li>
+                                <li class="list-none text-[22px] flex items-center gap-2.5 px-2 py-0.5 hover:text-[#003bbb] font-light max-[480px]:text-[16px]"><img src="src/img/GER.png" alt="" class="w-6 h-6 shrink-0 object-cover border-2 border-[#003bbb] rounded-full max-[991px]:hidden">Deutsch</li>
+                                <li class="list-none text-[22px] flex items-center gap-2.5 px-2 py-0.5 hover:text-[#001453] font-light max-[480px]:text-[16px]"><img src="src/img/SPA.png" alt="" class="w-6 h-6 shrink-0 object-cover border-2 border-[#003bbb] rounded-full max-[991px]:hidden">Español</li>
+                                <li class="list-none text-[22px] flex items-center gap-2.5 px-2 py-0.5 hover:text-[#001453] font-light max-[480px]:text-[16px]"><img src="src/img/FRA.png" alt="" class="w-6 h-6 shrink-0 object-cover border-2 border-[#003bbb] rounded-full max-[991px]:hidden">Français</li>
+                                <li class="list-none text-[22px] flex items-center gap-2.5 px-2 py-0.5 hover:text-[#001453] font-light max-[480px]:text-[16px]"><img src="src/img/ITA.png" alt="" class="w-6 h-6 shrink-0 object-cover border-2 border-[#003bbb] rounded-full max-[991px]:hidden">Italiano</li>
+                                <li class="list-none text-[22px] flex items-center gap-2.5 px-2 py-0.5 hover:text-[#001453] font-light max-[480px]:text-[16px]"><img src="src/img/JPN.png" alt="" class="w-6 h-6 shrink-0 object-cover border-2 border-[#003bbb] rounded-full max-[991px]:hidden">日本語</li>
+                                <li class="list-none text-[22px] flex items-center gap-2.5 px-2 py-0.5 hover:text-[#003bbb] font-light max-[480px]:text-[16px]"><img src="src/img/NL.png" alt="" class="w-6 h-6 shrink-0 object-cover border-2 border-[#003bbb] rounded-full max-[991px]:hidden">Nederlands</li>
                             </ul>
                         </div>
                     </div>
@@ -1584,12 +1585,12 @@ tailwind.config = {
             </div>
         </div>
 
-        <div class="info w-full md:w-auto md:absolute md:bottom-[5%] md:left-[80%] lg:left-[100px] xl:left-[200px] max-md:order-4 max-md:mt-8 max-md:p-0 max-md:text-center">
-            <ul class="p-0 m-0">
-                <li class="inline-block p-2 relative max-md:block max-md:mb-1"><a href="#" class="no-underline text-[15px] font-medium text-[#001453] hover:text-[#001453] max-[480px]:text-[12px]">Legal notice</a></li>
-                <li class="inline-block p-2 relative max-md:block max-md:mb-1"><a href="#" class="no-underline text-[15px] font-medium text-[#001453] hover:text-[#001453] max-[480px]:text-[12px]">Terms of Service</a></li>
-                <li class="inline-block p-2 relative max-md:block max-md:mb-1"><a href="#" class="no-underline text-[15px] font-medium text-[#001453] hover:text-[#001453] max-[480px]:text-[12px]">Privacy Policy</a></li>
-                <li class="inline-block p-2 relative max-md:block max-md:mb-1"><a href="#" class="no-underline text-[15px] font-medium text-[#001453] hover:text-[#001453] max-[480px]:text-[12px]">Cookie Settings</a></li>
+        <div class="info w-full min-[992px]:w-auto min-[992px]:absolute min-[992px]:left-9 min-[992px]:bottom-[5%] lg:min-[992px]:left-[100px] xl:min-[992px]:left-[200px] max-[991px]:order-4 max-[991px]:mt-8 max-[991px]:p-0 max-[991px]:text-center">
+            <ul class="flex flex-wrap p-0 m-0">
+                <li class="p-2 relative"><a href="#" class="no-underline text-[15px] font-medium text-[#001453] hover:text-[#001453] max-[480px]:text-[12px]">Legal notice</a></li>
+                <li class="p-2 relative"><a href="#" class="no-underline text-[15px] font-medium text-[#001453] hover:text-[#001453] max-[480px]:text-[12px]">Terms of Service</a></li>
+                <li class="p-2 relative"><a href="#" class="no-underline text-[15px] font-medium text-[#001453] hover:text-[#001453] max-[480px]:text-[12px]">Privacy Policy</a></li>
+                <li class="p-2 relative"><a href="#" class="no-underline text-[15px] font-medium text-[#001453] hover:text-[#001453] max-[480px]:text-[12px]">Cookie Settings</a></li>
             </ul>
         </div>
     </section>
