@@ -1423,11 +1423,6 @@ tailwind.config = {
 
 </section>
 
-
-
-
-
-
     <!-- ===================================================================== -->
     <!--  Website CTA / Professions Section                            -->
     <!-- ===================================================================== -->
@@ -1441,20 +1436,20 @@ tailwind.config = {
             </p>
         </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14 text-center max-w-6xl mx-auto">
-            <article class="flex flex-col items-center">
-                <h3 class="text-xl sm:text-2xl font-normal text-[#000000]">Freelancer</h3>
-                <p class="mt-4 text-base sm:text-base font-extralight leading-relaxed text-[#000000] lg:w-full max-w-sm">
-                    Every freelancer needs a website to attract new customers, find work, and show <br> off your skills. Build your own portfolio, with no coding required!
+        <div class="grid grid-cols-1 min-[992px]:grid-cols-3 gap-x-10 gap-y-16 lg:gap-18 text-center max-w-7xl mx-auto">
+            <article class="flex flex-col items-center ">
+                <h3 class="text-xl sm:text-2xl font-normal text-[#000000]"><br>Freelancer</h3>
+                <p class="mt-4 text-base sm:text-base font-extralight leading-relaxed text-[#000000] lg:w-full min-[992px]:w-full">
+                    Every freelancer needs a website to attract new customers, find work, and show off your skills. Build your own portfolio, with no coding required!
                 </p>
                 <a href="#" class="mt-5 inline-flex items-center gap-2 whitespace-nowrap border-b border-current pb-0.5 font-medium text-[#000] hover:border-transparent">
                     Freelance website how-to <span aria-hidden="true">&rarr;</span>
                 </a>
             </article>
             <article class="flex flex-col items-center">
-                <h3 class="text-xl sm:text-2xl font-normal text-[#000]">Photography</h3>
-                <p class="mt-4 text-sm sm:text-base font-extralight leading-relaxed text-[#000000] lg:w-full max-w-sm">
-                    Photographers love Jimdo for its beautiful and easy portfolio websites. See how <br> you can get your photos online quickly and start taking bookings.
+                <h3 class="text-xl sm:text-2xl font-normal text-[#000000]"><br> Photography</h3>
+                <p class="mt-4 text-base sm:text-base font-extralight leading-relaxed text-[#000000] lg:w-full min-[992px]:w-full">
+                    Photographers love Jimdo for its beautiful and easy portfolio websites. See how you can get your photos online quickly and start taking bookings.
                 </p>
                 <a href="#" class="mt-5 inline-flex items-center gap-2 whitespace-nowrap border-b border-current pb-0.5 font-medium text-[#000] hover:border-transparent">
                     Photography website how-to <span aria-hidden="true">&rarr;</span>
@@ -1462,8 +1457,8 @@ tailwind.config = {
             </article>
 
             <article class="flex flex-col items-center">
-                <h3 class="text-xl sm:text-2xl font-normal text-[#000]">Design</h3>
-                <p class="mt-4 text-sm sm:text-base font-extralight leading-relaxed text-[#000000] lg:w-full max-w-sm">
+                <h3 class="text-xl sm:text-2xl font-normal text-[#000000]"><br> Design</h3>
+                    <p class="mt-4 text-base sm:text-base font-extralight leading-relaxed text-[#000000] lg:w-full min-[992px]:w-full">
                     Create an art portfolio that matches your style. Our built-in tools will help you improve your search engine ranking and even sell your artwork online.
                 </p>
                 <a href="#" class="mt-5 inline-flex items-center gap-2 whitespace-nowrap border-b border-current pb-0.5 font-medium text-[#000] hover:border-transparent">
@@ -1485,7 +1480,7 @@ tailwind.config = {
             <div class="icons flex max-[991px]:justify-center">
                 <i class="fa-brands fa-facebook w-[50px] text-[#001453] text-[28px] transition-colors duration-300 hover:text-[#004ced]"></i>
                 <i class="fa-brands fa-instagram w-[50px] text-[#001453] text-[28px] transition-colors duration-300 hover:text-[#004ced]"></i>
-               <i class="fa-brands fa-tiktok inline-flex items-center justify-center w-[28px] h-[28px] rounded-full bg-[#001453] text-white text-[20px] transition-colors duration-300 hover:bg-[#004ced]"></i>
+                <i class="fa-brands fa-tiktok inline-flex items-center justify-center w-[28px] h-[28px] rounded-full bg-[#001453] text-white text-[20px] transition-colors duration-300 hover:bg-[#004ced]"></i>
                 <i class="fa-brands fa-youtube mx-4 w-[px] text-[#001453] text-[28px] transition-colors duration-300 hover:text-[#004ced]"></i>
             </div>
         </div>
@@ -1495,7 +1490,9 @@ tailwind.config = {
             <div class="foot-text footer-dropdown w-full flex flex-col justify-start" id="footProducts">
                 <button type="button" class="footer-dropdown-toggle w-full flex items-center justify-between cursor-pointer select-none py-3 text-left bg-transparent border-none p-0 max-[991px]:py-3 max-[991px]:px-3 max-[991px]:border-b max-[991px]:border-solid max-[991px]:border-gray-200 focus:outline-none" aria-expanded="false">
                     <span class="pl-2 font-[450] text-[16px] text-[#6d6d6d] max-[991px]:text-black">Products</span>
-                    <i class="footer-arrow fa fa-angle-down hidden max-[991px]:block text-gray-700 transition-transform  mr-2"></i>
+                    <svg class="footer-arrow hidden max-[991px]:block shrink-0 text-gray-700 transition-transform duration-300 ease-in-out" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <path d="m6 9 6 6 6-6"></path>
+                    </svg>
                 </button>
 
                 <ul class="footer-dropdown-menu p-0 max-[991px]:max-h-0 max-[991px]:overflow-hidden transition-all duration-300 ease-in-out [&.active]:max-[991px]:max-h-[500px] [&.active]:max-[991px]:py-2">
@@ -1509,7 +1506,9 @@ tailwind.config = {
             <div class="foot-text footer-dropdown w-full flex flex-col justify-start" id="footAbout">
                 <button type="button" class="footer-dropdown-toggle w-full flex items-center justify-between cursor-pointer select-none py-3 text-left bg-transparent border-none p-0 max-[991px]:py-3 max-[991px]:px-3 max-[991px]:border-b max-[991px]:border-solid max-[991px]:border-gray-200 focus:outline-none" aria-expanded="false">
                     <span class="pl-2 font-[450] text-[16px] text-[#6d6d6d] max-[991px]:text-black">About us</span>
-                    <i class="footer-arrow fa fa-angle-down hidden max-[991px]:block text-gray-700 transition-transform duration-300 mr-2"></i>
+                    <svg class="footer-arrow hidden max-[991px]:block shrink-0 text-gray-700 transition-transform duration-300 ease-in-out" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <path d="m6 9 6 6 6-6"></path>
+                    </svg>
                 </button>
 
                 <ul class="footer-dropdown-menu p-0 max-[991px]:max-h-0 max-[991px]:overflow-hidden transition-all duration-300 ease-in-out [&.active]:max-[991px]:max-h-[500px] [&.active]:max-[991px]:py-2">
@@ -1527,7 +1526,9 @@ tailwind.config = {
             <div class="foot-text footer-dropdown w-full flex flex-col justify-start" id="footResources">
                 <button type="button" class="footer-dropdown-toggle w-full flex items-center justify-between cursor-pointer select-none py-2 text-left bg-transparent border-none p-0 max-[991px]:py-3 max-[991px]:px-3 max-[991px]:border-b max-[991px]:border-solid max-[991px]:border-gray-200 focus:outline-none" aria-expanded="false">
                     <span class="pl-2 font-[450] text-[16px] text-[#6d6d6d] max-[991px]:text-black">Resources</span>
-                    <i class="footer-arrow fa fa-angle-down hidden max-[991px]:block text-gray-700 transition-transform duration-90 mr-2"></i>
+                    <svg class="footer-arrow hidden max-[991px]:block shrink-0 text-gray-700 transition-transform duration-300 ease-in-out" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <path d="m6 9 6 6 6-6"></path>
+                    </svg>
                 </button>
 
                 <ul class="footer-dropdown-menu p-0 max-[991px]:max-h-0 max-[991px]:overflow-hidden transition-all duration-300 ease-in-out [&.active]:max-[991px]:max-h-[500px] [&.active]:max-[991px]:py-2">
@@ -1589,15 +1590,66 @@ tailwind.config = {
 
         <div class="info w-full min-[992px]:w-auto min-[992px]:absolute min-[992px]:left-9 min-[992px]:bottom-[5%] lg:min-[992px]:left-[100px] xl:min-[992px]:left-[200px] max-[991px]:order-4 max-[991px]:mt-8 max-[991px]:p-0 max-[991px]:text-center">
             <ul class="flex flex-wrap max-[991px]:flex-col p-0 m-0">
-                <li class="p-2 relative"><a href="#" class="no-underline text-[15px] font-medium text-[#001453] hover:text-[#001453] max-[480px]:text-[12px]">Legal notice</a></li>
-                <li class="p-2 relative"><a href="#" class="no-underline text-[15px] font-medium text-[#001453] hover:text-[#001453] max-[480px]:text-[12px]">Terms of Service</a></li>
-                <li class="p-2 relative"><a href="#" class="no-underline text-[15px] font-medium text-[#001453] hover:text-[#001453] max-[480px]:text-[12px]">Privacy Policy</a></li>
-                <li class="p-2 relative"><a href="#" class="no-underline text-[15px] font-medium text-[#001453] hover:text-[#001453] max-[480px]:text-[12px]">Cookie Settings</a></li>
+                <li class="p-2 relative"><a href="#" class="no-underline text-[15px] font-light text-[#001453] hover:text-[#001453] max-[480px]:text-[12px]">Legal notice</a></li>
+                <li class="p-2 relative"><a href="#" class="no-underline text-[15px] font-light text-[#001453] hover:text-[#001453] max-[480px]:text-[12px]">Terms of Service</a></li>
+                <li class="p-2 relative"><a href="#" class="no-underline text-[15px] font-light text-[#001453] hover:text-[#001453] max-[480px]:text-[12px]">Privacy Policy</a></li>
+                <li class="p-2 relative"><a href="#" class="no-underline text-[15px] font-light text-[#001453] hover:text-[#001453] max-[480px]:text-[12px]">Cookie Settings</a></li>
             </ul>
         </div>
     </section>
 
     <!--  SCRIPTS                                      -->
+
+    <script>
+
+
+document.addEventListener('DOMContentLoaded', function () {
+
+
+    document.querySelectorAll('.faq-item').forEach(item => {
+
+
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+
+
+        question.addEventListener('click', function () {
+
+
+            const isOpen = question.getAttribute('aria-expanded') === 'true';
+
+
+            if (isOpen) {
+
+
+                question.setAttribute('aria-expanded', 'false');
+                answer.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+
+
+            } else {
+
+
+                question.setAttribute('aria-expanded', 'true');
+                answer.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+
+
+            }
+
+
+        });
+
+
+    });
+
+
+});
+</script>
+
+
+
 
     <script>
 
@@ -1788,7 +1840,6 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!toggle || !menu) return;
 
             toggle.addEventListener('click', (e) => {
-                // Only toggle on mobile/tablet screens where the arrow is visible
                 if (arrow && window.getComputedStyle(arrow).display === 'none') return;
                 e.preventDefault();
 
@@ -1798,18 +1849,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 footerDropdowns.forEach((other) => {
                     if (other !== dropdown) {
                         other.querySelector('.footer-dropdown-menu')?.classList.remove('active');
-                        other.querySelector('.footer-arrow')?.classList.remove('rotate-180');
+                        other.querySelector('.footer-arrow')?.style.removeProperty('transform');
                         other.querySelector('.footer-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
                     }
                 });
 
                 if (isOpen) {
                     menu.classList.remove('active');
-                    arrow?.classList.remove('rotate-180');
+                    arrow?.style.removeProperty('transform');
                     toggle.setAttribute('aria-expanded', 'false');
                 } else {
                     menu.classList.add('active');
-                    arrow?.classList.add('rotate-180');
+                    arrow?.style.setProperty('transform', 'rotate(180deg)');
                     toggle.setAttribute('aria-expanded', 'true');
                 }
             });
@@ -1852,7 +1903,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // =====================================================================
         // Inspiration Carousel Slider Interactivity (Matches Jimdo Gallery)
         // =====================================================================
-      const inspirationContainer = document.getElementById('inspirationCarousel');
+    const inspirationContainer = document.getElementById('inspirationCarousel');
 const carouselTrack = document.getElementById('carouselTrack');
 const carouselDots = document.querySelectorAll('.carousel-dot');
 
@@ -2019,6 +2070,6 @@ window.addEventListener('resize', () => moveToSlide(currentIndex, false));
 setTimeout(() => moveToSlide(currentIndex, false), 100);
     </script>
 
-    <script type="module" src="/src/main.js"></script>
+<script type="module" src="/src/main.js"></script>
 </body>
 </html>
