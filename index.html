@@ -1,1 +1,2021 @@
-﻿
+﻿<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden max-w-full min-w-full mx-auto font-['Geologica',sans-serif]">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create an Online Portfolio With Jimdo</title>
+<link rel="icon" type="image/png" href="src/img/Jimdo.png">
+
+<!-- Euclid Circular A -->
+<link href="https://fonts.cdnfonts.com/css/euclid-circular-a" rel="stylesheet">
+
+<!-- Google Fonts: Other font families -->
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:wght@100..900&family=Poppins:wght@100..900&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+    <!-- ===================================================================== -->
+    <!-- SECTION: Tailwind CSS Custom Configuration                            -->
+    <!-- Customizes font families (Geologica) and Jimdo brand color palette     -->
+    <!-- ===================================================================== -->
+    <script>
+tailwind.config = {
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: [
+                    '"Euclid Circular A"',
+                    '-apple-system',
+                    'BlinkMacSystemFont',
+                    'Segoe UI',
+                    'Roboto',
+                    'Helvetica Neue',
+                    'Helvetica',
+                    'Arial',
+                    'sans-serif'
+                ],
+                euclid: ['"Euclid Circular A"', 'sans-serif'],
+                inter: ['"Inter"', 'sans-serif'],
+                geologica: ['"Geologica"', 'sans-serif'],
+                poppins: ['"Poppins"', 'sans-serif'],
+                montserrat: ['"Montserrat"', 'sans-serif'],
+            },
+            colors: {
+                jimdo: {
+                    navy: '#001453',
+                    blue: '#004ced',
+                    darkBlue: '#003bbb',
+                    bg: '#f8f8f8',
+                }
+            }
+        }
+    }
+}
+</script>
+    <link rel="stylesheet" href="src/output.css">
+    <style>
+        #hamburger > span {
+            transform-origin: center;
+            transition: transform 300ms ease, opacity 300ms ease;
+        }
+
+        #hamburger.active > span {
+            background-color: #fff;
+        }
+
+        nav:has(#hamburger.active) {
+            background-color: transparent;
+        }
+
+        #hamburger.active > span:first-child {
+            transform: translateY(7.8px) rotate(-45deg);
+        }
+
+        #hamburger.active > span:nth-child(2) {
+            opacity: 0;
+        }
+
+        #hamburger.active > span:last-child {
+            transform: translateY(-7.8px) rotate(45deg);
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden max-w-full min-w-full mx-auto font-geologica text-black">
+
+
+    <!-- ===================================================================== -->
+    <!-- Edmark START: Navigation Bar (Desktop Menu)                           -->
+    <!--                                                                       -->
+    <!-- TASKS:                                                                -->
+    <!--   1. Desktop Navbar with Logo, Nav Links, Dropdowns & "Start for free"-->
+    <!-- ===================================================================== -->
+
+
+
+
+    <div class=" pt--0.5 hero bg-[#f8f8f8] w-full min-h-dvh flex justify-center relative max-lg:min-h-[70dvh] max-md:h-[120dvh] max-[480px]:min-h-[80dvh] max-[480px]:h-[120dvh]">
+        <nav class="fixed w-full h-[90px] flex items-center gap-4 shadow-[0_2px_4px_rgba(0,0,0,0.08)] bg-white z-[1000] px-6 xl:px-10 2xl:px-[100px] max-md:h-[80px]">
+
+            <a href="#home" class="shrink-0"><img src="src/img/Logo.png" alt="Jimdo Logo" class="logo block w-[103px]"></a>
+
+            <a href="#" class="hidden max-xl:inline-flex ml-auto items-center justify-center rounded-[6px] bg-[#004ced] px-3 py-2 text-[12px] font-semibold text-white no-underline transition-colors hover:bg-[#003bbb]">
+                Start for free
+            </a>
+
+            <button type="button" class="hamburger hidden max-xl:flex flex-col cursor-pointer z-[1001] shrink-0 border-0 bg-transparent p-0" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="w-[25px] h-[3px] bg-[#001453] my-[2.4px]"></span>
+                <span class="w-[25px] h-[3px] bg-[#001453] my-[2.4px]"></span>
+                <span class="w-[25px] h-[3px] bg-[#001453] my-[2.4px]"></span>
+            </button>
+
+            <!-- Left/Center Nav Links -->
+            <div class="fnav hidden xl:block flex-1 min-w-0">
+                <ul id="navLinks" class="relative flex items-center justify-center m-0 p-0">
+
+                    <!-- Website -->
+                    <li class="list-none inline-block p-2 relative max-xl:hidden">
+                        <a href="#" class="dropdown-toggle inline-flex items-center gap-1 no-underline text-[16px] font-[450] text-[#001453] mx-4 hover:text-[#004ced] lg:max-xl:mx-1.5 lg:max-xl:text-[12px] lg:max-xl:font-medium [&.active]:underline [&.active]:decoration-[#004ced] [&.active]:decoration-4 [&.active]:underline-offset-[40px]">
+                            <span>Website</span>
+                            <svg width="14" height="14" class="w-3.5 h-3.5 stroke-[2.3] mt-0.5 transition-transform duration-300 [&.rotated]:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </a>
+                    
+                        <div class="dropdown-menu web-options flex w-max min-w-[950px] flex-row items-stretch justify-between gap-8 opacity-0 invisible translate-y-2 pointer-events-none transition-all duration-200 ease-out [&.show]:opacity-100 [&.show]:visible [&.show]:translate-y-0 [&.show]:pointer-events-auto absolute top-[145%] left-0 bg-white py-[30px] px-8 shadow-[0_4px_12px_rgba(0,0,0,0.15)] z-[999] mt-2.5">
+                            <div class="builder shrink-0 bg-white p-[30px] -my-[30px]">
+                                <h1 class="text-[11px] font-medium text-[#888] ml-[29px] mb-5 tracking-[0.1px] text-left">OUR WEBSITE BUILDER</h1>
+                                <ul class="list-none flex flex-col items-start gap-[5px] m-0">
+                                    <li class="text-left p-2 relative"><a href="#" class="block w-full whitespace-nowrap text-left no-underline text-black font-medium text-[16px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Create a website</a></li>
+                                    <li class="text-left p-2 relative"><a href="#" class="block w-full whitespace-nowrap text-left no-underline text-black font-medium text-[16px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Pricing and plans</a></li>
+                                    <li class="text-left p-2 relative"><a href="#" class="block w-full whitespace-nowrap text-left no-underline text-black font-medium text-[16px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Website examples</a></li>
+                                    <li class="text-left p-2 relative"><a href="#" class="block w-full whitespace-nowrap text-left no-underline text-black font-medium text-[16px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Your own domain</a></li>
+                                    <li class="text-left p-2 relative"><a href="#" class="block w-full whitespace-nowrap text-left no-underline text-black font-medium text-[16px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Founder Stories</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="tools shrink-0 bg-white p-[30px] -my-[30px]">
+                                <h1 class="text-[11px] font-medium text-[#888] ml-[29px] mb-5 tracking-[0.1px] text-left">USEFUL TOOLS FOR YOUR WEBSITE</h1>
+                                <ul class="list-none flex flex-col items-start gap-[5px] m-0">
+                                    <li class="text-left p-2 relative">
+                                        <a href="#" class="block w-full text-left no-underline text-black font-medium text-[16px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Warning-proof legal texts
+                                            <span class="subtitle block whitespace-nowrap text-[15px] font-light">For privacy policy &amp; Co</span>
+                                        </a>
+                                    </li>
+                                    <li class="text-left p-2 relative">
+                                        <a href="#" class="block w-full text-left no-underline text-black font-medium text-[16px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Business listings
+                                            <span class="subtitle block whitespace-nowrap text-[15px] font-light">For Google, Facebook &amp; Co.</span>
+                                        </a>
+                                    </li>
+                                    <li class="text-left p-2 relative">
+                                        <a href="#" class="block w-full text-left no-underline text-black font-medium text-[16px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Online booking
+                                            <span class="subtitle block whitespace-nowrap text-[15px] font-light">Directly via your website</span>
+                                        </a>
+                                    </li>
+                                    <li class="text-left p-2 relative">
+                                        <a href="#" class="block w-full text-left no-underline text-black font-medium text-[16px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Social media integration
+                                            <span class="subtitle block whitespace-nowrap text-[15px] font-light">Promote on Facebook &amp; Instagram</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="industry shrink-0 bg-[#f8f8f8] p-[30px] pr-[50px] -my-[30px]">
+                                <h1 class="text-[11px] font-medium text-[#004ced] ml-[29px] mb-5 tracking-[0.1px] text-left">FOR YOUR INDUSTRY</h1>
+                                <ul class="list-none flex flex-col items-start gap-[5px] m-0">
+                                    <li class="text-left p-2 relative"><a href="#" class="group/item block w-full whitespace-nowrap text-left no-underline text-[#001453] font-medium text-[16px] mx-5 transition-colors duration-300 hover:text-[#004ced]"><span class="menu-title font-semibold text-[16px] text-black block mb-1 text-left group-hover/item:text-[#004ced]">Online Portfolio</span></a></li>
+                                    <li class="text-left p-2 relative"><a href="#" class="group/item block w-full whitespace-nowrap text-left no-underline text-[#001453] font-medium text-[16px] mx-5 transition-colors duration-300 hover:text-[#004ced]"><span class="menu-title font-semibold text-[16px] text-black block mb-1 text-left group-hover/item:text-[#004ced]">Restaurant websites</span></a></li>
+                                    <li class="text-left p-2 relative"><a href="#" class="group/item block w-full whitespace-nowrap text-left no-underline text-[#001453] font-medium text-[16px] mx-5 transition-colors duration-300 hover:text-[#004ced]"><span class="menu-title font-semibold text-[16px] text-black block mb-1 text-left group-hover/item:text-[#004ced]">Coaches</span></a></li>
+                                    <li class="text-left p-2 relative"><a href="#" class="group/item block w-full whitespace-nowrap text-left no-underline text-[#001453] font-medium text-[16px] mx-5 transition-colors duration-300 hover:text-[#004ced]"><span class="menu-title font-semibold text-[16px] text-black block mb-1 text-left group-hover/item:text-[#004ced]">Musicians &amp; Bands</span></a></li>
+                                    <li class="text-left p-2 relative"><a href="#" class="group/item block w-full whitespace-nowrap text-left no-underline text-[#001453] font-medium text-[16px] mx-5 transition-colors duration-300 hover:text-[#004ced]"><span class="menu-title font-semibold text-[16px] text-black block mb-1 text-left group-hover/item:text-[#004ced]">Real estate agents</span></a></li>
+                                    <li class="text-left p-2 relative"><a href="#" class="group/item block w-full whitespace-nowrap text-left no-underline text-[#001453] font-medium text-[16px] mx-5 transition-colors duration-300 hover:text-[#004ced]"><span class="menu-title font-semibold text-[16px] text-black block mb-1 text-left group-hover/item:text-[#004ced]">Doctors &amp; practices</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Online Store -->
+                    <li class="list-none inline-block p-2 relative max-xl:hidden">
+                        <a href="#" class="dropdown-toggle inline-flex items-center gap-1 no-underline text-[16px] font-[450] text-[#001453] mx-4 hover:text-[#004ced] lg:max-xl:mx-1.5 lg:max-xl:text-[12px] lg:max-xl:font-medium [&.active]:underline [&.active]:decoration-[#004ced] [&.active]:decoration-4 [&.active]:underline-offset-[40px]">
+                            <span>Online Store</span>
+                            <svg width="14" height="14" class="w-3.5 h-3.5 stroke-[2.3] mt-0.5 transition-transform duration-300 [&.rotated]:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </a>
+
+                        <div class="dropdown-menu store-menu w-full flex justify-around opacity-0 invisible translate-y-2 pointer-events-none transition-all duration-200 ease-out [&.show]:opacity-100 [&.show]:visible [&.show]:translate-y-0 [&.show]:pointer-events-auto absolute top-[145%] left-[10%] bg-white py-[30px] px-5 shadow-[0_4px_12px_rgba(0,0,0,0.15)] z-[999] min-w-[600px] mt-2.5">
+                            <div class="store-builder bg-white p-[30px] -my-[30px] -mr-2.5 ml-0">
+                                <h1 class="text-[11px] font-medium text-[#888] ml-[29px] mb-5 tracking-[0.1px] text-left">OUR ONLINE STORE BUILDER</h1>
+                                <ul class="list-none flex flex-col items-start gap-[5px] m-0">
+                                    <li class="text-left p-2 relative"><a href="#" class="group/item block w-full text-left no-underline text-[#001453] font-medium text-[15px] mx-5 transition-colors duration-300 hover:text-[#004ced]"><span class="menu-title font-semibold text-[15px] text-black block mb-1 text-left group-hover/item:text-[#004ced]">Create an online store</span></a></li>
+                                    <li class="text-left p-2 relative"><a href="#" class="group/item block w-full text-left no-underline text-[#001453] font-medium text-[15px] mx-5 transition-colors duration-300 hover:text-[#004ced]"><span class="menu-title font-semibold text-[15px] text-black block mb-1 text-left group-hover/item:text-[#004ced]">Pricing and Plans</span></a></li>
+                                    <li class="text-left p-2 relative"><a href="#" class="group/item block w-full text-left no-underline text-[#001453] font-medium text-[15px] mx-5 transition-colors duration-300 hover:text-[#004ced]"><span class="menu-title font-semibold text-[15px] text-black block mb-1 text-left group-hover/item:text-[#004ced]">Online store examples</span></a></li>
+                                    <li class="text-left p-2 relative"><a href="#" class="group/item block w-full text-left no-underline text-[#001453] font-medium text-[15px] mx-5 transition-colors duration-300 hover:text-[#004ced]"><span class="menu-title font-semibold text-[15px] text-black block mb-1 text-left group-hover/item:text-[#004ced]">Your own domain</span></a></li>
+                                    <li class="text-left p-2 relative"><a href="#" class="group/item block w-full text-left no-underline text-[#001453] font-medium text-[15px] mx-5 transition-colors duration-300 hover:text-[#004ced]"><span class="menu-title font-semibold text-[15px] text-black block mb-1 text-left group-hover/item:text-[#004ced]">Founder Stories</span></a></li>
+                                </ul>
+                            </div>
+
+                            <div class="useful-tools bg-white p-[30px] -my-[30px] -mr-2.5 ml-0">
+                                <h1 class="text-[11px] font-medium text-[#888] ml-[29px] mb-5 tracking-[0.1px] text-left">USEFUL TOOLS FOR YOUR STORE</h1>
+                                <ul class="list-none flex flex-col items-start gap-[5px] m-0">
+                                    <li class="text-left p-2 relative">
+                                        <a href="#" class="block w-full text-left no-underline text-black font-medium text-[15px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Warning-proof legal texts<br>
+                                            <span class="subtitle text-[14px] font-light">For general terms and conditions, privacy policy &amp; Co</span>
+                                        </a>
+                                    </li>
+                                    <li class="text-left p-2 relative">
+                                        <a href="#" class="block w-full text-left no-underline text-black font-medium text-[15px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Business listings<br>
+                                            <span class="subtitle text-[14px] font-light">For Google, Facebook &amp; Co.</span>
+                                        </a>
+                                    </li>
+                                    <li class="text-left p-2 relative">
+                                        <a href="#" class="block w-full text-left no-underline text-black  font-medium text-[15px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Social Media Integration<br>
+                                            <span class="subtitle text-[14px] font-light">Sell on Facebook &amp; Instagram</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Solutions -->
+                    <li class="list-none inline-block p-2 relative max-xl:hidden">
+                        <a href="#" class="dropdown-toggle inline-flex items-center gap-1 no-underline text-[16px] font-[450] text-[#001453] mx-4 hover:text-[#004ced] lg:max-xl:mx-1.5 lg:max-xl:text-[12px] lg:max-xl:font-medium [&.active]:underline [&.active]:decoration-[#004ced] [&.active]:decoration-4 [&.active]:underline-offset-[40px]">
+                            <span>Solutions</span>
+                            <svg width="14" height="14" class="w-3.5 h-3.5 stroke-[2.3] mt-0.5 transition-transform duration-300 [&.rotated]:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </a>
+
+                        <div class="dropdown-menu b-tools flex flex-row justify-around opacity-0 invisible translate-y-2 pointer-events-none transition-all duration-200 ease-out [&.show]:opacity-100 [&.show]:visible [&.show]:translate-y-0 [&.show]:pointer-events-auto absolute top-[145%] left-[10%] bg-white py-[30px] px-5 shadow-[0_4px_12px_rgba(0,0,0,0.15)] z-[999] min-w-[300px] mt-2.5">
+                            <div class="b-menu bg-white py-[30px] px-5 -my-[30px] -mr-2.5 -ml-[50px]">
+                                <h1 class="block w-full text-left no-underline text-[#001453] font-medium text-[15px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Get Found</h1>
+                                <ul class="list-none flex flex-col items-start leading-[1.5] gap-[5px] m-0">
+                                    <li class="text-left p-2 relative">
+                                        <a href="#" class="block w-full text-left no-underline text-[#001453] font-medium text-[15px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Jimdo Local<br>
+                                            <span class="subtitle text-[14px] font-light">Google Business, Facebook &amp; Co</span>
+                                        </a>
+                                    </li>
+                                    <li class="text-left p-2 relative">
+                                        <a href="#" class="block w-full text-left no-underline text-[#001453] font-medium text-[15px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Social Media Integration<br>
+                                            <span class="subtitle text-[14px] font-light">Promote your Facebook and Instagram</span>
+                                        </a>
+                                    </li>
+                                    <li class="text-left p-2 relative">
+                                        <a href="#" class="block w-full text-left no-underline text-[#001453] font-medium text-[15px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Your Own Domain<br>
+                                            <span class="subtitle text-[14px] font-light">Your own Domain</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="b-menu bg-white py-[30px] px-5 -my-[30px] -mr-2.5 -ml-[50px]">
+                                <h1 class="block w-full text-left no-underline text-[#001453] font-medium text-[15px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Get Booked</h1>
+                                <ul class="list-none flex flex-col items-start leading-[1.5] gap-[5px] m-0">
+                                    <li class="text-left p-2 relative">
+                                        <a href="#" class="block w-full text-left no-underline text-[#001453] font-medium text-[15px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Online Bookings<br>
+                                            <span class="subtitle text-[14px] font-light">Take Appointments via your Website</span>
+                                        </a>
+                                    </li>
+                                    <li class="text-left p-2 relative">
+                                        <a href="#" class="block w-full text-left no-underline text-[#001453] font-medium text-[15px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Smart Forms<br>
+                                            <span class="subtitle text-[14px] font-light">Create a contact form for any Occasion</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="b-menu bg-white py-[30px] px-5 -my-[30px] -mr-2.5 -ml-[50px]">
+                                <h1 class="block w-full text-left no-underline text-[#001453] font-medium text-[15px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Get Paid</h1>
+                                <ul class="list-none flex flex-col items-start leading-[1.5] gap-[5px] m-0">
+                                    <li class="text-left p-2 relative">
+                                        <a href="#" class="block w-full text-left no-underline text-[#001453] font-medium text-[15px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Payment links<br>
+                                            <span class="subtitle text-[14px] font-light">Share a link, get paid</span>
+                                        </a>
+                                    </li>
+                                    <li class="text-left p-2 relative">
+                                        <a href="#" class="block w-full text-left no-underline text-[#001453] font-medium text-[15px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Sell on Facebook &amp; Instagram<br>
+                                            <span class="subtitle text-[14px] font-light">Reach buyers where they scroll</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <!-- Pricing -->
+                    <li class="list-none inline-block p-2 relative max-xl:hidden">
+                        <a href="#" class="no-underline text-[16px] font-[450] text-[#001453] mx-4 hover:text-[#004ced] lg:max-xl:mx-1.5 lg:max-xl:text-[12px] lg:max-xl:font-medium [&.active]:underline [&.active]:decoration-[#004ced] [&.active]:decoration-4 [&.active]:underline-offset-[40px]">Pricing</a>
+                    </li>
+
+                    <!-- Community -->
+                    <li class="list-none inline-block p-2 relative max-xl:hidden">
+                        <a href="#" class="no-underline text-[16px] font-[450] text-[#001453] mx-4 hover:text-[#004ced] lg:max-xl:mx-1.5 lg:max-xl:text-[12px] lg:max-xl:font-medium [&.active]:underline [&.active]:decoration-[#004ced] [&.active]:decoration-4 [&.active]:underline-offset-[40px]">Community</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Right Nav Links -->
+            <div class="snav hidden xl:block shrink-0">
+                <ul id="navLinksRight" class="relative flex items-center m-0 p-0">
+                    <!-- Blog -->
+                    <li class="list-none inline-block p-2 relative">
+                        <a href="#" class="dropdown-toggle inline-flex items-center gap-1 no-underline text-[16px] font-medium text-[#001453] mx-4 hover:text-[#004ced] lg:max-xl:mx-1.5 lg:max-xl:text-[12px] lg:max-xl:font-medium [&.active]:underline [&.active]:decoration-[#004ced] [&.active]:decoration-4 [&.active]:underline-offset-[40px]">
+                            <span>Blog</span>
+                            <svg width="14" height="14" class="w-3.5 h-3.5 stroke-[2.3] mt-0.5 transition-transform duration-300 [&.rotated]:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu Knowledge flex flex-row justify-around opacity-0 invisible translate-y-2 pointer-events-none transition-all duration-200 ease-out [&.show]:opacity-100 [&.show]:visible [&.show]:translate-y-0 [&.show]:pointer-events-auto absolute top-[145%] right-0 bg-white py-[30px] px-5 shadow-[0_4px_12px_rgba(0,0,0,0.15)] z-[999] min-w-[300px] mt-2.5">
+                            <div class="k-menu bg-white py-[30px] px-5 -my-[30px] -mr-2.5 -ml-[50px]">
+                                <h1 class="text-[11px] font-medium text-[#888] ml-[29px] mb-5 tracking-[0.1px] text-left">EXPERTISE, TIPS AND INSPIRATION</h1>
+                                <ul class="list-none flex flex-col items-start leading-[1.5] gap-[5px] m-0">
+                                    <li class="text-left p-2 relative">
+                                        <a href="#" class="block w-full text-left no-underline text-[#001453] font-medium text-[15px] mx-5 transition-colors duration-300 hover:text-[#004ced]">All Topics<br>
+                                            <span class="subtitle text-[14px] font-light">Blog &amp; Knowledge guide overview</span>
+                                        </a>
+                                    </li>
+                                    <li class="text-left p-2 relative">
+                                        <a href="#" class="block w-full text-left no-underline text-[#001453] font-medium text-[15px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Website Tips<br>
+                                            <span class="subtitle text-[14px] font-light">Get the most out of your website</span>
+                                        </a>
+                                    </li>
+                                    <li class="text-left p-2 relative">
+                                        <a href="#" class="block w-full text-left no-underline text-[#001453] font-medium text-[15px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Success stories<br>
+                                            <span class="subtitle text-[14px] font-light">Inspiring stories by real Jimdo customers</span>
+                                        </a>
+                                    </li>
+                                    <li class="text-left p-2 relative">
+                                        <a href="#" class="block w-full text-left no-underline text-[#001453] font-medium text-[15px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Jimdo Updates<br>
+                                            <span class="subtitle text-[14px] font-light">What's new at Jimdo?</span>
+                                        </a>
+                                    </li>
+                                    <li class="text-left p-2 relative">
+                                        <a href="#" class="block w-full text-left no-underline text-[#001453] font-medium text-[15px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Founder Stories<br>
+                                            <span class="subtitle text-[14px] font-light">Inspiring stories by real Jimdo customers</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Help -->
+                    <li class="list-none inline-block p-2 relative">
+                        <a href="#" class="dropdown-toggle inline-flex items-center gap-1 no-underline text-[16px] font-medium text-[#001453] mx-4 hover:text-[#004ced] lg:max-xl:mx-1.5 lg:max-xl:text-[12px] lg:max-xl:font-medium [&.active]:underline [&.active]:decoration-[#004ced] [&.active]:decoration-4 [&.active]:underline-offset-[40px]">
+                            <span>Help</span>
+                            <svg width="14" height="14" class="w-3.5 h-3.5 stroke-[2.3] mt-0.5 transition-transform duration-300 [&.rotated]:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu Knowledge flex flex-row justify-around opacity-0 invisible translate-y-2 pointer-events-none transition-all duration-200 ease-out [&.show]:opacity-100 [&.show]:visible [&.show]:translate-y-0 [&.show]:pointer-events-auto absolute top-[145%] right-0 bg-white py-[30px] px-5 shadow-[0_4px_12px_rgba(0,0,0,0.15)] z-[999] min-w-[300px] mt-2.5">
+                            <div class="k-menu bg-white py-[30px] px-5 -my-[30px] -mr-2.5 -ml-[50px]">
+                                <h1 class="text-[11px] font-medium text-[#888] ml-[29px] mb-5 tracking-[0.1px] text-left">HOW CAN WE HELP YOU?</h1>
+                                <ul class="list-none flex flex-col items-start leading-[1.5] gap-[5px] m-0">
+                                    <li class="text-left p-2 relative">
+                                        <a href="#" class="block w-full text-left no-underline text-[#001453] font-medium text-[15px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Help center<br>
+                                            <span class="subtitle text-[14px] font-light">Find answers to your questions</span>
+                                        </a>
+                                    </li>
+                                    <li class="text-left p-2 relative">
+                                        <a href="#" class="block w-full text-left no-underline text-[#001453] font-medium text-[15px] mx-5 transition-colors duration-300 hover:text-[#004ced]">Contact support<br>
+                                            <span class="subtitle text-[14px] font-light">Our support team is here for you</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Log In -->
+                    <li class="list-none inline-block p-2 relative">
+                        <a href="#" class="no-underline text-[16px] font-semibold text-[#001453] mx-4 hover:text-[#004ced] lg:max-xl:mx-1.5 lg:max-xl:text-[12px] lg:max-xl:font-medium">Log In</a>
+                    </li>
+
+                    <!-- Start for free button -->
+                    <li class="list-none inline-block p-1.5 relative ">
+                        <a href="#" class="btn inline-block rounded-[8px] bg-[#004ced] hover:bg-[#003bbb] text-white no-underline font-semibold text-[15px] text-center py-[14px] px-[23px] transition-colors md:max-xl:flex">
+                            Start for free
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay hidden fixed top-0 left-0 w-full h-full bg-black/60 z-[999] opacity-0 transition-opacity duration-300 [&.active]:max-xl:block [&.active]:opacity-100" id="mobileMenuOverlay">
+            <button type="button" class="fixed top-4 right-0 w-[60px] max-sm:w-[52px] h-12 flex items-center justify-center text-white bg-transparent border-0 cursor-pointer p-0 z-[1003]" id="mobileMenuClose" aria-label="Close menu">
+            </button>
+        </div>
+
+        <!-- Mobile Menu Container -->
+        <div class="mobile-menu fixed top-0 left-0 w-[calc(100%-60px)] max-sm:w-[calc(100%-52px)] h-svh bg-white z-[1002] flex flex-col transition-transform duration-300 shadow-[2px_0_10px_rgba(0,0,0,0.15)] -translate-x-full [&.active]:translate-x-0 xl:hidden" id="mobileMenu" tabindex="-1">
+            <!-- Header section with Jimdo Logo -->
+            <div class="flex items-center justify-between px-6 py-5 shrink-0 bg-white">
+                <a href="#home" class="inline-block">
+                    <img src="src/img/Logo.png" alt="Jimdo Logo" class="w-[95px] block">
+                </a>
+            </div>
+
+            <!-- Submenu Back Header ("Main menu <") -->
+            <button type="button" id="mobileSubmenuBack" class="hidden w-full bg-[#f8f8f8] px-6 py-4 items-center justify-between text-[#001453] font-semibold text-[16px] border-0 cursor-pointer text-left shrink-0 hover:bg-[#efefef] transition-colors">
+                <span>Main menu</span>
+                <svg aria-hidden="true" width="16" height="16" class="w-4 h-4 stroke-[2.5] text-[#001453]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+
+            <!-- Scrollable Content Area -->
+            <div class="mobile-menu-content flex-1 overflow-y-auto px-6 py-2">
+                <!-- Main Menu List -->
+                <ul id="mobileMainMenuList" class="flex flex-col items-start w-full m-0 p-0">
+                    <!-- Website -->
+                    <li class="w-full border-b border-[#f0f0f0] py-[18px] px-0 list-none text-[18px] font-semibold text-[#001453] relative">
+                        <a href="#" class="menu-toggle flex justify-between items-center w-full no-underline text-[#001453]" data-target="websiteSubmenu" aria-expanded="false" aria-controls="websiteSubmenu">
+                            <span>Website</span>
+                            <svg aria-hidden="true" width="16" height="16" class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <!-- Online Store -->
+                    <li class="w-full border-b border-[#f0f0f0] py-[18px] px-0 list-none text-[18px] font-semibold text-[#001453] relative">
+                        <a href="#" class="menu-toggle flex justify-between items-center w-full no-underline text-[#001453]" data-target="storeSubmenu" aria-expanded="false" aria-controls="storeSubmenu">
+                            <span>Online Store</span>
+                            <svg aria-hidden="true" width="16" height="16" class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <!-- Solutions -->
+                    <li class="w-full border-b border-[#f0f0f0] py-[18px] px-0 list-none text-[18px] font-semibold text-[#001453] relative">
+                        <a href="#" class="menu-toggle flex justify-between items-center w-full no-underline text-[#001453]" data-target="solutionsSubmenu" aria-expanded="false" aria-controls="solutionsSubmenu">
+                            <span>Solutions</span>
+                            <svg aria-hidden="true" width="16" height="16" class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <!-- Pricing -->
+                    <li class="w-full border-b border-[#f0f0f0] py-[18px] px-0 list-none text-[18px] font-semibold text-[#001453] relative">
+                        <a href="#" class="flex justify-between items-center w-full no-underline text-[#001453]">
+                            <span>Pricing</span>
+                        </a>
+                    </li>
+
+                    <!-- Community -->
+                    <li class="w-full border-b border-[#f0f0f0] py-[18px] px-0 list-none text-[18px] font-semibold text-[#001453] relative">
+                        <a href="#" class="flex justify-between items-center w-full no-underline text-[#001453]">
+                            <span>Community</span>
+                        </a>
+                    </li>
+
+                    <!-- Spacer -->
+                    <li class="mt-4 w-full py-[30px] list-none"></li>
+
+                    <!-- Blog -->
+                    <li class="w-full border-b border-[#f0f0f0] py-[18px] px-0 list-none text-[18px] font-semibold text-[#001453] relative">
+                        <a href="#" class="menu-toggle flex justify-between items-center w-full no-underline text-[#001453]" data-target="blogSubmenu" aria-expanded="false" aria-controls="blogSubmenu">
+                            <span>Blog</span>
+                            <svg aria-hidden="true" width="16" height="16" class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <!-- Help -->
+                    <li class="w-full py-[18px] px-0 list-none text-[18px] font-semibold text-[#001453] relative">
+                        <a href="#" class="menu-toggle flex justify-between items-center w-full no-underline text-[#001453]" data-target="helpSubmenu" aria-expanded="false" aria-controls="helpSubmenu">
+                            <span>Help</span>
+                            <svg aria-hidden="true" width="16" height="16" class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Submenu: Website -->
+                <div id="websiteSubmenu" class="mobile-submenu hidden py-4">
+                    <div class="mb-7">
+                        <h2 class="text-[12px] font-normal text-[#6d758d] uppercase tracking-[0.4px] mb-3">OUR WEBSITE BUILDER</h2>
+                        <ul class="list-none m-0 p-0 flex flex-col gap-1">
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Create a website</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Pricing and plans</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Website examples</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Your own domain</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Founder Stories</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-7">
+                        <h2 class="text-[12px] font-normal text-[#6d758d] uppercase tracking-[0.4px] mb-3">USEFUL TOOLS FOR YOUR WEBSITE</h2>
+                        <ul class="list-none m-0 p-0 flex flex-col gap-2">
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Warning-proof legal texts</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">For privacy policy &amp; Co</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Business listings</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">For Google, Facebook &amp; Co.</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Online booking</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Directly via your website</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Social media integration</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Promote on Facebook &amp; Instagram</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-4">
+                        <h2 class="text-[12px] font-normal text-[#004ced] uppercase tracking-[0.4px] mb-3">FOR YOUR INDUSTRY</h2>
+                        <ul class="list-none m-0 p-0 flex flex-col gap-1">
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Online Portfolio</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Restaurant websites</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Coaches</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Musicians &amp; Bands</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Real estate agents</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Doctors &amp; practices</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Submenu: Online Store -->
+                <div id="storeSubmenu" class="mobile-submenu hidden py-4">
+                    <div class="mb-7">
+                        <h2 class="text-[12px] font-normal text-[#6d758d] uppercase tracking-[0.4px] mb-3">OUR ONLINE STORE BUILDER</h2>
+                        <ul class="list-none m-0 p-0 flex flex-col gap-1">
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Create an online store</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Pricing and Plans</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Online store examples</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Your own domain</a></li>
+                            <li><a href="#" class="block py-2 text-[15px] font-semibold text-[#001453] no-underline hover:text-[#004ced]">Founder Stories</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-4">
+                        <h2 class="text-[12px] font-normal text-[#6d758d] uppercase tracking-[0.4px] mb-3">USEFUL TOOLS FOR YOUR STORE</h2>
+                        <ul class="list-none m-0 p-0 flex flex-col gap-2">
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Warning-proof legal texts</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">For general terms and conditions, privacy policy &amp; Co</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Business listings</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">For Google, Facebook &amp; Co.</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Social Media Integration</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Sell on Facebook &amp; Instagram</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Submenu: Solutions -->
+                <div id="solutionsSubmenu" class="mobile-submenu hidden py-4">
+                    <div class="mb-7">
+                        <h2 class="text-[12px] font-normal text-[#6d758d] uppercase tracking-[0.4px] mb-3">GET FOUND</h2>
+                        <ul class="list-none m-0 p-0 flex flex-col gap-2">
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Jimdo Local</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Google Business, Facebook &amp; Co</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Social Media Integration</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Promote your Facebook and Instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Your Own Domain</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Your own Domain</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-7">
+                        <h2 class="text-[12px] font-normal text-[#6d758d] uppercase tracking-[0.4px] mb-3">GET BOOKED</h2>
+                        <ul class="list-none m-0 p-0 flex flex-col gap-2">
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Online Bookings</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Take Appointments via your Website</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Smart Forms</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Create a contact form for any Occasion</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-4">
+                        <h2 class="text-[12px] font-normal text-[#6d758d] uppercase tracking-[0.4px] mb-3">GET PAID</h2>
+                        <ul class="list-none m-0 p-0 flex flex-col gap-2">
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Payment links</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Share a link, get paid</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Sell on Facebook &amp; Instagram</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Reach buyers where they scroll</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Submenu: Blog -->
+                <div id="blogSubmenu" class="mobile-submenu hidden py-4">
+                    <div class="mb-4">
+                        <h2 class="text-[12px] font-normal text-[#6d758d] uppercase tracking-[0.4px] mb-3">EXPERTISE, TIPS AND INSPIRATION</h2>
+                        <ul class="list-none m-0 p-0 flex flex-col gap-2">
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">All Topics</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Blog &amp; Knowledge guide overview</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Website Tips</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Get the most out of your website</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Success stories</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Inspiring stories by real Jimdo customers</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Jimdo Updates</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">What's new at Jimdo?</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Founder Stories</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Inspiring stories by real Jimdo customers</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Submenu: Help -->
+                <div id="helpSubmenu" class="mobile-submenu hidden py-4">
+                    <div class="mb-4">
+                        <h2 class="text-[12px] font-normal text-[#6d758d] uppercase tracking-[0.4px] mb-3">HOW CAN WE HELP YOU?</h2>
+                        <ul class="list-none m-0 p-0 flex flex-col gap-2">
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Help center</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Find answers to your questions</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 no-underline group">
+                                    <span class="block text-[15px] font-semibold text-[#001453] group-hover:text-[#004ced]">Contact support</span>
+                                    <span class="block text-[14px] font-normal text-[#6d758d] mt-0.5">Our support team is here for you</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sticky Bottom Action Buttons -->
+            <div class="mt-auto shrink-0 bg-white px-6 py-4 shadow-[0_-4px_12px_rgba(0,0,0,0.06)] flex flex-col gap-2.5">
+                <a href="#" class="w-full rounded-[4px] bg-[#004ced] hover:bg-[#003bbb] text-white no-underline font-semibold text-[15px] text-center py-[12px] transition-colors">
+                    Start for free
+                </a>
+                <a href="#" class="w-full rounded-[4px] bg-white border border-[#d6d9e0] text-[#004ced] no-underline font-semibold text-[15px] text-center py-[12px] transition-colors hover:bg-gray-50">
+                    Log In
+                </a>
+            </div>
+        </div>
+
+
+<!-- Hero Content -->
+
+
+        <!-- Hero Content -->
+
+    
+        <section class="w-full bg-white pt-36 pb-12 sm:pt-32 sm:pb-16 lg:pt-36 lg:pb-20">
+
+        <div class="mx-auto flex w-full max-w-7xl
+                    flex-col items-center
+                    gap-8 px-5
+                    sm:px-8
+                    lg:flex-row 
+                    lg:gap-14 lg:px-10
+                    xl:gap-16">
+
+
+            <!-- LEFT SIDE: TEXT, BENEFITS, AND BUTTON -->
+            <div class="w-full lg:w-1/2">
+
+
+                <!-- Heading -->
+                <h1 class="mb-5 font-poppins font-normal
+                        text-[32px] leading-tight
+                        sm:text-4xl
+                        lg:text-[35px]
+                        xl:text-5xl">
+
+
+                    Create an Online Portfolio
+                    <br class="max-lg:hidden">
+                    <span>With Jimdo</span>
+
+
+                </h1>
+
+
+                <!-- Benefits -->
+                <ul class="bio m-0 list-none space-y-1 p-0">
+
+
+                    <!-- Benefit 1 -->
+                    <li class="flex items-center gap-3 py-1 max-sm:py-1.5">
+
+
+                        <span class="inline-flex h-[18px] w-[18px]
+                                    shrink-0 items-center justify-center
+                                    rounded-full border-[1.8px]
+                                    border-[#004ced] text-[#004ced]">
+
+
+                            <svg viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.6"
+                                class="h-3 w-3">
+
+
+                                <path stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M5 13l4 4L19 7"/>
+
+
+                            </svg>
+
+
+                        </span>
+
+
+                        <span class="text-[16px] font-[240] text-black
+                                    max-sm:text-sm">
+                            Perfect for artists and creatives
+                        </span>
+
+
+                    </li>
+
+
+                    <!-- Benefit 2 -->
+                    <li class="flex items-center gap-3 py-1 max-sm:py-1.5">
+
+
+                        <span class="inline-flex h-[18px] w-[18px]
+                                    shrink-0 items-center justify-center
+                                    rounded-full border-[1.8px]
+                                    border-[#004ced] text-[#004ced]">
+
+
+                            <svg viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.6"
+                                class="h-3 w-3">
+
+
+                                <path stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M5 13l4 4L19 7"/>
+
+
+                            </svg>
+
+
+                        </span>
+
+
+                        <span class="text-[16px] font-[240] text-black
+                                    max-sm:text-sm">
+                            Reach a larger audience
+                        </span>
+
+
+                    </li>
+
+
+                    <!-- Benefit 3 -->
+                    <li class="flex items-center gap-3 py-1 max-sm:py-1.5">
+
+
+                        <span class="inline-flex h-[18px] w-[18px]
+                                    shrink-0 items-center justify-center
+                                    rounded-full border-[1.8px]
+                                    border-[#004ced] text-[#004ced]">
+
+
+                            <svg viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.6"
+                                class="h-3 w-3">
+
+
+                                <path stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M5 13l4 4L19 7"/>
+
+
+                            </svg>
+
+
+                        </span>
+
+
+                        <span class="text-[16px] font-[240] text-black
+                                    max-sm:text-sm">
+                            Show off what you can do
+                        </span>
+
+
+                    </li>
+
+
+                </ul>
+
+
+                <!-- BUTTON AND DESCRIPTION -->
+                <div class="btn mt-10 w-full max-w-[225px]
+                            max-md:max-w-[240px]
+                            max-sm:max-w-full">
+
+
+                    <a href="#"
+                    class="flex w-full items-center justify-center
+                            rounded-[8px] bg-[#004ced]
+                            px-8 py-5
+                            text-center text-[20px] font-normal
+                            text-white no-underline
+                            transition-colors duration-300
+                            hover:bg-[#003bbb]
+                            max-sm:py-4 max-sm:text-[16px]">
+                        Start Now
+
+
+                    </a>
+
+
+                    <p class="mt-3 text-[13px] text-center
+                            font-light text-gray-500
+                            max-sm:text-[14px]">
+
+                        Start for free and upgrade anytime <br class="max-sm:block">
+                        to one of our premium plans
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+            <!-- RIGHT SIDE: HERO IMAGE -->
+            <div class="w-full lg:w-1/2">
+
+
+                <img
+                    src="src/img/hero-image.png"
+                    alt="Portfolio Hero Preview"
+                    class="h-auto w-full object-contain"
+                >
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+    </div>
+
+
+    <!-- ========================== MEMBER 1 END ============================= -->
+
+    <!-- ===================================================================== -->
+    <!--  ANI: Portfolio Site Features Section                                 -->
+    <!-- TASKS                                                                 -->
+    <!--   1.                                                                  -->
+    <!-- ===================================================================== -->
+    <section class="w-full bg-white px-5 py-14 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
+
+    <div class="mx-auto max-w-7xl">
+
+        <h2 class="text-center text-3xl font-light leading-tight
+        sm:text-4xl lg:text-5xl"> Portfolio site features that matter </h2>
+
+
+        <div class="mt-12 flex flex-col items-center gap-10
+                    lg:flex-row md:gap-12 lg:gap-20">
+
+            <div class="w-full lg:w-1/2">
+
+                <h3 class="mt-8 mb-5 text-3xl font-[250] lg:text-3xl">
+                    Beautiful visuals, by design
+                </h3>
+
+                <p class="text-md font-[250] leading-7 sm:text-base">
+                    Polished. Professional. Eye-catching. With Jimdo's
+                    design tools, your online portfolio makes the best
+                    impression. Choose colors and fonts, and even design
+                    your own logo. Then show off your work in high-impact
+                    slideshows.
+                </p>
+
+            </div>
+
+
+            <div class="w-full lg:w-1/2">
+                <img src="src/img/img2.webp" alt="Beautiful visuals, by design" class="w-full h-auto object-contain">
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Feature 2: Help search engines find you -->
+    <section class="max-w-7xl mx-auto px-9 py-5">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+
+                <!-- Analytics Dashboard Image -->
+                <div class="w-full lg:w-1/2">
+                    <img
+                        src="src/img/img3.webp"
+                        alt="Website visitor analytics dashboard"
+                        class="w-full h-auto object-contain"
+                    >
+                </div>
+
+                <!-- SEO Text -->
+                <div class="w-full lg:w-1/2">
+                    <h3 class="text-3xl font-[250] text-heading mb-6 max-[480px]:text-[22.5px]">
+                        Help search engines find you
+                    </h3>
+
+                    <p class="text-base font-[250] text-heading max-[480px]:text-[15px]">
+                        Want your portfolio website to find the right audience?
+                        Our automatic SEO tools and tips walk you through every
+                        step, even if you’re a beginner. Show up on Google and
+                        track traffic with Statistics, too.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+    <section class="max-w-7xl mx-auto  py-16 px-9">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+
+                <!-- SEO Text -->
+                <div class="w-full lg:w-1/2">
+                    <h3 class="text-3xl font-[250] text-heading mb-6 max-[480px]:text-[25px]">
+                    Connect to social media in seconds
+                    </h3>
+
+                    <p class="text-[15px] font-[250] text-heading max-[480px]:text-[15px]">
+                        Already using Facebook? That makes it even easier 
+                        to build your online portfolio. Pull in photos right
+                        from your existing accounts, so your website is ready in a snap.
+                    </p>
+                </div>
+
+                <!-- Analytics Dashboard Image -->
+                <div class="w-full lg:w-1/2">
+                    <img
+                        src="src/img/img4.webp"
+                        alt="Website visitor analytics dashboard"
+                        class="w-full h-auto object-contain"
+                    >
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <!-- Build "How to create your online portfolio" steps (src/img/img5.webp) here -->
+        
+        <section class="max-w-[1350px] mx-auto py-20 sm:py-12 px-7">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+
+                <div class="w-full lg:w-1/2 gap[-30px]  gap-12 ">
+                    <h3 class="text-3xl font-[300] text-heading max-[480px]:text-[16px] max-[600px]:text-[23px]">
+                        How to make an online portfolio
+                    </h3>
+                    <p class="font-extralight mt-4">
+                        If you're a photographer, artist, designer, model, or creative,
+                        putting your work online is the best way to reach a larger
+                        audience. And you can do it in 4 easy steps.
+                    </p>
+
+                    <ol class="list-none space-y-2 mt-6">
+                        <li class="flex gap-4"><span class="text-blue-600 font-medium">1.</span>
+                            <span class="text-black font-extralight">
+                            Sign up or log in with social media. You’ll also be able to choose a domain (website address) for your portfolio site.
+                            </span>
+                        </li>
+                        <li class="flex gap-4"><span class="text-blue-600 font-medium">2.</span>
+                            <span class="text-black font-extralight">
+                                Tell us a little about your work. Answer a few questions and our portfolio maker creates the website for you.
+                            </span>
+                        </li>
+                        <li class="flex gap-4"><span class="text-blue-600 font-medium">3.</span>
+                            <span class="text-black font-extralight">
+                                Add your images. Connect your social media accounts to pull in your images from around the web, or easily upload them.
+                            </span>
+                        </li>
+                        <li class="flex gap-4"><span class="text-blue-600 font-medium">4.</span>
+                            <span class="text-black font-extralight">
+                                Publish your site—and you’re online! Then follow our quick and easy tips to optimize your portfolio site even more!
+                            </span>
+                        </li>
+                    </ol>
+                    <a href="#" class="btn inline-block rounded-[5px] bg-[#004ced] hover:bg-[#003bbb] text-white no-underline font-[380] text-[16px] text-center py-3 px-10 transition-colors mt-10 max-[480px]:w-full max-[600px]:w-full">
+                            Start Now
+                        </a>
+                </div>
+                
+
+                <div class="w-full lg:w-1/2 ml-16 mr-1.5 max-[767px]:hidden max-[991px]:items-center max-[991px]:justify-center max-[991px]:ml-[350px] max-[991px]:mr-0">
+                    <img
+                        src="src/img/img5.webp"
+                        alt="How to make an online portfolio"
+                        class="h-auto max-w-sm ml-28"
+                    >
+                </div>
+
+            </div>
+        </section>
+
+
+
+    <section id="portfolio-types" class="w-full bg-[#ffffff] px-9 py-20 md:py-28">
+        <div class="mx-auto max-w-7xl">
+            <div class="mx-auto max-w-3xl text-center">
+                <h2 class="text-4xl font-light leading-tight text-black max-md:text-3xl max-[991px]:text-[35px]">
+                    What kind of portfolio website will you create?
+                </h2>
+            </div>
+<div class="grid grid-cols-2 grid-rows-2 gap-4 md *:grid-cols-3 md:grid-rows-1 mt-12 max-md:grid-cols-1 max-md:gap-8 *:max-md:mt-8 max-[991px]:grid-cols-1 max-[991px]:gap-6 max-[991px]:mt-6">
+
+<!--------------------- Panels ------------------->
+
+            <div id="portfolio-panel" role="tabpanel" aria-labelledby="portfolio-tab-graphic" tabindex="0"
+                class="mt-12">
+                <div class="order-1 flex min-h-[220px] items-center justify-center md:order-2">
+                    <img data-portfolio-image src="src/img/graphic.webp" alt="Artist portfolio website featuring colorful abstract artwork"
+                        class="h-auto w-full max-w-[850px] object-contain" loading="lazy">
+                </div>
+                <div class="order-2 text-left md:order-1">
+                    <h3 data-portfolio-title class="text-2xl font- text-[#000] max-md:text-2xl">Graphic designer portfolio</h3>
+                    <p data-portfolio-description class="mt-2 max-w-xl text-base font-light leading-7 text-[#000]">
+                        Your graphic design online portfolio shows off your skills and work examples in one place, from different design programs to different mediums.
+                    </p>
+                    <a href="#" class="mt-5 inline-flex items-center gap-2 whitespace-nowrap border-b border-current pb-0.5 font-medium text-[#000] hover:border-transparent">
+                    Start Now <span aria-hidden="true">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+            <div id="portfolio-panel" role="tabpanel" aria-labelledby="portfolio-tab-photographer" tabindex="0"
+                class="mt-12">
+                <div class="order-1 flex min-h-[220px] items-center justify-center md:order-2">
+                    <img data-portfolio-image src="src/img/photographer.webp" alt="Artist portfolio website featuring colorful abstract artwork"
+                        class="h-auto w-full max-w-[850px] object-contain" loading="lazy">
+                </div>
+                <div class="order-2 text-left md:order-1">
+                    <h3 data-portfolio-title class="text-2xl font-normal text-[#000] max-md:text-2xl">Photographer portfolio</h3>
+                    <p data-portfolio-description class="mt-2 max-w-xl text-base font-light leading-7 text-[#000]">
+                        Building a photography portfolio means focusing on the work, not the website. Jimdo’s modern designs keep your images front and center. You can accept bookings, too!
+                    </p>
+                    <a href="#" class="mt-5 inline-flex items-center gap-2 whitespace-nowrap border-b border-current pb-0.5 font-medium text-[#000] hover:border-transparent">
+                    Start Now <span aria-hidden="true">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+            <div id="portfolio-panel" role="tabpanel" aria-labelledby="portfolio-tab-artist" tabindex="0"
+                class="mt-12">
+                <div class="order-1 flex min-h-[220px] items-center justify-center md:order-2">
+                    <img data-portfolio-image src="src/img/artist.webp" alt="Artist portfolio website featuring colorful abstract artwork"
+                        class="h-auto w-full max-w-[850px] object-contain" loading="lazy">
+                </div>
+                <div class="order-2 text-left md:order-1">
+                    <h3 data-portfolio-title class="text-2xl font-normal text-[#000] max-md:text-2xl">Artist Portfolio</h3>
+                    <p data-portfolio-description class="mt-2 max-w-xl text-base font-light leading-7 text-[#000]">
+                        Showcase your latest work, share your creative process, and give visitors a place to discover your art.
+                    </p>
+                    <a href="#" class="mt-5 inline-flex items-center gap-2 whitespace-nowrap border-b border-current pb-0.5 font-medium text-[#000] hover:border-transparent">
+                    Start Now <span aria-hidden="true">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+            <div id="portfolio-panel" role="tabpanel" aria-labelledby="portfolio-tab-artist" tabindex="0"
+                class="mt-12">
+                <div class="order-1 flex min-h-[220px] items-center justify-center md:order-2">
+                    <img data-portfolio-image src="src/img/model.webp" alt="Artist portfolio website featuring colorful abstract artwork"
+                        class="h-auto w-full max-w-[850px] object-contain" loading="lazy">
+                </div>
+                <div class="order-2 text-left md:order-1 ">
+                    <h3 data-portfolio-title class="text-2xl font-normal text-[#000] max-md:text-2xl">Model Portfolio</h3>
+                    <p data-portfolio-description class="mt-5 max-w-xl text-base font-light leading-7 text-[#000]">
+                        You’re versatile and stylish, and your portfolio can be too. A website is a platform that you control, and it’s easy to use images right from your social media accounts.
+                    </p>
+                    <a href="#" class="mt-5 inline-flex items-center gap-2 whitespace-nowrap border-b border-current pb-0.5 font-medium text-[#000] hover:border-transparent">
+                    Start Now <span aria-hidden="true">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- ==================== Gallery  ==================== -->
+   <!-- ==================== Gallery ==================== -->
+<section class="design w-full bg-white py-16 sm:py-20 relative text-center overflow-hidden select-none px-9">
+    <div class="max-w-5xl mx-auto px-4">
+        <h2 class="text-3xl sm:text-[38px] lg:text-[40px] font-light text-black tracking-tight leading-tight">
+            Get portfolio design inspiration with these examples
+        </h2>
+        <p class="text-sm sm:text-base text-gray-700 font-light mt-3 mb-10 sm:mb-12">
+            Artists ♡ Jimdo! Spark your creativity with these website portfolio examples built with Jimdo.
+        </p>
+    </div>
+
+    <!-- Carousel Slider Container -->
+    <div class="relative w-full max-w-[1500px] mx-auto overflow-hidden py-4" id="inspirationCarousel">
+        <div class="carousel-track flex items-center will-change-transform" id="carouselTrack" style="transition: transform 500ms ease-out;">
+
+            <!-- Slides -->
+            <div class="carousel-slide shrink-0 w-[85vw] max-w-[480px] lg:max-w-[540px] mx-3 sm:mx-4 cursor-pointer transition-all duration-500 rounded-[24px] sm:rounded-[32px] p-2 sm:p-3 bg-white border border-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.06)]" data-index="0">
+                <img src="src/img/portfolio1.webp" alt="Herzlich Willkommen portfolio" class="w-full h-auto rounded-[16px] sm:rounded-[22px] object-cover block shadow-sm pointer-events-none">
+            </div>
+    
+            <div class="carousel-slide shrink-0 w-[85vw] max-w-[480px] lg:max-w-[540px] mx-3 sm:mx-4 cursor-pointer transition-all duration-500 rounded-[24px] sm:rounded-[32px] p-2 sm:p-3 bg-white border border-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.06)]" data-index="1">
+                <img src="src/img/portfolio2.webp" alt="OH DEAR portfolio" class="w-full h-auto rounded-[16px] sm:rounded-[22px] object-cover block shadow-sm pointer-events-none">
+            </div>
+        
+            <div class="carousel-slide shrink-0 w-[85vw] max-w-[480px] lg:max-w-[540px] mx-3 sm:mx-4 cursor-pointer transition-all duration-500 rounded-[24px] sm:rounded-[32px] p-2 sm:p-3 bg-white border border-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.06)]" data-index="2">
+                <img src="src/img/portfolio3.webp" alt="Curio products portfolio" class="w-full h-auto rounded-[16px] sm:rounded-[22px] object-cover block shadow-sm pointer-events-none">
+            </div>
+            
+            <div class="carousel-slide shrink-0 w-[85vw] max-w-[480px] lg:max-w-[540px] mx-3 sm:mx-4 cursor-pointer transition-all duration-500 rounded-[24px] sm:rounded-[32px] p-2 sm:p-3 bg-white border border-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.06)]" data-index="3">
+                <img src="src/img/portfolio4.webp" alt="Design portfolio 4" class="w-full h-auto rounded-[16px] sm:rounded-[22px] object-cover block shadow-sm pointer-events-none">
+            </div>
+        
+            <div class="carousel-slide shrink-0 w-[85vw] max-w-[480px] lg:max-w-[540px] mx-3 sm:mx-4 cursor-pointer transition-all duration-500 rounded-[24px] sm:rounded-[32px] p-2 sm:p-3 bg-white border border-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.06)]" data-index="4">
+                <img src="src/img/portfolio5.webp" alt="Design portfolio 5" class="w-full h-auto rounded-[16px] sm:rounded-[22px] object-cover block shadow-sm pointer-events-none">
+            </div>
+        </div>
+    </div>
+
+    <!-- Pagination Dots (Total original 5 dots) -->
+    <div class="flex items-center justify-center gap-10 mt-8" id="carouselDots">
+        <button type="button" aria-label="Go to slide 1" class="carousel-dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300 cursor-pointer hover:bg-gray-400" data-index="0"></button>
+        <button type="button" aria-label="Go to slide 2" class="carousel-dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300 cursor-pointer hover:bg-gray-400" data-index="1"></button>
+        <button type="button" aria-label="Go to slide 3" class="carousel-dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300 cursor-pointer hover:bg-gray-400" data-index="2"></button>
+        <button type="button" aria-label="Go to slide 4" class="carousel-dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300 cursor-pointer hover:bg-gray-400" data-index="3"></button>
+        <button type="button" aria-label="Go to slide 5" class="carousel-dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300 cursor-pointer hover:bg-gray-400" data-index="4"></button>
+    </div>
+</section>
+
+    
+
+    <!-- ===================================================================== -->
+    <!--  EDMARK: Website FAQ Section                                          -->
+    <!-- ===================================================================== -->
+    <!-- Build "Online Portfolio FAQ" accordion here -->
+    <!-- Build "Online Portfolio FAQ" accordion here -->
+    <section class="max-w-7xl mx-auto my-16 px-6 py-16 items-center">
+
+
+    <!-- Heading -->
+    <h2 class="text-3xl md:text-4xl font-light tracking-tight mb-10">
+        Online portfolio FAQ
+    </h2>
+
+
+    <!-- FAQ Container -->
+    <div class="">
+
+
+        <!-- FAQ 1 -->
+        <div class="faq-item border-b border-gray-300">
+
+
+            <button
+                class="faq-question w-full flex items-center justify-between py-6 text-left text-lg md:text-xl font-normal"
+                aria-expanded="false">
+
+
+                <span>What are the benefits of having an online portfolio?</span>
+
+
+                <svg class="faq-icon w-5 h-5 shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    style="transition: transform 0.3s ease;">
+
+
+                    <path d="m6 9 6 6 6-6"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+
+            <div class="faq-answer hidden pb-6 text-base font-light leading-relaxed">
+                Creating an online portfolio is one of the best ways to show off your best work, all in one place. Even if you’re already using different social media accounts, putting your portfolio online gives you an online hub for potential clients, customers, agencies, and recruiters to see what you can do. It’s all on a platform you control, no matter how social media trends change. Plus, you can customize your design exactly how you want it.
+            </div>
+        </div>
+
+
+        <!-- FAQ 2 -->
+        <div class="faq-item border-b border-gray-300">
+
+
+            <button
+                class="faq-question w-full flex items-center justify-between py-6 text-left text-lg md:text-xl font-normal"
+                aria-expanded="false">
+
+
+                <span>How do I make a good portfolio website?</span>
+
+
+                <svg class="faq-icon w-5 h-5 shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    style="transition: transform 0.3s ease;">
+
+
+                    <path d="m6 9 6 6 6-6"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+
+            <div class="faq-answer hidden pb-6 text-base font-light leading-relaxed">
+                Fortunately with Jimdo, most of the portfolio creation is already done for you! The best way to create a good online portfolio is to start with a custom domain. That shows the world that you take your project seriously and professionally. Once you put your portfolio online, make sure you use high-quality images, and choose a high-impact image for the header of your homepage to grab people’s attention. In addition to design, be sure to take a few minutes to optimize your site for search engines (Jimdo will walk you through how to do that). That way, your portfolio will start showing up in search engines for the right audience, and your traffic will grow.
+            </div>
+
+
+        </div>
+
+
+        <!-- FAQ 3 -->
+        <div class="faq-item border-b border-gray-300">
+
+
+            <button
+                class="faq-question w-full flex items-center justify-between py-6 text-left text-lg md:text-xl font-normal"
+                aria-expanded="false">
+
+
+                <span>What should I put in my online portfolio?</span>
+
+
+                <svg class="faq-icon w-5 h-5 shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    style="transition: transform 0.3s ease;">
+
+
+                    <path d="m6 9 6 6 6-6"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+
+            <div class="faq-answer hidden pb-6 text-base font-light leading-relaxed">
+                A good portfolio website doesn’t have to be complicated. It’s a good idea to include a short bio and headshot on your About page, as well as any relevant skills or experience. Then, you can have some fun putting together the visuals on your site, either in a slide show or just by placing the images on your web pages. When you do this, try to choose just your best work. Don’t post everything you’ve ever done—be picky and keep in mind that many online visitors have short attention spans and don’t want to browse through years of your work. You can also easily add a contact form so visitors know how to get in touch with you.
+            </div>
+
+
+        </div>
+
+
+        <!-- FAQ 4 -->
+        <div class="faq-item border-b border-gray-300">
+
+
+            <button
+                class="faq-question w-full flex items-center justify-between py-6 text-left text-lg md:text-xl font-normal"
+                aria-expanded="false">
+
+
+                <span>Why is an online portfolio important for a designer?</span>
+
+
+                <svg class="faq-icon w-5 h-5 shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    style="transition: transform 0.3s ease;">
+
+
+                    <path d="m6 9 6 6 6-6"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+
+            <div class="faq-answer hidden pb-6 text-base font-light leading-relaxed">
+                When you’re a designer, visuals are a huge part of the story. An online portfolio helps you go beyond a paper resume and portfolio and really start attracting the attention of hiring managers and potential customers. By putting your designer portfolio online, you can show off all sorts of work beyond print—including video, multimedia, and more. It’s also a good way to let your personality shine through and share your photography, modeling shots, or graphic design work in a more personal way.
+            </div>
+
+
+        </div>
+
+
+        <!-- FAQ 5 -->
+        <div class="faq-item border-b border-gray-300">
+
+
+            <button
+                class="faq-question w-full flex items-center justify-between py-6 text-left text-lg md:text-xl font-normal"
+                aria-expanded="false">
+
+
+                <span>How do I choose the right design for my portfolio website?</span>
+
+
+                <svg class="faq-icon w-5 h-5 shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    style="transition: transform 0.3s ease;">
+
+
+                    <path d="m6 9 6 6 6-6"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+
+            <div class="faq-answer hidden pb-6 text-base font-light leading-relaxed">
+                The best portfolio website designs and templates are clean, modern, and show off your work without distractions. When you sign up for Jimdo, you’ll be able to pick a style that fits you, and then the design of the website is taken care of! Once you create your online portfolio, you can tweak it and customize it as you like, but all the heavy lifting is done for you. So you can spend more time on your actual work, and less time laboring over your website.
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+
+
+    <!-- ===================================================================== -->
+    <!--  Website CTA / Professions Section                            -->
+    <!-- ===================================================================== -->
+    <section class="last w-full bg-white py-16 sm:py-20 text-center max-w-7xl mx-auto px-6 ">
+        <header class="text-center mb-12 sm:mb-16">
+            <h2 class="text-2xl sm:text-4xl font-light text-[#000000] ">
+                Show off your hard work
+            </h2>
+            <p class="mt-3 text-base sm:text-lg font-extralight text-[#000000]">
+                A portfolio creator for every profession
+            </p>
+        </header><br>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14 text-center max-w-6xl mx-auto">
+            <article class="flex flex-col items-center">
+                <h3 class="text-xl sm:text-2xl font-normal text-[#000000]">Freelancer</h3>
+                <p class="mt-4 text-base sm:text-base font-extralight leading-relaxed text-[#000000] lg:w-full max-w-sm">
+                    Every freelancer needs a website to attract new customers, find work, and show <br> off your skills. Build your own portfolio, with no coding required!
+                </p>
+                <a href="#" class="mt-5 inline-flex items-center gap-2 whitespace-nowrap border-b border-current pb-0.5 font-medium text-[#000] hover:border-transparent">
+                    Freelance website how-to <span aria-hidden="true">&rarr;</span>
+                </a>
+            </article>
+
+            <article class="flex flex-col items-center">
+                <h3 class="text-xl sm:text-2xl font-normal text-[#000]">Photography</h3>
+                <p class="mt-4 text-sm sm:text-base font-extralight leading-relaxed text-[#000000] lg:w-full max-w-sm">
+                    Photographers love Jimdo for its beautiful and easy portfolio websites. See how <br> you can get your photos online quickly and start taking bookings.
+                </p>
+                <a href="#" class="mt-5 inline-flex items-center gap-2 whitespace-nowrap border-b border-current pb-0.5 font-medium text-[#000] hover:border-transparent">
+                    Photography website how-to <span aria-hidden="true">&rarr;</span>
+                </a>
+            </article>
+
+            <article class="flex flex-col items-center">
+                <h3 class="text-xl sm:text-2xl font-normal text-[#000]">Design</h3>
+                <p class="mt-4 text-sm sm:text-base font-extralight leading-relaxed text-[#000000] lg:w-full max-w-sm">
+                    Create an art portfolio that matches your style. Our built-in tools will help you improve your search engine ranking and even sell your artwork online.
+                </p>
+                <a href="#" class="mt-5 inline-flex items-center gap-2 whitespace-nowrap border-b border-current pb-0.5 font-medium text-[#000] hover:border-transparent">
+                    Website design: So geht's <span aria-hidden="true">&rarr;</span>
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- Website Footer Section                                       -->
+    <!-- ===================================================================== -->
+    <section class="footer bg-white w-full max-w-full min-h-[50dvh] flex flex-wrap relative py-[50px] px-9 lg:px-[100px] xl:px-[200px] max-[991px]:flex-col max-[991px]:py-[30px] max-[991px]:px-9 max-[991px]:gap-6 max-[991px]:h-auto max-[480px]:p-5 max-[480px]:gap-8">
+        <div class="foot-items w-full min-[992px]:w-[30%] flex flex-col max-[991px]:order-2 max-[991px]:p-0 max-[991px]:text-center max-[480px]:gap-4" id="footBrand">
+            <div class="symbols w-full pb-6 min-[992px]:pb-[50px] max-[991px]:pb-16">
+                <img src="src/img/logo.png" alt="Jimdo Logo" class="w-[130px] max-[991px]:w-[120px] inline-block">
+            </div>
+
+            <div class="icons flex max-[991px]:justify-center">
+                <i class="fa-brands fa-facebook w-[50px] text-[#001453] text-[28px] transition-colors duration-300 hover:text-[#004ced]"></i>
+                <i class="fa-brands fa-instagram w-[50px] text-[#001453] text-[28px] transition-colors duration-300 hover:text-[#004ced]"></i>
+               <i class="fa-brands fa-tiktok inline-flex items-center justify-center w-[28px] h-[28px] rounded-full bg-[#001453] text-white text-[20px] transition-colors duration-300 hover:bg-[#004ced]"></i>
+                <i class="fa-brands fa-youtube mx-4 w-[px] text-[#001453] text-[28px] transition-colors duration-300 hover:text-[#004ced]"></i>
+            </div>
+        </div>
+
+        <div class="fdesc w-full min-[992px]:w-1/2 flex justify-start gap-8 lg:gap-20 max-[991px]:order-1 max-[991px]:w-[85%] max-[991px]:mx-auto max-[991px]:gap-0 max-[991px]:p-0 max-[991px]:flex-col max-[991px]:divide-y max-[991px]:divide-gray-300 max-[991px]:rounded-md max-[991px]:border max-[991px]:border-gray-300 max-[991px]:overflow-hidden">
+            <!-- Products Column / Dropdown on Mobile -->
+            <div class="foot-text footer-dropdown w-full flex flex-col justify-start" id="footProducts">
+                <button type="button" class="footer-dropdown-toggle w-full flex items-center justify-between cursor-pointer select-none py-3 text-left bg-transparent border-none p-0 max-[991px]:py-3 max-[991px]:px-3 max-[991px]:border-b max-[991px]:border-solid max-[991px]:border-gray-200 focus:outline-none" aria-expanded="false">
+                    <span class="pl-2 font-[450] text-[16px] text-[#6d6d6d] max-[991px]:text-black">Products</span>
+                    <i class="footer-arrow fa fa-angle-down hidden max-[991px]:block text-gray-700 transition-transform  mr-2"></i>
+                </button>
+
+                <ul class="footer-dropdown-menu p-0 max-[991px]:max-h-0 max-[991px]:overflow-hidden transition-all duration-300 ease-in-out [&.active]:max-[991px]:max-h-[500px] [&.active]:max-[991px]:py-2">
+                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Website</a></li>
+                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Online Store</a></li>
+                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Domain</a></li>
+                </ul>
+            </div>
+
+            <!-- About us Column / Dropdown on Mobile -->
+            <div class="foot-text footer-dropdown w-full flex flex-col justify-start" id="footAbout">
+                <button type="button" class="footer-dropdown-toggle w-full flex items-center justify-between cursor-pointer select-none py-3 text-left bg-transparent border-none p-0 max-[991px]:py-3 max-[991px]:px-3 max-[991px]:border-b max-[991px]:border-solid max-[991px]:border-gray-200 focus:outline-none" aria-expanded="false">
+                    <span class="pl-2 font-[450] text-[16px] text-[#6d6d6d] max-[991px]:text-black">About us</span>
+                    <i class="footer-arrow fa fa-angle-down hidden max-[991px]:block text-gray-700 transition-transform duration-300 mr-2"></i>
+                </button>
+
+                <ul class="footer-dropdown-menu p-0 max-[991px]:max-h-0 max-[991px]:overflow-hidden transition-all duration-300 ease-in-out [&.active]:max-[991px]:max-h-[500px] [&.active]:max-[991px]:py-2">
+                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">About Jimdo</a></li>
+                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Careers</a></li>
+                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Press</a></li>
+                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Jimdo-ifo Index</a></li>
+                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Affiliates</a></li>
+                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Partnerships</a></li>
+                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Sitemap</a></li>
+                </ul>
+            </div>
+
+            <!-- Resources Column / Dropdown on Mobile -->
+            <div class="foot-text footer-dropdown w-full flex flex-col justify-start" id="footResources">
+                <button type="button" class="footer-dropdown-toggle w-full flex items-center justify-between cursor-pointer select-none py-3 text-left bg-transparent border-none p-0 max-[991px]:py-3 max-[991px]:px-3 max-[991px]:border-b max-[991px]:border-solid max-[991px]:border-gray-200 focus:outline-none" aria-expanded="false">
+                    <span class="pl-2 font-[450] text-[16px] text-[#6d6d6d] max-[991px]:text-black">Resources</span>
+                    <i class="footer-arrow fa fa-angle-down hidden max-[991px]:block text-gray-700 transition-transform duration-90 mr-2"></i>
+                </button>
+
+                <ul class="footer-dropdown-menu p-0 max-[991px]:max-h-0 max-[991px]:overflow-hidden transition-all duration-300 ease-in-out [&.active]:max-[991px]:max-h-[500px] [&.active]:max-[991px]:py-2">
+                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Jimdo Blog</a></li>
+                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">JIMDOCONNECT</a></li>
+                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Founder Stories</a></li>
+                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Inspiration</a></li>
+                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Help Center</a></li>
+                    <li class="text-[15px] list-none py-1 pl-4 relative"><a href="#" class="no-underline text-[#001453] font-normal hover:text-[#004ced]">Contact Support</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="languages w-full min-[992px]:w-auto min-[992px]:absolute min-[992px]:right-9 min-[992px]:bottom-[5%] lg:min-[992px]:right-[100px] xl:min-[992px]:right-[200px] max-[991px]:order-3 max-[991px]:mt-6 max-[991px]:text-center">
+            <div class="language-picker language-picker-desktop hidden min-[992px]:block">
+                <div class="option relative flex flex-row items-center">
+                    <div id="languageMenu" class="selection absolute bottom-[calc(100%+0.5rem)] right-0 z-50 w-48 bg-white shadow-[0_4px_12px_rgba(0,0,0,0.15)] p-3 overflow-hidden hidden" aria-hidden="true">
+                        <ul>
+                            <li class="list-none text-[15px] flex items-center gap-2.5 p-2 hover:text-[#003bbb]"><img src="src/img/GER.png" alt="" class="w-8 h-8 shrink-0 object-cover border-2 border-[#003bbb] rounded-full">Deutsch</li>
+                            <li class="list-none text-[15px] flex items-center gap-2.5 p-2 hover:text-[#003bbb]"><img src="src/img/SPA.png" alt="" class="w-8 h-8 shrink-0 object-cover border-2 border-[#003bbb] rounded-full">Español</li>
+                            <li class="list-none text-[15px] flex items-center gap-2.5 p-2 hover:text-[#003bbb]"><img src="src/img/FRA.png" alt="" class="w-8 h-8 shrink-0 object-cover border-2 border-[#003bbb] rounded-full">Français</li>
+                            <li class="list-none text-[15px] flex items-center gap-2.5 p-2 hover:text-[#003bbb]"><img src="src/img/ITA.png" alt="" class="w-8 h-8 shrink-0 object-cover border-2 border-[#003bbb] rounded-full">Italiano</li>
+                            <li class="list-none text-[15px] flex items-center gap-2.5 p-2 hover:text-[#003bbb]"><img src="src/img/JPN.png" alt="" class="w-8 h-8 shrink-0 object-cover border-2 border-[#003bbb] rounded-full">日本語</li>
+                            <li class="list-none text-[15px] flex items-center gap-2.5 p-2 hover:text-[#003bbb]"><img src="src/img/NL.png" alt="" class="w-8 h-8 shrink-0 object-cover border-2 border-[#003bbb] rounded-full">Nederlands</li>
+                        </ul>
+                    </div>
+
+                    <img src="src/img/UK.png" alt="UK" class="w-6 h-6 shrink-0 object-cover border-2 border-[#003bbb] rounded-full">
+                    <img src="src/img/US.png" alt="USA" class="w-6 h-6 shrink-0 object-cover border-2 border-[#003bbb] rounded-full ml--5">
+                    <button type="button" class="language-toggle my-[5px] mx-2.5 flex items-center bg-transparent border-0 p-0 text-[15px] font-medium hover:text-[#003bbb] cursor-pointer" aria-expanded="false" aria-controls="languageMenu">
+                        English<i class="language-arrow fa fa-angle-down ml-1 transition-transform duration-300"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="language-picker language-picker-mobile relative mx-auto min-[992px]:hidden">
+                <div class="option relative flex flex-row items-center justify-center">
+                    <img src="src/img/UK.png" alt="UK" class="w-6 h-6 shrink-0 object-cover border-2 border-[#003bbb] rounded-full">
+                    <img src="src/img/US.png" alt="USA" class="w-6 h-6 shrink-0 object-cover -ml-1 border-2 border-[#003bbb] rounded-full">
+                    <div class="relative">
+                        <button type="button" class="language-toggle my-[5px] mx-0 flex items-center gap-10 border border-transparent bg-transparent px-4 py-2 text-[16px] font-normal text-[#001453] hover:text-[#001453] cursor-pointer" aria-expanded="false" aria-controls="languageMenuMobile">
+                            English<i class="language-arrow fa fa-angle-down transition-transform duration-300"></i>
+                        </button>
+                        <div id="languageMenuMobile" class="selection absolute bottom-full left-0 right-0 z-50 w-auto border border-black bg-white shadow-[0_4px_12px_rgba(0,0,0,0.15)] p-0 overflow-hidden hidden max-[991px]:top-full max-[991px]:bottom-auto" aria-hidden="true">
+                            <ul class="language-menu-list m-0 p-0 text-[#001453]">
+                                <li class="list-none text-[22px] flex items-center gap-2.5 px-2 py-0.5 hover:text-[#001453] font-light max-[480px]:text-[16px]">English</li>
+                                <li class="list-none text-[22px] flex items-center gap-2.5 px-2 py-0.5 hover:text-[#003bbb] font-light max-[480px]:text-[16px]"><img src="src/img/GER.png" alt="" class="w-6 h-6 shrink-0 object-cover border-2 border-[#003bbb] rounded-full max-[991px]:hidden">Deutsch</li>
+                                <li class="list-none text-[22px] flex items-center gap-2.5 px-2 py-0.5 hover:text-[#001453] font-light max-[480px]:text-[16px]"><img src="src/img/SPA.png" alt="" class="w-6 h-6 shrink-0 object-cover border-2 border-[#003bbb] rounded-full max-[991px]:hidden">Español</li>
+                                <li class="list-none text-[22px] flex items-center gap-2.5 px-2 py-0.5 hover:text-[#001453] font-light max-[480px]:text-[16px]"><img src="src/img/FRA.png" alt="" class="w-6 h-6 shrink-0 object-cover border-2 border-[#003bbb] rounded-full max-[991px]:hidden">Français</li>
+                                <li class="list-none text-[22px] flex items-center gap-2.5 px-2 py-0.5 hover:text-[#001453] font-light max-[480px]:text-[16px]"><img src="src/img/ITA.png" alt="" class="w-6 h-6 shrink-0 object-cover border-2 border-[#003bbb] rounded-full max-[991px]:hidden">Italiano</li>
+                                <li class="list-none text-[22px] flex items-center gap-2.5 px-2 py-0.5 hover:text-[#001453] font-light max-[480px]:text-[16px]"><img src="src/img/JPN.png" alt="" class="w-6 h-6 shrink-0 object-cover border-2 border-[#003bbb] rounded-full max-[991px]:hidden">日本語</li>
+                                <li class="list-none text-[22px] flex items-center gap-2.5 px-2 py-0.5 hover:text-[#003bbb] font-light max-[480px]:text-[16px]"><img src="src/img/NL.png" alt="" class="w-6 h-6 shrink-0 object-cover border-2 border-[#003bbb] rounded-full max-[991px]:hidden">Nederlands</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info w-full min-[992px]:w-auto min-[992px]:absolute min-[992px]:left-9 min-[992px]:bottom-[5%] lg:min-[992px]:left-[100px] xl:min-[992px]:left-[200px] max-[991px]:order-4 max-[991px]:mt-8 max-[991px]:p-0 max-[991px]:text-center">
+            <ul class="flex flex-wrap max-[991px]:flex-col p-0 m-0">
+                <li class="p-2 relative"><a href="#" class="no-underline text-[15px] font-medium text-[#001453] hover:text-[#001453] max-[480px]:text-[12px]">Legal notice</a></li>
+                <li class="p-2 relative"><a href="#" class="no-underline text-[15px] font-medium text-[#001453] hover:text-[#001453] max-[480px]:text-[12px]">Terms of Service</a></li>
+                <li class="p-2 relative"><a href="#" class="no-underline text-[15px] font-medium text-[#001453] hover:text-[#001453] max-[480px]:text-[12px]">Privacy Policy</a></li>
+                <li class="p-2 relative"><a href="#" class="no-underline text-[15px] font-medium text-[#001453] hover:text-[#001453] max-[480px]:text-[12px]">Cookie Settings</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!--  SCRIPTS                                      -->
+
+    <script>
+
+
+document.addEventListener('DOMContentLoaded', function () {
+
+
+    document.querySelectorAll('.faq-item').forEach(item => {
+
+
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+
+
+        question.addEventListener('click', function () {
+
+
+            const isOpen = question.getAttribute('aria-expanded') === 'true';
+
+
+            if (isOpen) {
+
+
+                question.setAttribute('aria-expanded', 'false');
+                answer.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+
+
+            } else {
+
+
+                question.setAttribute('aria-expanded', 'true');
+                answer.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+
+
+            }
+
+
+        });
+
+
+    });
+
+
+});
+</script>
+
+
+
+    <script>
+        // =====================================================================
+        // ZANDER JS: Desktop Nav Dropdowns & Mobile Hamburger Menu
+        // =====================================================================
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+        function closeAllDropdowns(exceptToggle = null) {
+            dropdownToggles.forEach((toggle) => {
+                if (toggle !== exceptToggle) {
+                    toggle.classList.remove('active');
+                    toggle.querySelector('svg, i')?.classList.remove('rotated');
+                    toggle.nextElementSibling?.classList.remove('show');
+                }
+            });
+        }
+
+        dropdownToggles.forEach((toggle) => {
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const menu = toggle.nextElementSibling;
+                const icon = toggle.querySelector('svg, i');
+                const isOpen = menu?.classList.contains('show');
+
+                closeAllDropdowns(toggle);
+
+                if (isOpen) {
+                    toggle.classList.remove('active');
+                    icon?.classList.remove('rotated');
+                    menu?.classList.remove('show');
+                } else {
+                    toggle.classList.add('active');
+                    icon?.classList.add('rotated');
+                    menu?.classList.add('show');
+                }
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.dropdown-menu') && !e.target.closest('.dropdown-toggle')) {
+                closeAllDropdowns();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeAllDropdowns();
+                if (mobileMenu?.classList.contains('active')) {
+                    closeMobileMenu();
+                }
+            }
+        });
+
+        // Mobile Hamburger Menu & Drill-down Submenu Toggles
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+        const mobileMainMenuList = document.getElementById('mobileMainMenuList');
+        const mobileSubmenuBack = document.getElementById('mobileSubmenuBack');
+        const mobileSubmenus = document.querySelectorAll('.mobile-submenu');
+        const menuToggles = document.querySelectorAll('.menu-toggle');
+
+        function showMobileMainMenu() {
+            mobileSubmenus.forEach((submenu) => submenu.classList.add('hidden'));
+            menuToggles.forEach((toggle) => toggle.setAttribute('aria-expanded', 'false'));
+            mobileSubmenuBack?.classList.add('hidden');
+            mobileSubmenuBack?.classList.remove('flex');
+            mobileMainMenuList?.classList.remove('hidden');
+            mobileMenu?.querySelector('.mobile-menu-content')?.scrollTo({ top: 0 });
+        }
+
+        function openMobileMenu() {
+            hamburger?.classList.add('active');
+            hamburger?.setAttribute('aria-expanded', 'true');
+            mobileMenu?.classList.add('active');
+            mobileMenuOverlay?.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            mobileMenu?.focus();
+        }
+
+        function closeMobileMenu() {
+            hamburger?.classList.remove('active');
+            hamburger?.setAttribute('aria-expanded', 'false');
+            mobileMenu?.classList.remove('active');
+            mobileMenuOverlay?.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            showMobileMainMenu();
+        }
+
+        function toggleMobileMenu() {
+            if (mobileMenu?.classList.contains('active')) {
+                closeMobileMenu();
+            } else {
+                openMobileMenu();
+            }
+        }
+
+        hamburger?.addEventListener('click', toggleMobileMenu);
+        mobileMenuOverlay?.addEventListener('click', closeMobileMenu);
+        mobileMenuClose?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeMobileMenu();
+        });
+
+        menuToggles.forEach((toggle) => {
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = toggle.getAttribute('data-target');
+                const submenu = targetId ? document.getElementById(targetId) : null;
+                if (!submenu) return;
+
+                mobileMainMenuList?.classList.add('hidden');
+                mobileSubmenus.forEach((menu) => menu.classList.add('hidden'));
+                menuToggles.forEach((t) => t.setAttribute('aria-expanded', 'false'));
+
+                submenu.classList.remove('hidden');
+                toggle.setAttribute('aria-expanded', 'true');
+                mobileSubmenuBack?.classList.remove('hidden');
+                mobileSubmenuBack?.classList.add('flex');
+                mobileMenu?.querySelector('.mobile-menu-content')?.scrollTo({ top: 0 });
+            });
+        });
+
+        mobileSubmenuBack?.addEventListener('click', showMobileMainMenu);
+
+        // =====================================================================
+        // Footer Accordion Dropdown on Mobile (Products, About us, Resources)
+        // =====================================================================
+        const footerDropdowns = document.querySelectorAll('.footer-dropdown');
+
+        footerDropdowns.forEach((dropdown) => {
+            const toggle = dropdown.querySelector('.footer-dropdown-toggle');
+            const menu = dropdown.querySelector('.footer-dropdown-menu');
+            const arrow = dropdown.querySelector('.footer-arrow');
+
+            if (!toggle || !menu) return;
+
+            toggle.addEventListener('click', (e) => {
+                // Only toggle on mobile/tablet screens where the arrow is visible
+                if (arrow && window.getComputedStyle(arrow).display === 'none') return;
+                e.preventDefault();
+
+                const isOpen = menu.classList.contains('active');
+
+                // Close other footer dropdowns
+                footerDropdowns.forEach((other) => {
+                    if (other !== dropdown) {
+                        other.querySelector('.footer-dropdown-menu')?.classList.remove('active');
+                        other.querySelector('.footer-arrow')?.classList.remove('rotate-180');
+                        other.querySelector('.footer-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                if (isOpen) {
+                    menu.classList.remove('active');
+                    arrow?.classList.remove('rotate-180');
+                    toggle.setAttribute('aria-expanded', 'false');
+                } else {
+                    menu.classList.add('active');
+                    arrow?.classList.add('rotate-180');
+                    toggle.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        const languagePickers = document.querySelectorAll('.language-picker');
+
+        function setLanguageMenuOpen(picker, isOpen) {
+            const toggle = picker.querySelector('.language-toggle');
+            const menu = picker.querySelector('.selection');
+            const arrow = toggle?.querySelector('.language-arrow');
+
+            menu?.classList.toggle('hidden', !isOpen);
+            toggle?.setAttribute('aria-expanded', String(isOpen));
+            menu?.setAttribute('aria-hidden', String(!isOpen));
+            arrow?.classList.toggle('rotate-180', isOpen && window.matchMedia('(min-width: 768px)').matches);
+
+            if (picker.classList.contains('language-picker-mobile') && toggle) {
+                toggle.style.borderColor = isOpen ? 'black' : 'transparent';
+            }
+        }
+
+        languagePickers.forEach((picker) => {
+            const toggle = picker.querySelector('.language-toggle');
+            toggle?.addEventListener('click', () => {
+                setLanguageMenuOpen(picker, toggle.getAttribute('aria-expanded') !== 'true');
+            });
+        });
+
+        document.addEventListener('click', (event) => {
+            languagePickers.forEach((picker) => {
+                if (!picker.contains(event.target)) setLanguageMenuOpen(picker, false);
+            });
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') languagePickers.forEach((picker) => setLanguageMenuOpen(picker, false));
+        });
+
+        // =====================================================================
+        // Inspiration Carousel Slider Interactivity (Matches Jimdo Gallery)
+        // =====================================================================
+      const inspirationContainer = document.getElementById('inspirationCarousel');
+const carouselTrack = document.getElementById('carouselTrack');
+const carouselDots = document.querySelectorAll('.carousel-dot');
+
+let originalSlides = Array.from(carouselTrack.querySelectorAll('.carousel-slide'));
+const totalOriginal = originalSlides.length;
+
+// Clone slides for seamless infinite looping
+const clonedBefore = originalSlides.slice(-2).map(slide => slide.cloneNode(true));
+const clonedAfter = originalSlides.slice(0, 2).map(slide => slide.cloneNode(true));
+
+clonedBefore.forEach(node => {
+    node.classList.add('cloned');
+    carouselTrack.insertBefore(node, carouselTrack.firstChild);
+});
+clonedAfter.forEach(node => {
+    node.classList.add('cloned');
+    carouselTrack.appendChild(node);
+});
+
+let allSlides = document.querySelectorAll('.carousel-slide');
+let currentIndex = 2; // Offset by prepended clones
+
+let startX = 0;
+let currentTranslate = 0;
+let prevTranslate = 0;
+let isDragging = false;
+let isTransitioning = false;
+
+function getSlideOffset(index) {
+    const targetSlide = allSlides[index];
+    if (!targetSlide || !inspirationContainer) return 0;
+    const containerCenter = inspirationContainer.offsetWidth / 2;
+    const slideCenter = targetSlide.offsetLeft + (targetSlide.offsetWidth / 2);
+    return containerCenter - slideCenter;
+}
+
+function updateSlideStyles(activeIndex) {
+    const realActiveIndex = (activeIndex - 2 + totalOriginal) % totalOriginal;
+    
+    allSlides.forEach((slide, idx) => {
+        if (idx === activeIndex) {
+            slide.classList.remove('opacity-70', 'scale-[0.96]');
+            slide.classList.add('opacity-100', 'scale-100', 'shadow-[0_12px_40px_rgba(0,0,0,0.08)]');
+        } else {
+            slide.classList.remove('opacity-100', 'scale-100', 'shadow-[0_12px_40px_rgba(0,0,0,0.08)]');
+            slide.classList.add('opacity-70', 'scale-[0.96]');
+        }
+    });
+
+    carouselDots.forEach((dot, dIdx) => {
+        if (dIdx === realActiveIndex) {
+            dot.classList.remove('bg-gray-300');
+            dot.classList.add('bg-[#004ced]');
+        } else {
+            dot.classList.remove('bg-[#004ced]');
+            dot.classList.add('bg-gray-300');
+        }
+    });
+}
+
+function setTrackPosition(xPos) {
+    carouselTrack.style.transform = `translateX(${xPos}px)`;
+}
+
+function moveToSlide(index, smooth = true) {
+    currentIndex = index;
+    prevTranslate = getSlideOffset(currentIndex);
+    currentTranslate = prevTranslate;
+
+    if (smooth) {
+        carouselTrack.style.transition = 'transform 500ms cubic-bezier(0.25, 1, 0.5, 1)';
+    } else {
+        carouselTrack.style.transition = 'none';
+    }
+
+    setTrackPosition(currentTranslate);
+    updateSlideStyles(currentIndex);
+}
+
+// Handle infinite re-indexing seamlessly after transition ends
+carouselTrack.addEventListener('transitionend', () => {
+    isTransitioning = false;
+    if (currentIndex >= totalOriginal + 2) {
+        moveToSlide(2, false);
+    } else if (currentIndex < 2) {
+        moveToSlide(totalOriginal + 1, false);
+    }
+});
+
+// Calculate nearest slide after free drag release
+function snapToNearest() {
+    let closestIndex = currentIndex;
+    let minDistance = Infinity;
+
+    allSlides.forEach((slide, idx) => {
+        const slidePos = getSlideOffset(idx);
+        const dist = Math.abs(currentTranslate - slidePos);
+        if (dist < minDistance) {
+            minDistance = dist;
+            closestIndex = idx;
+        }
+    });
+
+    isTransitioning = true;
+    moveToSlide(closestIndex, true);
+}
+
+// Start Free Drag
+function dragStart(e) {
+    if (isTransitioning) return;
+    isDragging = true;
+    startX = e.type.includes('touch') ? e.touches[0].clientX : e.pageX;
+    carouselTrack.style.transition = 'none';
+    inspirationContainer.classList.add('cursor-grabbing');
+}
+
+// Free Drag Movement
+function dragMove(e) {
+    if (!isDragging) return;
+    const currentX = e.type.includes('touch') ? e.touches[0].clientX : e.pageX;
+    const diff = currentX - startX;
+    currentTranslate = prevTranslate + diff;
+    setTrackPosition(currentTranslate);
+}
+
+// End Free Drag & Snap
+function dragEnd() {
+    if (!isDragging) return;
+    isDragging = false;
+    inspirationContainer.classList.remove('cursor-grabbing');
+    snapToNearest();
+}
+
+// Touch & Mouse Event Listeners
+inspirationContainer.addEventListener('mousedown', dragStart);
+window.addEventListener('mousemove', dragMove);
+window.addEventListener('mouseup', dragEnd);
+
+inspirationContainer.addEventListener('touchstart', dragStart, { passive: true });
+window.addEventListener('touchmove', dragMove, { passive: true });
+window.addEventListener('touchend', dragEnd);
+
+// Dot & Direct Slide Click Handlers
+allSlides.forEach((slide, idx) => {
+    slide.addEventListener('click', (e) => {
+        // Prevent click trigger if user was dragging
+        if (Math.abs(currentTranslate - prevTranslate) > 5) return;
+        isTransitioning = true;
+        moveToSlide(idx, true);
+    });
+});
+
+carouselDots.forEach((dot, idx) => {
+    dot.addEventListener('click', () => {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        moveToSlide(idx + 2, true);
+    });
+});
+
+window.addEventListener('resize', () => moveToSlide(currentIndex, false));
+
+// Initialize on page load
+setTimeout(() => moveToSlide(currentIndex, false), 100);
+    </script>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
