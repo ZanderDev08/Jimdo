@@ -114,7 +114,7 @@ tailwind.config = {
             </button>
 
             <!-- Left/Center Nav Links -->
-            <div class="fnav hidden xl:block flex-1 min-w-0">
+            <div class="fnav hidden xl:block flex-1 min-w-0 font-euclid">
                 <ul id="navLinks" class="relative flex items-center justify-center m-0 p-0">
 
                     <!-- Website -->
@@ -301,7 +301,7 @@ tailwind.config = {
             </div>
 
             <!-- Right Nav Links -->
-            <div class="snav hidden xl:block shrink-0">
+            <div class="snav hidden xl:block shrink-0 font-euclid">
                 <ul id="navLinksRight" class="relative flex items-center m-0 p-0">
                     <!-- Blog -->
                     <li class="list-none inline-block p-2 relative">
@@ -388,13 +388,13 @@ tailwind.config = {
         </nav>
 
         <!-- Mobile Menu Overlay -->
-        <div class="mobile-menu-overlay hidden fixed top-0 left-0 w-full h-full bg-black/60 z-[999] opacity-0 transition-opacity duration-300 [&.active]:max-xl:block [&.active]:opacity-100" id="mobileMenuOverlay">
+        <div class="mobile-menu-overlay hidden fixed top-0 left-0 w-full h-full bg-black/60 z-[999] opacity-0 transition-opacity duration-300 [&.active]:max-xl:block [&.active]:opacity-100 font-euclid" id="mobileMenuOverlay">
             <button type="button" class="fixed top-4 right-0 w-[60px] max-sm:w-[52px] h-12 flex items-center justify-center text-white bg-transparent border-0 cursor-pointer p-0 z-[1003]" id="mobileMenuClose" aria-label="Close menu">
             </button>
         </div>
 
         <!-- Mobile Menu Container -->
-        <div class="mobile-menu fixed top-0 left-0 w-[calc(100%-60px)] max-sm:w-[calc(100%-52px)] h-svh bg-white z-[1002] flex flex-col transition-transform duration-300 shadow-[2px_0_10px_rgba(0,0,0,0.15)] -translate-x-full [&.active]:translate-x-0 xl:hidden" id="mobileMenu" tabindex="-1">
+        <div class="font-euclid mobile-menu fixed top-0 left-0 w-[calc(100%-60px)] max-sm:w-[calc(100%-52px)] h-svh bg-white z-[1002] flex flex-col transition-transform duration-300 shadow-[2px_0_10px_rgba(0,0,0,0.15)] -translate-x-full [&.active]:translate-x-0 xl:hidden" id="mobileMenu" tabindex="-1">
             <!-- Header section with Jimdo Logo -->
             <div class="flex items-center justify-between px-6 py-5 shrink-0 bg-white">
                 <a href="#home" class="inline-block">
@@ -403,8 +403,13 @@ tailwind.config = {
             </div>
 
             <!-- Submenu Back Header ("Main menu <") -->
+<<<<<<< HEAD
              
               <!--spacer--><li class="mt-1 w-full py-[25px] list-none"></li>
+=======
+        
+        <!--spacer--><li class="mt-3 w-full py-[30px] list-none"></li>
+>>>>>>> 43764f668be30cc8778ad4cf4f0d3345493ea832
 
             <button type="button" id="mobileSubmenuBack" class="hidden w-full bg-[#f8f8f8] px-10 py-6 items-center justify-between text-[#001453] font-semibold text-[18px] border-0 cursor-pointer text-left shrink-0 hover:bg-[#efefef] transition-colors">
                 <span>Main menu</span>
@@ -715,13 +720,10 @@ tailwind.config = {
         </div>
 
 
-<!-- Hero Content -->
-
-
         <!-- Hero Content -->
 
     
-        <section class="w-full bg-white pt-36 pb-12 sm:pt-32 sm:pb-16 lg:pt-36 lg:pb-20">
+        <section class="w-full bg-white pt-36 pb-12 sm:pt-32 sm:pb-16 lg:pt-36 lg:pb-20 font-euclid">
 
         <div class="mx-auto flex w-full max-w-7xl
                     flex-col items-center
@@ -737,7 +739,7 @@ tailwind.config = {
 
 
                 <!-- Heading -->
-                <h1 class="mb-5 font-poppins font-normal
+                <h1 class="mb-5 font-normal
                         text-[32px] leading-tight
                         sm:text-4xl
                         lg:text-[35px]
@@ -873,14 +875,14 @@ tailwind.config = {
                 <!-- BUTTON AND DESCRIPTION -->
                 <div class="btn mt-10 w-full max-w-[225px]
                             max-md:max-w-[240px]
-                            max-sm:max-w-full">
+                            max-[767px]:max-w-full">
 
 
                     <a href="#"
                     class="flex w-full items-center justify-center
                             rounded-[8px] bg-[#004ced]
-                            px-8 py-5
-                            text-center text-[20px] font-normal
+                            px-8 py-4
+                            text-center text-[16px] font-[500]
                             text-white no-underline
                             transition-colors duration-300
                             hover:bg-[#003bbb]
@@ -939,11 +941,11 @@ tailwind.config = {
     <!-- TASKS                                                                 -->
     <!--   1.                                                                  -->
     <!-- ===================================================================== -->
-    <section class="w-full bg-white px-5 py-14 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
+    <section class="w-full bg-white px-5 py-14 sm:px-8 sm:py-20 lg:px-12 lg:py-24 font-euclid">
 
     <div class="mx-auto max-w-7xl">
 
-        <h2 class="text-center text-3xl font-light leading-tight
+        <h2 class="text-center text-3xl font-[400] leading-tight
         sm:text-4xl lg:text-5xl"> Portfolio site features that matter </h2>
 
 
@@ -952,7 +954,7 @@ tailwind.config = {
 
             <div class="w-full lg:w-1/2">
 
-                <h3 class="mt-8 mb-5 text-3xl font-[250] lg:text-3xl">
+                <h3 class="mt-8 mb-5 text-3xl font-[400] lg:text-3xl">
                     Beautiful visuals, by design
                 </h3>
 
@@ -976,7 +978,7 @@ tailwind.config = {
 
 
     <!-- Feature 2: Help search engines find you -->
-    <section class="max-w-7xl mx-auto px-9 py-5">
+    <section class="max-w-7xl mx-auto px-9 py-5 font-euclid">
             <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
 
                 <!-- Analytics Dashboard Image -->
@@ -990,7 +992,7 @@ tailwind.config = {
 
                 <!-- SEO Text -->
                 <div class="w-full lg:w-1/2">
-                    <h3 class="text-3xl font-[250] text-heading mb-6 max-[480px]:text-[22.5px]">
+                    <h3 class="text-3xl font-[400] text-heading mb-6 max-[480px]:text-[22.5px]">
                         Help search engines find you
                     </h3>
 
@@ -1007,12 +1009,12 @@ tailwind.config = {
         </section>
 
 
-    <section class="max-w-7xl mx-auto  py-16 px-9">
+    <section class="max-w-7xl mx-auto  py-16 max-[991px]:px-9 font-euclid">
             <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
 
                 <!-- SEO Text -->
                 <div class="w-full lg:w-1/2">
-                    <h3 class="text-3xl font-[250] text-heading mb-6 max-[480px]:text-[25px]">
+                    <h3 class="text-3xl font-[400] text-heading mb-6 max-[480px]:text-[25px]">
                     Connect to social media in seconds
                     </h3>
 
@@ -1039,11 +1041,11 @@ tailwind.config = {
 
         <!-- Build "How to create your online portfolio" steps (src/img/img5.webp) here -->
         
-        <section class="max-w-[1350px] mx-auto py-20 px-7 sm:py-12">
+        <section class="max-w-[1350px] mx-auto py-20 px-7 sm:py-12 font-euclid">
             <div class="w-full flex flex-col min-[992px]:flex-row items-center justify-between gap-12">
 
                 <div class="w-full min-[992px]:w-1/2">
-                    <h3 class="w-full text-3xl font-light max-[480px]:text-[16px] max-[992px]:text-[25px]">
+                    <h3 class="w-full text-[31.5px] font-[400] max-[480px]:text-[16px] max-[992px]:text-[25px]">
                         How to make an online portfolio
                     </h3>
                     <p class="font-extralight mt-4">
@@ -1074,7 +1076,7 @@ tailwind.config = {
                             </span>
                         </li>
                     </ol>
-                    <a href="#" class="btn inline-block rounded-[5px] bg-[#004ced] hover:bg-[#003bbb] text-white no-underline font-[380] text-[16px] text-center py-3 px-10 transition-colors mt-10 max-[480px]:w-full max-[600px]:w-full">
+                    <a href="#" class="btn inline-block rounded-[8px] bg-[#004ced] hover:bg-[#003bbb] text-white no-underline font-[500] text-[16px] text-center py-4 px-10 transition-colors mt-10 max-[480px]:w-full max-[767px]:w-full">
                             Start Now
                         </a>
                 </div>
@@ -1094,10 +1096,10 @@ tailwind.config = {
 
 
 
-    <section id="portfolio-types" class="w-full bg-[#ffffff] px-9 py-20 md:py-28">
+    <section id="portfolio-types" class="w-full bg-[#ffffff] px-9 py-20 md:py-28 font-euclid">
         <div class="mx-auto max-w-7xl">
             <div class="mx-auto max-w-3xl text-center">
-                <h2 class="text-4xl font-light leading-tight text-black max-md:text-3xl max-[991px]:text-[35px]">
+                <h2 class="text-4xl font-[400] leading-tight text-black max-md:text-3xl max-[991px]:text-[35px]">
                     What kind of portfolio website will you create?
                 </h2>
             </div>
@@ -1112,7 +1114,7 @@ tailwind.config = {
                         class="h-auto w-full max-w-[850px] object-contain" loading="lazy">
                 </div>
                 <div class="order-2 text-left md:order-1">
-                    <h3 data-portfolio-title class="text-2xl font- text-[#000] max-md:text-2xl">Graphic designer portfolio</h3>
+                    <h3 data-portfolio-title class="text-2xl font-[500] text-[#000] max-md:text-2xl">Graphic designer portfolio</h3>
                     <p data-portfolio-description class="mt-2 max-w-xl text-base font-light leading-7 text-[#000]">
                         Your graphic design online portfolio shows off your skills and work examples in one place, from different design programs to different mediums.
                     </p>
@@ -1129,7 +1131,7 @@ tailwind.config = {
                         class="h-auto w-full max-w-[850px] object-contain" loading="lazy">
                 </div>
                 <div class="order-2 text-left md:order-1">
-                    <h3 data-portfolio-title class="text-2xl font-normal text-[#000] max-md:text-2xl">Photographer portfolio</h3>
+                    <h3 data-portfolio-title class="text-2xl font-[500] text-[#000] max-md:text-2xl">Photographer portfolio</h3>
                     <p data-portfolio-description class="mt-2 max-w-xl text-base font-light leading-7 text-[#000]">
                         Building a photography portfolio means focusing on the work, not the website. Jimdo’s modern designs keep your images front and center. You can accept bookings, too!
                     </p>
@@ -1146,7 +1148,7 @@ tailwind.config = {
                         class="h-auto w-full max-w-[850px] object-contain" loading="lazy">
                 </div>
                 <div class="order-2 text-left md:order-1">
-                    <h3 data-portfolio-title class="text-2xl font-normal text-[#000] max-md:text-2xl">Artist Portfolio</h3>
+                    <h3 data-portfolio-title class="text-2xl font-[500] text-[#000] max-md:text-2xl">Artist Portfolio</h3>
                     <p data-portfolio-description class="mt-2 max-w-xl text-base font-light leading-7 text-[#000]">
                         Showcase your latest work, share your creative process, and give visitors a place to discover your art.
                     </p>
@@ -1163,7 +1165,7 @@ tailwind.config = {
                         class="h-auto w-full max-w-[850px] object-contain" loading="lazy">
                 </div>
                 <div class="order-2 text-left md:order-1 ">
-                    <h3 data-portfolio-title class="text-2xl font-normal text-[#000] max-md:text-2xl">Model Portfolio</h3>
+                    <h3 data-portfolio-title class="text-2xl font-[500] text-[#000] max-md:text-2xl">Model Portfolio</h3>
                     <p data-portfolio-description class="mt-5 max-w-xl text-base font-light leading-7 text-[#000]">
                         You’re versatile and stylish, and your portfolio can be too. A website is a platform that you control, and it’s easy to use images right from your social media accounts.
                     </p>
@@ -1177,13 +1179,13 @@ tailwind.config = {
 </section>
 
     <!-- ==================== Gallery  ==================== -->
-   <!-- ==================== Gallery ==================== -->
-<section class="design w-full bg-white py-16 sm:py-20 relative text-center overflow-hidden select-none px-9">
+    <!-- ==================== Gallery ==================== -->
+<section class="design w-full bg-white py-16 sm:py-20 relative text-center overflow-hidden select-none px-9 font-euclid">
     <div class="max-w-5xl mx-auto px-4">
-        <h2 class="text-3xl sm:text-[38px] lg:text-[40px] font-light text-black tracking-tight leading-tight">
+        <h2 class="text-3xl sm:text-[38px] lg:text-[40px] font-[400] text-black tracking-tight leading-tight">
             Get portfolio design inspiration with these examples
         </h2>
-        <p class="text-sm sm:text-base text-gray-700 font-light mt-3 mb-10 sm:mb-12">
+        <p class="text-sm sm:text-base text-black font-[300] mt-3 mb-10 sm:mb-12">
             Artists ♡ Jimdo! Spark your creativity with these website portfolio examples built with Jimdo.
         </p>
     </div>
@@ -1232,11 +1234,11 @@ tailwind.config = {
     <!-- ===================================================================== -->
     <!-- Build "Online Portfolio FAQ" accordion here -->
     <!-- Build "Online Portfolio FAQ" accordion here -->
-    <section class="max-w-7xl mx-auto my-16 px-6 py-16 items-center">
+    <section class="max-w-[1350px] mx-auto my-16 px-6 py-16 items-center font-euclid">
 
 
     <!-- Heading -->
-    <h2 class="text-3xl md:text-4xl font-light tracking-tight mb-10">
+    <h2 class="text-3xl md:text-4xl font-[400] mb-10">
         Online portfolio FAQ
     </h2>
 
@@ -1250,7 +1252,7 @@ tailwind.config = {
 
 
             <button
-                class="faq-question w-full flex items-center justify-between py-6 text-left text-lg md:text-xl font-normal"
+                class="faq-question w-full flex items-center justify-between py-6 text-left text-lg md:text-xl font-[500]"
                 aria-expanded="false">
 
 
@@ -1283,7 +1285,7 @@ tailwind.config = {
 
 
             <button
-                class="faq-question w-full flex items-center justify-between py-6 text-left text-lg md:text-xl font-normal"
+                class="faq-question w-full flex items-center justify-between py-6 text-left text-lg md:text-xl font-[500]"
                 aria-expanded="false">
 
 
@@ -1318,7 +1320,7 @@ tailwind.config = {
 
 
             <button
-                class="faq-question w-full flex items-center justify-between py-6 text-left text-lg md:text-xl font-normal"
+                class="faq-question w-full flex items-center justify-between py-6 text-left text-lg md:text-xl font-[500]"
                 aria-expanded="false">
 
 
@@ -1353,7 +1355,7 @@ tailwind.config = {
 
 
             <button
-                class="faq-question w-full flex items-center justify-between py-6 text-left text-lg md:text-xl font-normal"
+                class="faq-question w-full flex items-center justify-between py-6 text-left text-lg md:text-xl font-[500]"
                 aria-expanded="false">
 
 
@@ -1388,7 +1390,7 @@ tailwind.config = {
 
 
             <button
-                class="faq-question w-full flex items-center justify-between py-6 text-left text-lg md:text-xl font-normal"
+                class="faq-question w-full flex items-center justify-between py-6 text-left text-lg md:text-xl font-[500]"
                 aria-expanded="false">
 
 
@@ -1423,12 +1425,12 @@ tailwind.config = {
 
 </section>
 
+<!-- ===================================================================== -->
+    <!--  Website CTA / Professions Section                                    -->
     <!-- ===================================================================== -->
-    <!--  Website CTA / Professions Section                            -->
-    <!-- ===================================================================== -->
-    <section class="last w-full bg-white py-16 sm:py-20 text-center max-w-7xl mx-auto px-6 ">
+    <section class="last w-full bg-white py-16 sm:py-20 text-center max-w-7xl mx-auto px-6 font-euclid">
         <header class="text-center mb-16">
-            <h2 class="text-4xl sm:text-3xl font-light text-[#000000] ">
+            <h2 class="text-4xl sm:text-3xl font-[500] text-[#000000] ">
                 Show off your hard work
             </h2>
             <p class="mt-3 text-base sm:text-lg font-extralight text-[#000000]">
@@ -1438,7 +1440,7 @@ tailwind.config = {
 
         <div class="grid grid-cols-1 min-[992px]:grid-cols-3 gap-x-10 gap-y-16 lg:gap-18 text-center max-w-7xl mx-auto">
             <article class="flex flex-col items-center ">
-                <h3 class="text-xl sm:text-2xl font-normal text-[#000000]"><br>Freelancer</h3>
+                <h3 class="text-xl sm:text-2xl font-[500] text-[#000000]"><br>Freelancer</h3>
                 <p class="mt-4 text-base sm:text-base font-extralight leading-relaxed text-[#000000] lg:w-full min-[992px]:w-full">
                     Every freelancer needs a website to attract new customers, find work, and show off your skills. Build your own portfolio, with no coding required!
                 </p>
@@ -1447,7 +1449,7 @@ tailwind.config = {
                 </a>
             </article>
             <article class="flex flex-col items-center">
-                <h3 class="text-xl sm:text-2xl font-normal text-[#000000]"><br> Photography</h3>
+                <h3 class="text-xl sm:text-2xl font-[500] text-[#000000]"><br> Photography</h3>
                 <p class="mt-4 text-base sm:text-base font-extralight leading-relaxed text-[#000000] lg:w-full min-[992px]:w-full">
                     Photographers love Jimdo for its beautiful and easy portfolio websites. See how you can get your photos online quickly and start taking bookings.
                 </p>
@@ -1457,7 +1459,7 @@ tailwind.config = {
             </article>
 
             <article class="flex flex-col items-center">
-                <h3 class="text-xl sm:text-2xl font-normal text-[#000000]"><br> Design</h3>
+                <h3 class="text-xl sm:text-2xl font-[500] text-[#000000]"><br> Design</h3>
                     <p class="mt-4 text-base sm:text-base font-extralight leading-relaxed text-[#000000] lg:w-full min-[992px]:w-full">
                     Create an art portfolio that matches your style. Our built-in tools will help you improve your search engine ranking and even sell your artwork online.
                 </p>
@@ -1471,7 +1473,7 @@ tailwind.config = {
     <!-- ===================================================================== -->
     <!-- Website Footer Section                                       -->
     <!-- ===================================================================== -->
-    <section class="footer bg-white w-full max-w-full min-h-[50dvh] flex flex-wrap relative py-[50px] px-9 lg:px-[100px] xl:px-[200px] max-[991px]:flex-col max-[991px]:py-[30px] max-[991px]:px-9 max-[991px]:gap-6 max-[991px]:h-auto max-[480px]:p-5 max-[480px]:gap-8">
+    <section class="footer bg-white w-full max-w-full min-h-[50dvh] flex flex-wrap relative py-[50px] px-9 lg:px-[100px] xl:px-[200px] max-[991px]:flex-col max-[991px]:py-[30px] max-[991px]:px-9 max-[991px]:gap-6 max-[991px]:h-auto max-[480px]:p-5 max-[480px]:gap-8 font-euclid">
         <div class="foot-items w-full min-[992px]:w-[30%] flex flex-col max-[991px]:order-2 max-[991px]:p-0 max-[991px]:text-center max-[480px]:gap-4" id="footBrand">
             <div class="symbols w-full pb-6 min-[992px]:pb-[50px] max-[991px]:pb-16">
                 <img src="src/img/logo.png" alt="Jimdo Logo" class="w-[130px] max-[991px]:w-[120px] inline-block">
