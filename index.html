@@ -734,7 +734,7 @@ tailwind.config = {
                     flex-col items-center
                     gap-8 px-5
                     sm:px-8
-                    lg:flex-row 
+                    min-[992px]:flex-row 
                     lg:gap-14 lg:px-10
                     xl:gap-16">
 
@@ -744,11 +744,12 @@ tailwind.config = {
 
 
                 <!-- Heading -->
-                <h1 class="mb-5 font-normal
+                <h1 class="mb-5 font-[400]
                         text-[32px] leading-tight
                         sm:text-4xl
                         lg:text-[35px]
-                        xl:text-5xl">
+                        xl:text-[45px]
+                        max-[991px]:text-5xl">
 
 
                     Create an Online Portfolio
@@ -917,7 +918,7 @@ tailwind.config = {
 
 
             <!-- RIGHT SIDE: HERO IMAGE -->
-            <div class="w-full lg:w-1/2">
+            <div class="w-full lg:w-1/2 pt-12">
 
 
                 <img
@@ -955,7 +956,7 @@ tailwind.config = {
 
 
         <div class="mt-12 flex flex-col items-center gap-10
-                    lg:flex-row md:gap-12 lg:gap-20">
+                    min-[992px]:flex-row md:gap-12 lg:gap-20">
 
             <div class="w-full lg:w-1/2">
 
@@ -984,7 +985,7 @@ tailwind.config = {
 
     <!-- Feature 2: Help search engines find you -->
     <section class="max-w-7xl mx-auto px-9 py-5 font-euclid">
-            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+            <div class="flex flex-col min-[992px]:flex-row items-center justify-between gap-12">
 
                 <!-- Analytics Dashboard Image -->
                 <div class="w-full lg:w-1/2">
@@ -1014,8 +1015,8 @@ tailwind.config = {
         </section>
 
 
-    <section class="max-w-7xl mx-auto  py-16 max-[991px]:px-9 font-euclid">
-            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+    <section class="max-w-7xl mx-auto px-9 py-16 max-[991px]:px-9 font-euclid">
+            <div class="flex flex-col min-[992px]:flex-row items-center justify-between gap-12">
 
                 <!-- SEO Text -->
                 <div class="w-full lg:w-1/2">
@@ -1046,11 +1047,11 @@ tailwind.config = {
 
         <!-- Build "How to create your online portfolio" steps (src/img/img5.webp) here -->
         
-        <section class="max-w-[1350px] mx-auto py-20 px-7 sm:py-12 font-euclid">
+        <section class="max-w-[1350px] mx-auto py-20 px-10 sm:py-12 font-euclid">
             <div class="w-full flex flex-col min-[992px]:flex-row items-center justify-between gap-12">
 
                 <div class="w-full min-[992px]:w-1/2">
-                    <h3 class="w-full text-[31.5px] font-[400] max-[480px]:text-[16px] max-[992px]:text-[25px]">
+                    <h3 class="w-full text-[31.5px] font-[400] max-[480px]:text-[16px] max-[992px]:text-[28px]">
                         How to make an online portfolio
                     </h3>
                     <p class="font-extralight mt-4">
@@ -1087,11 +1088,11 @@ tailwind.config = {
                 </div>
                 
 
-                <div class="w-full min-[992px]:w-1/2 ml-16 mr-1.5 max-[767px]:hidden max-[991px]:items-center max-[991px]:ml-[350px] min-[991px]:ml-7">
+                <div class="w-full min-[992px]:w-1/2 ml-16 mr-1.5 max-[767px]:hidden max-[991px]:items-center max-[991px]:ml-[340px] min-[992px]:ml-7">
                     <img
                         src="src/img/img5.webp"
                         alt="How to make an online portfolio"
-                        class="h-auto max-w-xs ml-28"
+                        class="h-auto max-w-[350px] ml-28"
                     >
                 </div>
 
