@@ -110,7 +110,6 @@ tailwind.config = {
                 Start for free
             </a>
 
-           
 
             <button type="button" class="hamburger hidden max-xl:flex flex-col cursor-pointer z-[1001] shrink-0 border-0 bg-transparent p-0" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span class="w-[25px] h-[3px] bg-[#001453] my-[2.4px]"></span>
@@ -289,7 +288,6 @@ tailwind.config = {
                                     </li>
                                 </ul>
                             </div>
-
                         </div>
                     </li>
 
@@ -408,8 +406,8 @@ tailwind.config = {
             </div>
 
             <!-- Submenu Back Header ("Main menu <") -->
-             
-              <!--spacer--><li class="mt-1 w-full py-[25px] list-none"></li>
+            
+            <!--spacer--><li class="mt-1 w-full py-[25px] list-none"></li>
 
             <button type="button" id="mobileSubmenuBack" class="hidden w-full bg-[#f8f8f8] px-10 py-6 items-center justify-between text-[#001453] font-semibold text-[18px] border-0 cursor-pointer text-left shrink-0 hover:bg-[#efefef] transition-colors">
                 <span>Main menu</span>
@@ -466,7 +464,6 @@ tailwind.config = {
                         </a>
                     </li>
 
-                  
                     
 
                     <!-- Blog -->
@@ -723,28 +720,30 @@ tailwind.config = {
         <!-- Hero Content -->
 
     
-        <section class="w-full bg-white pt-36 pb-12 sm:pt-32 sm:pb-16 lg:pt-36 lg:pb-20 font-euclid">
+        <section class="w-full bg-white  pb-12 sm:pt-32 sm:pb-16 lg:pb-20 font-euclid">
 
-        <div class="mx-auto flex w-full max-w-7xl
-                    flex-col items-center
+        <div class="mx-auto flex w-full max-w-[1400px]
+                    max:[991px]:items-center
                     gap-8 px-5
                     sm:px-8
+                    sm:ml-2.5
                     min-[992px]:flex-row 
                     lg:gap-14 lg:px-10
-                    xl:gap-16">
+                    xl:gap-16
+                    xl:ml-[260px]">
 
 
             <!-- LEFT SIDE: TEXT, BENEFITS, AND BUTTON -->
-            <div class="w-full lg:w-1/2 mb-7 max-[992px]:mt-14">
+            <div class="w-full lg:w-1/2 min-[992px]:mt-[79px]">
 
 
                 <!-- Heading -->
                 <h1 class="mb-5 font-[400]
                         text-[32px] leading-tight
-                        sm:text-4xl
+                        sm:text-[38px]
                         lg:text-[35px]
-                        xl:text-[45px]
-                        max-[991px]:text-5xl">
+                        xl:text-[47px]
+                        max-[991px]:text-4xl">
 
 
                     Create an Online Portfolio
@@ -913,7 +912,7 @@ tailwind.config = {
 
 
             <!-- RIGHT SIDE: HERO IMAGE -->
-            <div class="w-full lg:w-1/2 mt-7 pt-10 max-[992px]:mt-7">
+            <div class="w-full lg:w-1/2 pt-20">
 
 
                 <img
@@ -946,7 +945,7 @@ tailwind.config = {
 
     <div class="mx-auto max-w-7xl">
 
-        <h2 class="text-center text-3xl font-[400] leading-tight
+        <h2 class="text-center text-4xl font-[400] leading-tight
         sm:text-4xl lg:text-5xl"> Portfolio site features that matter </h2>
 
 
@@ -1117,7 +1116,7 @@ tailwind.config = {
                 </div>
                 <div class="order-2 text-left md:order-1">
                     <h3 data-portfolio-title class="text-2xl font-[500] text-[#000] max-md:text-2xl">Graphic designer portfolio</h3>
-                    <p data-portfolio-description class="mt-2 w-full text-base font-light leading-7 text-[#000]">
+                    <p data-portfolio-description class="mt-2 max-w-xl text-base font-light leading-7 text-[#000]">
                         Your graphic design online portfolio shows off your skills and work examples in one place, from different design programs to different mediums.
                     </p>
                     <a href="#" class="mt-5 inline-flex items-center gap-2 whitespace-nowrap border-b border-current pb-0.5 font-medium text-[#000] hover:border-transparent">
@@ -1134,7 +1133,7 @@ tailwind.config = {
                 </div>
                 <div class="order-2 text-left md:order-1">
                     <h3 data-portfolio-title class="text-2xl font-[500] text-[#000] max-md:text-2xl">Photographer portfolio</h3>
-                    <p data-portfolio-description class="mt-2 w-full text-base font-light leading-7 text-[#000]">
+                    <p data-portfolio-description class="mt-2 max-w-xl text-base font-light leading-7 text-[#000]">
                         Building a photography portfolio means focusing on the work, not the website. Jimdo’s modern designs keep your images front and center. You can accept bookings, too!
                     </p>
                     <a href="#" class="mt-5 inline-flex items-center gap-2 whitespace-nowrap border-b border-current pb-0.5 font-medium text-[#000] hover:border-transparent">
@@ -1151,7 +1150,7 @@ tailwind.config = {
                 </div>
                 <div class="order-2 text-left md:order-1">
                     <h3 data-portfolio-title class="text-2xl font-[500] text-[#000] max-md:text-2xl">Artist Portfolio</h3>
-                    <p data-portfolio-description class="mt-2 w-full text-base font-light leading-7 text-[#000]">
+                    <p data-portfolio-description class="mt-2 max-w-xl text-base font-light leading-7 text-[#000]">
                         Showcase your latest work, share your creative process, and give visitors a place to discover your art.
                     </p>
                     <a href="#" class="mt-5 inline-flex items-center gap-2 whitespace-nowrap border-b border-current pb-0.5 font-medium text-[#000] hover:border-transparent">
@@ -1168,7 +1167,7 @@ tailwind.config = {
                 </div>
                 <div class="order-2 text-left md:order-1 ">
                     <h3 data-portfolio-title class="text-2xl font-[500] text-[#000] max-md:text-2xl">Model Portfolio</h3>
-                    <p data-portfolio-description class="mt-5 w-full text-base font-light leading-7 text-[#000]">
+                    <p data-portfolio-description class="mt-5 max-w-xl text-base font-light leading-7 text-[#000]">
                         You’re versatile and stylish, and your portfolio can be too. A website is a platform that you control, and it’s easy to use images right from your social media accounts.
                     </p>
                     <a href="#" class="mt-5 inline-flex items-center gap-2 whitespace-nowrap border-b border-current pb-0.5 font-medium text-[#000] hover:border-transparent">
@@ -1180,7 +1179,7 @@ tailwind.config = {
     </div>
 </section>
 
-    
+    <!-- ==================== Gallery  ==================== -->
     <!-- ==================== Gallery ==================== -->
 <section class="design w-full bg-white py-16 sm:py-20 relative text-center overflow-hidden select-none px-9 font-euclid">
     <div class="max-w-5xl mx-auto px-4">
@@ -1440,7 +1439,7 @@ tailwind.config = {
 
         <div class="grid grid-cols-1 min-[992px]:grid-cols-3 gap-x-10 gap-y-16 lg:gap-18 text-center max-w-7xl mx-auto">
             <article class="flex flex-col items-center ">
-                <h3 class="text-xl sm:text-2xl font-[500] text-[#000000]"><br>Freelancer</h3>
+                <h3 class="text-xl sm:text-2xl font-[500] text-[#000000]">Freelancer</h3>
                 <p class="mt-4 text-base sm:text-base font-extralight leading-relaxed text-[#000000] lg:w-full min-[992px]:w-full">
                     Every freelancer needs a website to attract new customers, find work, and show off your skills. Build your own portfolio, with no coding required!
                 </p>
@@ -1449,7 +1448,7 @@ tailwind.config = {
                 </a>
             </article>
             <article class="flex flex-col items-center">
-                <h3 class="text-xl sm:text-2xl font-[500] text-[#000000]"><br> Photography</h3>
+                <h3 class="text-xl sm:text-2xl font-[500] text-[#000000]">Photography</h3>
                 <p class="mt-4 text-base sm:text-base font-extralight leading-relaxed text-[#000000] lg:w-full min-[992px]:w-full">
                     Photographers love Jimdo for its beautiful and easy portfolio websites. See how you can get your photos online quickly and start taking bookings.
                 </p>
@@ -1459,7 +1458,7 @@ tailwind.config = {
             </article>
 
             <article class="flex flex-col items-center">
-                <h3 class="text-xl sm:text-2xl font-[500] text-[#000000]"><br> Design</h3>
+                <h3 class="text-xl sm:text-2xl font-[500] text-[#000000]">Design</h3>
                     <p class="mt-4 text-base sm:text-base font-extralight leading-relaxed text-[#000000] lg:w-full min-[992px]:w-full">
                     Create an art portfolio that matches your style. Our built-in tools will help you improve your search engine ranking and even sell your artwork online.
                 </p>
@@ -1479,16 +1478,15 @@ tailwind.config = {
                 <img src="src/img/logo.png" alt="Jimdo Logo" class="w-[130px] max-[991px]:w-[120px] inline-block">
             </div>
 
-            <div class="icons flex items-center gap-6 max-[991px]:justify-center">
-                <i class="fa-brands fa-facebook inline-flex h-7 w-7 shrink-0 items-center justify-center text-[28px] text-[#001453] transition-colors duration-300 hover:text-[#004ced]"></i>
-                <i class="fa-brands fa-instagram inline-flex h-7 w-7 shrink-0 items-center justify-center text-[28px] text-[#001453] transition-colors duration-300 hover:text-[#004ced]"></i>
-                <svg class="h-7 w-7 shrink-0 text-[#001453] transition-colors duration-300 hover:text-[#004ced]" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TikTok"><path fill="currentColor"
-                 d="M256,0C114.615,0,0,114.615,0,256S114.615,512,256,512,512,397.385,512,256,397.385,0,256,0ZM385.62,232.382c-27.184,0-53.634-8.822-74-23.75l-.162,101.5a92.457,92.457,0,1,1-80.178-91.721v49.845a43.657,43.657,0,1,0,31.288,41.876V109.333h51.275a71.773,71.773,0,0,0,71.774,71.773Z"/> </svg>
-                <i class="fa-brands fa-youtube inline-flex h-7 w-7 shrink-0 items-center justify-center text-[28px] text-[#001453] transition-colors duration-300 hover:text-[#004ced]"></i>
+            <div class="icons flex max-[991px]:justify-center">
+                <i class="fa-brands fa-facebook w-[50px] text-[#001453] text-[28px] transition-colors duration-300 hover:text-[#004ced]"></i>
+                <i class="fa-brands fa-instagram w-[50px] text-[#001453] text-[28px] transition-colors duration-300 hover:text-[#004ced]"></i>
+                <i class="fa-brands fa-tiktok inline-flex items-center justify-center w-[28px] h-[28px] rounded-full bg-[#001453] text-white text-[20px] transition-colors duration-300 hover:bg-[#004ced]"></i>
+                <i class="fa-brands fa-youtube mx-4 w-[px] text-[#001453] text-[28px] transition-colors duration-300 hover:text-[#004ced]"></i>
             </div>
         </div>
 
-        <div class="fdesc w-full min-[992px]:w-1/2 flex justify-start gap-8 lg:gap-20 max-[991px]:order-1 max-[991px]:w-full max-[991px]:mx-auto max-[991px]:gap-0 max-[991px]:py-0 max-[991px]:flex-col max-[991px]:divide-y max-[991px]:divide-gray-300 max-[991px]:rounded-[18px] max-[991px]:border max-[991px]:border-gray-300 max-[991px]:overflow-hidden">
+        <div class="fdesc w-full min-[992px]:w-1/2 flex justify-start gap-8 lg:gap-20 max-[991px]:order-1 max-[991px]:w-full max-[991px]:mx-auto max-[991px]:gap-0 max-[991px]:py-0 max-[991px]:flex-col max-[991px]:divide-y max-[991px]:divide-gray-300 max-[991px]:rounded-md max-[991px]:border max-[991px]:border-gray-300 max-[991px]:overflow-hidden">
             <!-- Products Column / Dropdown on Mobile -->
             <div class="foot-text footer-dropdown w-full flex flex-col justify-start" id="footProducts">
                 <button type="button" class="footer-dropdown-toggle w-full flex items-center justify-between cursor-pointer select-none py-3 text-left bg-transparent border-none p-0 max-[991px]:py-3 max-[991px]:px-3 max-[991px]:border-b max-[991px]:border-solid max-[991px]:border-gray-200 focus:outline-none" aria-expanded="false">
