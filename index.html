@@ -720,7 +720,7 @@ tailwind.config = {
         <!-- Hero Content -->
 
     
-        <section class="w-full bg-white  pb-12 sm:pt-32 sm:pb-16 lg:pb-20 font-euclid">
+        <section class="w-full bg-white pt-24 pb-12 sm:pt-32 sm:pb-16 lg:pb-20 font-euclid">
 
         <div class="mx-auto flex w-full max-w-[1400px]
                     max:[991px]:items-center
@@ -1179,7 +1179,6 @@ tailwind.config = {
     </div>
 </section>
 
-    <!-- ==================== Gallery  ==================== -->
     <!-- ==================== Gallery ==================== -->
 <section class="design w-full bg-white py-16 sm:py-20 relative text-center overflow-hidden select-none px-9 font-euclid">
     <div class="max-w-5xl mx-auto px-4">
@@ -1852,7 +1851,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         // =====================================================================
-        // Inspiration Carousel Slider Interactivity (Matches Jimdo Gallery)
+        // Inspiration Carousel Slider Interactivity 
         // =====================================================================
     const inspirationContainer = document.getElementById('inspirationCarousel');
 const carouselTrack = document.getElementById('carouselTrack');
@@ -1954,9 +1953,13 @@ function snapToNearest() {
 
 // Start Free Drag
 function dragStart(e) {
-    if (isTransitioning) return;
+    isTransitioning = false; // Unlock dragging
     isDragging = true;
-    startX = e.type.includes('touch') ? e.touches[0].clientX : e.pageX;
+
+    startX = e.type.includes('touch')
+        ? e.touches[0].clientX
+        : e.pageX;
+
     carouselTrack.style.transition = 'none';
     inspirationContainer.classList.add('cursor-grabbing');
 }
@@ -1987,15 +1990,7 @@ inspirationContainer.addEventListener('touchstart', dragStart, { passive: true }
 window.addEventListener('touchmove', dragMove, { passive: true });
 window.addEventListener('touchend', dragEnd);
 
-// Dot & Direct Slide Click Handlers
-allSlides.forEach((slide, idx) => {
-    slide.addEventListener('click', (e) => {
-        // Prevent click trigger if user was dragging
-        if (Math.abs(currentTranslate - prevTranslate) > 5) return;
-        isTransitioning = true;
-        moveToSlide(idx, true);
-    });
-});
+
 
 carouselDots.forEach((dot, idx) => {
     dot.addEventListener('click', () => {
@@ -2007,8 +2002,7 @@ carouselDots.forEach((dot, idx) => {
 
 window.addEventListener('resize', () => moveToSlide(currentIndex, false));
 
-// Initialize on page load
-setTimeout(() => moveToSlide(currentIndex, false), 100);
+
     </script>
 
 <script type="module" src="/src/main.js"></script>
