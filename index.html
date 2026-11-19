@@ -713,35 +713,34 @@ tailwind.config = {
 
         <!-- Hero Content -->
 
-    
-        <section class="w-full bg-white pt-24 pb-12 sm:pt-32 sm:pb-16 lg:pb-20 font-euclid">
 
-        <div class="mx-auto flex w-full max-w-[1400px]
-                    max:[991px]:items-center
+        <section class="w-full bg-white pt-36 pb-12 sm:pt-32 sm:pb-16 min-[992px]:pt-36 min-[992px]:pb-20">
+
+        <div class="mx-auto flex w-full max-w-7xl
+                    flex-col items-center
                     gap-8 px-5
+                    mt-3 pt-5
                     sm:px-8
-                    sm:ml-2.5
                     min-[992px]:flex-row 
-                    lg:gap-14 lg:px-10
-                    xl:gap-16
-                    xl:ml-[260px]">
+                    min-[992px]:gap-14 min-[992px]:px-10
+                    xl:gap-16">
 
 
             <!-- LEFT SIDE: TEXT, BENEFITS, AND BUTTON -->
-            <div class="w-full lg:w-1/2 min-[992px]:mt-[79px]">
+            <div class="w-full min-[992px]:w-1/2 ">
 
 
                 <!-- Heading -->
-                <h1 class="mb-5 font-[400]
+                <h1 class="mb-5 font-poppins font-normal
                         text-[32px] leading-tight
-                        sm:text-[38px]
-                        lg:text-[35px]
-                        xl:text-[47px]
-                        max-[991px]:text-4xl">
+                        max-sm:text-4xl
+                        max-md:text-[40px]
+                        min-[992px]:text-[35px]
+                        xl:text-5xl">
 
 
                     Create an Online Portfolio
-                    <br class="max-lg:hidden">
+                    <br class="min-[764px]:hidden">
                     <span>With Jimdo</span>
 
 
@@ -868,15 +867,14 @@ tailwind.config = {
 
                 <!-- BUTTON AND DESCRIPTION -->
                 <div class="btn mt-10 w-full max-w-[225px]
-                            max-md:max-w-[240px]
-                            max-[767px]:max-w-full">
+                            max-md:max-w-full">
 
 
                     <a href="#"
                     class="flex w-full items-center justify-center
                             rounded-[8px] bg-[#004ced]
-                            px-8 py-4
-                            text-center text-[16px] font-[500]
+                            px-8 py-5
+                            text-center text-[20px] font-normal
                             text-white no-underline
                             transition-colors duration-300
                             hover:bg-[#003bbb]
@@ -906,7 +904,7 @@ tailwind.config = {
 
 
             <!-- RIGHT SIDE: HERO IMAGE -->
-            <div class="w-full lg:w-1/2 pt-20">
+            <div class="w-full min-[992px]:w-1/2 mt-7 pt-10">
 
 
                 <img
