@@ -1,4 +1,4 @@
-﻿﻿<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="overflow-x-hidden max-w-full min-w-full mx-auto font-['Geologica',sans-serif]">
 <head>
     <meta charset="UTF-8">
@@ -118,8 +118,8 @@ tailwind.config = {
             </button>
 
             <!-- Left/Center Nav Links -->
-            <div class="fnav hidden xl:block flex-1 min-w-0 font-euclid">
-                <ul id="navLinks" class="relative flex items-center justify-center m-0 p-0">
+            <div class="fnav hidden xl:block flex-0 min-w-0 font-euclid">
+                <ul id="navLinks" class="relzative flex items-center justify-center m-0 p-0">
 
                     <!-- Website -->
                     <li class="list-none inline-block p-2 relative max-xl:hidden">
@@ -723,8 +723,7 @@ tailwind.config = {
         <section class="w-full bg-white  pb-12 sm:pt-32 sm:pb-16 lg:pb-20 font-euclid">
 
         <div class="mx-auto flex w-full max-w-[1400px]
-                    max-[991px]:flex-col
-                    max-[991px]:items-center
+                    max:[991px]:items-center
                     gap-8 px-5
                     sm:px-8
                     sm:ml-2.5
@@ -889,6 +888,8 @@ tailwind.config = {
                             hover:bg-[#003bbb]
                             max-sm:py-4 max-sm:text-[16px]">
                         Start Now
+
+
                     </a>
 
 
@@ -1953,9 +1954,13 @@ function snapToNearest() {
 
 // Start Free Drag
 function dragStart(e) {
-    if (isTransitioning) return;
+    isTransitioning = false; // Unlock dragging
     isDragging = true;
-    startX = e.type.includes('touch') ? e.touches[0].clientX : e.pageX;
+
+    startX = e.type.includes('touch')
+        ? e.touches[0].clientX
+        : e.pageX;
+
     carouselTrack.style.transition = 'none';
     inspirationContainer.classList.add('cursor-grabbing');
 }
@@ -1986,15 +1991,7 @@ inspirationContainer.addEventListener('touchstart', dragStart, { passive: true }
 window.addEventListener('touchmove', dragMove, { passive: true });
 window.addEventListener('touchend', dragEnd);
 
-// Dot & Direct Slide Click Handlers
-allSlides.forEach((slide, idx) => {
-    slide.addEventListener('click', (e) => {
-        // Prevent click trigger if user was dragging
-        if (Math.abs(currentTranslate - prevTranslate) > 5) return;
-        isTransitioning = true;
-        moveToSlide(idx, true);
-    });
-});
+
 
 carouselDots.forEach((dot, idx) => {
     dot.addEventListener('click', () => {
@@ -2006,8 +2003,7 @@ carouselDots.forEach((dot, idx) => {
 
 window.addEventListener('resize', () => moveToSlide(currentIndex, false));
 
-// Initialize on page load
-setTimeout(() => moveToSlide(currentIndex, false), 100);
+
     </script>
 
 <script type="module" src="/src/main.js"></script>
